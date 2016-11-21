@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import LoginScreen from '../screens/LoginScreen'
 import SamplesListScreen from '../screens/SamplesListScreen'
+import CarouselScreen from '../screens/CarouselScreen'
+
 import {
     Navigator
 } from 'react-native'
@@ -19,6 +21,8 @@ class Router extends Component {
                 return (<LoginScreen navigator={navigator} />)
             case Routes.SamplesListScreen.title:
                 return (<SamplesListScreen navigator={navigator} />)
+            case Routes.CarouselScreen.title:
+                return (<CarouselScreen navigator={navigator} />)
             default:
                 return
         }
@@ -28,6 +32,7 @@ class Router extends Component {
         const routes = [
             { title: Routes.LoginScreen.title },
             { title: Routes.SamplesListScreen.title },
+            { title: Routes.CarouselScreen.title },
         ]
         return (
             <Navigator

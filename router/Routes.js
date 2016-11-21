@@ -4,6 +4,9 @@ let routes = {
     },
     SamplesListScreen: {
         title: 'Samples List'
+    },
+    CarouselScreen: {
+        title: 'Carousel - Swipe left/right'
     }
 }
 

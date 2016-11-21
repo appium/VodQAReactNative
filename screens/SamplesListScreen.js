@@ -1,23 +1,49 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import {
     Text,
     StyleSheet,
-    View
+    ScrollView,
+    View,
+    TouchableHighlight
 } from 'react-native'
+import Routes from '../router/Routes'
+
 class SamplesListScreen extends Component {
+
+    constructor(props) {
+        super(props)
+        this.handleCarouselSample = this.handleCarouselSample.bind(this)
+    }
+
+    handleCarouselSample() {
+        this.props.navigator.push(Routes.CarouselScreen)
+    }
+
     render() {
         return (
-            <View style={styles.container}>
-                <Text>Samples</Text>
-            </View>
+            <ScrollView>
+                <View style={styles.container}>
+                    <TouchableHighlight onPress={this.handleCarouselSample}>
+                        <View>
+                            <Text>Carousel</Text>
+                            <Text>Demos swipe left & right</Text>
+                        </View>
+                    </TouchableHighlight>
+                </View>
+            </ScrollView>
         )
     }
 }
+
+SamplesListScreen.propTypes = Object.assign({}, Component.propTypes, {
+    navigator: PropTypes.object
+})
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
+        marginTop: 52
     },
 })
 
