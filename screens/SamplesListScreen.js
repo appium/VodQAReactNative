@@ -4,7 +4,7 @@ import {
     StyleSheet,
     ScrollView,
     View,
-    TouchableHighlight
+    TouchableOpacity
 } from 'react-native'
 import Routes from '../router/Routes'
 
@@ -23,12 +23,14 @@ class SamplesListScreen extends Component {
         return (
             <ScrollView>
                 <View style={styles.container}>
-                    <TouchableHighlight onPress={this.handleCarouselSample}>
-                        <View>
-                            <Text>Carousel</Text>
-                            <Text>Demos swipe left & right</Text>
+                    <TouchableOpacity onPress={this.handleCarouselSample}>
+                        <View style={styles.itemView}
+                            testID="carousel"
+                            accessibilityLabel="carousel">
+                            <Text style={styles.header}>Carousel</Text>
+                            <Text style={styles.subHeader}>Demos swipe left & right</Text>
                         </View>
-                    </TouchableHighlight>
+                    </TouchableOpacity>
                 </View>
             </ScrollView>
         )
@@ -43,8 +45,20 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        marginTop: 52
+        marginTop: 72
     },
+    itemView: {
+        borderBottomWidth: 1,
+        borderColor: '#DCDCDC',
+        paddingVertical: 20,
+        paddingHorizontal: 20
+    },
+    header: {
+        fontSize: 16,
+    },
+    subHeader: {
+        color: '#696969'
+    }
 })
 
 export default SamplesListScreen

@@ -26,14 +26,26 @@ class CarouselScreen extends Component {
                     pageInfo
                     onAnimateNextPage={(p) => console.log(p)}
                     >
-                    <View style={[{ backgroundColor: '#BADA55' }]}>
-                        <Text>1</Text>
+                    <View style={{justifyContent:'center', alignItems: 'center', flex: 1}}
+                        testID="view1"
+                        accessibilityLabel="view1">
+                        <View style={[{ backgroundColor: '#BADA55', borderRadius: 10, width: 200, height: 200, justifyContent:'center', alignItems: 'center' }]}>
+                            <Text style={{color: 'white', fontSize: 36}}>1</Text>
+                        </View>
                     </View>
-                    <View style={[{ backgroundColor: '#DDAA55' }]}>
-                        <Text>2</Text>
+                    <View style={{justifyContent:'center', alignItems: 'center', flex: 1}}
+                        testID="view2"
+                        accessibilityLabel="view2">
+                        <View style={[{ backgroundColor: '#DDAA55', borderRadius: 10, width: 200, height: 200, justifyContent:'center', alignItems: 'center' }]}>
+                            <Text style={{color: 'white', fontSize: 36}}>2</Text>
+                        </View>
                     </View>
-                    <View style={[{ backgroundColor: '#1111CC' }]}>
-                        <Text>3</Text>
+                    <View style={{justifyContent:'center', alignItems: 'center', flex: 1}}
+                        testID="view3"
+                        accessibilityLabel="view3">
+                        <View style={[{ backgroundColor: '#1111CC', borderRadius: 10, width: 200, height: 200, justifyContent:'center', alignItems: 'center' }]}>
+                            <Text style={{color: 'white', fontSize: 36}}>3</Text>
+                        </View>
                     </View>
                 </Carousel>
             </View>

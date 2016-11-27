@@ -7,7 +7,9 @@ import {
     Navigator,
     StatusBar,
     StyleSheet,
-    View
+    Text,
+    View,
+    TouchableOpacity
 } from 'react-native'
 import Routes from './Routes'
 
@@ -31,6 +33,44 @@ class Router extends Component {
         }
     }
 
+    renderTitle(route) {
+        return (
+            <View style={{ paddingTop: 12 }}>
+                <Text style={{ color: 'white' }}>{route.title}</Text>
+            </View>
+        )
+    }
+
+    renderLeftButton(route, navigator) {
+        return (
+            <View style={{ paddingTop: 12, paddingLeft: 8 }}>
+                <TouchableOpacity
+                    onPress={() => {
+                        navigator.pop()
+                    } }>
+                    <Text style={{ color: 'white' }}>Back</Text>
+                </TouchableOpacity>
+            </View>
+        )
+    }
+
+    renderNavBar() {
+        return (
+            <Navigator.NavigationBar
+                routeMapper={{
+                    LeftButton: (route, navigator, index, navState) =>
+                    { return this.renderLeftButton(route, navigator, index, navState) },
+                    RightButton: (route, navigator, index, navState) =>
+                    { return },
+                    Title: (route, navigator, index, navState) => {
+                        return this.renderTitle(route, navigator, index, navState)
+                    },
+                }}
+                style={{ backgroundColor: '#26aa5c' }}
+                />
+        )
+    }
+
     render() {
         const routes = [
             { title: Routes.LoginScreen.title },
@@ -44,10 +84,11 @@ class Router extends Component {
                     barStyle="light-content"
                     />
                 <Navigator
-                    style={{ backgroundColor: '#181618' }}
+                    style={{ backgroundColor: 'white' }}
                     initialRoute={routes[0]}
                     initialRouteStack={routes}
                     renderScene={this.renderScene}
+                    navigationBar={this.renderNavBar()}
                     />
             </View>
         )
