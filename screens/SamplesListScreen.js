@@ -13,10 +13,15 @@ class SamplesListScreen extends Component {
     constructor(props) {
         super(props)
         this.handleCarouselSample = this.handleCarouselSample.bind(this)
+        this.handlePhotoScreen = this.handlePhotoScreen.bind(this)
     }
 
     handleCarouselSample() {
         this.props.navigator.push(Routes.CarouselScreen)
+    }
+
+    handlePhotoScreen(){
+        this.props.navigator.push(Routes.PhotoScreen)
     }
 
     render() {
@@ -29,6 +34,14 @@ class SamplesListScreen extends Component {
                             accessibilityLabel="carousel">
                             <Text style={styles.header}>Carousel</Text>
                             <Text style={styles.subHeader}>Demos swipe left & right</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={this.handlePhotoScreen}>
+                        <View style={styles.itemView}
+                            testID="photoView"
+                            accessibilityLabel="photoView">
+                            <Text style={styles.header}>Photo View</Text>
+                            <Text style={styles.subHeader}>Ping & Zoom</Text>
                         </View>
                     </TouchableOpacity>
                 </View>

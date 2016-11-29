@@ -7,6 +7,9 @@ let routes = {
     },
     CarouselScreen: {
         title: 'Carousel - Swipe left/right'
+    },
+    PhotoScreen: {
+        title: 'Photos - Ping & Zoom'
     }
 }
 

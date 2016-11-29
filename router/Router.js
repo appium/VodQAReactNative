@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import LoginScreen from '../screens/LoginScreen'
 import SamplesListScreen from '../screens/SamplesListScreen'
 import CarouselScreen from '../screens/CarouselScreen'
+import PhotoScreen from '../screens/PhotoScreen'
 
 import {
     Navigator,
@@ -28,6 +29,8 @@ class Router extends Component {
                 return (<SamplesListScreen navigator={navigator} />)
             case Routes.CarouselScreen.title:
                 return (<CarouselScreen navigator={navigator} />)
+            case Routes.PhotoScreen.title:
+                return (<PhotoScreen navigator={navigator} />)
             default:
                 return
         }
@@ -76,6 +79,7 @@ class Router extends Component {
             { title: Routes.LoginScreen.title },
             { title: Routes.SamplesListScreen.title },
             { title: Routes.CarouselScreen.title },
+            { title: Routes.PhotoScreen.title },
         ]
         // todo status bar styling in correct place. 
         return (
