@@ -3,7 +3,8 @@ import {
     StyleSheet,
     Text,
     View,
-    TouchableHighlight
+    TextInput,
+    Button,
 } from 'react-native'
 import Routes from '../router/Routes'
 
@@ -21,12 +22,33 @@ class LoginScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>
+                <Text style={styles.title}>
                     VodQA
                 </Text>
-                <TouchableHighlight onPress={this.handleLogin}>
-                    <Text style={styles.instructions}>Login</Text>
-                </TouchableHighlight>
+                <View style={styles.loginFieldsContainer}>
+                    <View style={styles.inputField}>
+                        <TextInput
+                            placeholder ={'Username'}
+                            style={styles.loginFields}
+                            testID="username"
+                            accessible
+                            accessibilityLabel={'username'}
+                            />
+                    </View>
+                    <View style={styles.inputField}>
+                        <TextInput
+                            secureTextEntry 
+                            placeholder ={'Password'}
+                            style={styles.loginFields}
+                            testID="password"
+                            accessible
+                            accessibilityLabel={'password'}
+                            />   
+                    </View>       
+                </View>
+                <Button onPress={this.handleLogin}
+                    title="Log in" />
+               
             </View>
         )
     }
@@ -38,20 +60,30 @@ LoginScreen.propTypes = Object.assign({}, Component.propTypes, {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: '#B4B835',
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        marginTop: 64
     },
-    welcome: {
-        fontSize: 20,
+    title: {
+        color: '#fff',
+        fontSize: 64,
         textAlign: 'center',
+        fontWeight: '600',
         margin: 10,
     },
-    instructions: {
-        textAlign: 'center',
-        fontSize: 20,
-        marginBottom: 5,
+    loginFieldsContainer: {
     },
+  
+    loginFields: {
+        backgroundColor: '#ced250',
+        borderWidth: 1,
+        borderColor: '#fff',
+        borderRadius: 5,
+        height: 48,
+        margin: 16,
+        color: '#fff',
+        paddingHorizontal: 16
+    }
 })
 
 export default LoginScreen

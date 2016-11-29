@@ -4,7 +4,10 @@ import SamplesListScreen from '../screens/SamplesListScreen'
 import CarouselScreen from '../screens/CarouselScreen'
 
 import {
-    Navigator
+    Navigator,
+    StatusBar,
+    StyleSheet,
+    View
 } from 'react-native'
 import Routes from './Routes'
 
@@ -34,14 +37,25 @@ class Router extends Component {
             { title: Routes.SamplesListScreen.title },
             { title: Routes.CarouselScreen.title },
         ]
+        // todo status bar styling in correct place. 
         return (
-            <Navigator
-                initialRoute={routes[0]}
-                initialRouteStack={routes}
-                renderScene={this.renderScene}
-                />
+            <View style={styles.mainContainer}> 
+                <StatusBar
+                    barStyle="light-content"
+                    />
+                <Navigator
+                    style={{ backgroundColor: '#181618' }}
+                    initialRoute={routes[0]}
+                    initialRouteStack={routes}
+                    renderScene={this.renderScene}
+                    />
+            </View>
         )
     }
 }
-
+const styles = StyleSheet.create({
+    mainContainer: {
+        flex: 1
+    }
+})
 export default Router
