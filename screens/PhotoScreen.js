@@ -17,7 +17,6 @@ class PhotoScreen extends Component {
                     minimumZoomScale={0.5}
                     maximumZoomScale={3}
                     androidScaleType="center"
-                    onLoad={() => console.log('Image loaded!')}
                     style={{ width: 300, height: 300 }} />
             </View>
         )

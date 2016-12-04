@@ -20,11 +20,8 @@ class CarouselScreen extends Component {
         return (
             <View>
                 <Carousel
-                    delay={2000}
                     style={this.state.size}
-                    autoplay
                     pageInfo
-                    onAnimateNextPage={(p) => console.log(p)}
                     >
                     <View style={{justifyContent:'center', alignItems: 'center', flex: 1}}
                         testID="view1"

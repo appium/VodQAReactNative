@@ -13,34 +13,19 @@ class SamplesListScreen extends Component {
     constructor(props) {
         super(props)
         this.getView = this.getView.bind(this)
-        this.handleCarouselSample = this.handleCarouselSample.bind(this)
-        this.handlePhotoScreen = this.handlePhotoScreen.bind(this)
-        this.handleWebViewScreen = this.handleWebViewScreen.bind(this)
-        this.handleSliderScreen = this.handleSliderScreen.bind(this)
+        this.goToScreen = this.goToScreen.bind(this)
     }
 
-    handleCarouselSample() {
-        this.props.navigator.push(Routes.CarouselScreen)
+    goToScreen(screenName) {
+        this.props.navigator.push(screenName)
     }
 
-    handlePhotoScreen() {
-        this.props.navigator.push(Routes.PhotoScreen)
-    }
-
-    handleWebViewScreen() {
-        this.props.navigator.push(Routes.WebViewScreen)
-    }
-
-    handleSliderScreen() {
-        this.props.navigator.push(Routes.SliderScreen)
-    }
-
-    getView(header, subHeader, testId, handlePress) {
+    getView(header, subHeader, testId, screenName) {
         return (
-            <TouchableOpacity onPress={handlePress}>
-                <View style={styles.itemView}
-                    testID={testId}
-                    accessibilityLabel={testId}>
+            <TouchableOpacity onPress={() => { this.goToScreen(screenName) } }
+                testID={testId}
+                accessibilityLabel={testId}>
+                <View style={styles.itemView}>
                     <Text style={styles.header}>{header}</Text>
                     <Text style={styles.subHeader}>{subHeader}</Text>
                 </View>
@@ -52,10 +37,10 @@ class SamplesListScreen extends Component {
         return (
             <ScrollView>
                 <View style={styles.container}>
-                    {this.getView('Carousel', 'Demos swipe left & right', 'carousel', this.handleCarouselSample)}
-                    {this.getView('Photo View', 'Ping & Zoom', 'photoView', this.handlePhotoScreen)}
-                    {this.getView('Web View', 'View hacker news', 'webView', this.handleWebViewScreen)}
-                    {this.getView('Slider', 'Slide your number', 'slider', this.handleSliderScreen)}
+                    {this.getView('Carousel', 'Demos swipe left & right', 'carousel', Routes.CarouselScreen)}
+                    {this.getView('Photo View', 'Ping & Zoom', 'photoView', Routes.PhotoScreen)}
+                    {this.getView('Web View', 'View hacker news', 'webView', Routes.WebViewScreen)}
+                    {this.getView('Slider', 'Slide your number', 'slider', Routes.SliderScreen)}
                 </View>
             </ScrollView>
         )
