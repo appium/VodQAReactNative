@@ -4,6 +4,7 @@ import SamplesListScreen from '../screens/SamplesListScreen'
 import CarouselScreen from '../screens/CarouselScreen'
 import PhotoScreen from '../screens/PhotoScreen'
 import WebViewScreen from '../screens/WebViewScreen'
+import SliderScreen from '../screens/SliderScreen'
 
 import {
     Navigator,
@@ -34,6 +35,8 @@ class Router extends Component {
                 return (<PhotoScreen navigator={navigator} />)
             case Routes.WebViewScreen.title:
                 return (<WebViewScreen navigator={navigator} />)
+            case Routes.SliderScreen.title:
+                return (<SliderScreen navigator={navigator} />)
             default:
                 return
         }
@@ -84,6 +87,7 @@ class Router extends Component {
             { title: Routes.CarouselScreen.title },
             { title: Routes.PhotoScreen.title },
             { title: Routes.WebViewScreen.title },
+            { title: Routes.SliderScreen.title },
         ]
         // todo status bar styling in correct place. 
         return (

@@ -12,6 +12,7 @@ class SamplesListScreen extends Component {
 
     constructor(props) {
         super(props)
+        this.getView = this.getView.bind(this)
         this.handleCarouselSample = this.handleCarouselSample.bind(this)
         this.handlePhotoScreen = this.handlePhotoScreen.bind(this)
         this.handleWebViewScreen = this.handleWebViewScreen.bind(this)
@@ -21,7 +22,7 @@ class SamplesListScreen extends Component {
         this.props.navigator.push(Routes.CarouselScreen)
     }
 
-    handlePhotoScreen(){
+    handlePhotoScreen() {
         this.props.navigator.push(Routes.PhotoScreen)
     }
 
@@ -29,34 +30,26 @@ class SamplesListScreen extends Component {
         this.props.navigator.push(Routes.WebViewScreen)
     }
 
+    getView(header, subHeader, testId, handlePress) {
+        return (
+            <TouchableOpacity onPress={handlePress}>
+                <View style={styles.itemView}
+                    testID={testId}
+                    accessibilityLabel={testId}>
+                    <Text style={styles.header}>{header}</Text>
+                    <Text style={styles.subHeader}>{subHeader}</Text>
+                </View>
+            </TouchableOpacity>
+        )
+    }
+
     render() {
         return (
             <ScrollView>
                 <View style={styles.container}>
-                    <TouchableOpacity onPress={this.handleCarouselSample}>
-                        <View style={styles.itemView}
-                            testID="carousel"
-                            accessibilityLabel="carousel">
-                            <Text style={styles.header}>Carousel</Text>
-                            <Text style={styles.subHeader}>Demos swipe left & right</Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={this.handlePhotoScreen}>
-                        <View style={styles.itemView}
-                            testID="photoView"
-                            accessibilityLabel="photoView">
-                            <Text style={styles.header}>Photo View</Text>
-                            <Text style={styles.subHeader}>Ping & Zoom</Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={this.handleWebViewScreen}>
-                        <View style={styles.itemView}
-                            testID="webView"
-                            accessibilityLabel="webView">
-                            <Text style={styles.header}>Web View</Text>
-                            <Text style={styles.subHeader}>View hacker news</Text>
-                        </View>
-                    </TouchableOpacity>
+                    {this.getView('Carousel', 'Demos swipe left & right', 'carousel', this.handleCarouselSample)}
+                    {this.getView('Photo View', 'Ping & Zoom', 'photoView', this.handlePhotoScreen)}
+                    {this.getView('Web View', 'View hacker news', 'webView', this.handleWebViewScreen)}
                 </View>
             </ScrollView>
         )

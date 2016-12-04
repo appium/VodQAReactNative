@@ -13,6 +13,9 @@ let routes = {
     },
     WebViewScreen: {
         title: 'Webview'
+    },
+    SliderScreen: {
+        title: 'Slider'
     }
 }
 
