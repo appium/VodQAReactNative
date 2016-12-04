@@ -14,6 +14,7 @@ class SamplesListScreen extends Component {
         super(props)
         this.handleCarouselSample = this.handleCarouselSample.bind(this)
         this.handlePhotoScreen = this.handlePhotoScreen.bind(this)
+        this.handleWebViewScreen = this.handleWebViewScreen.bind(this)
     }
 
     handleCarouselSample() {
@@ -22,6 +23,10 @@ class SamplesListScreen extends Component {
 
     handlePhotoScreen(){
         this.props.navigator.push(Routes.PhotoScreen)
+    }
+
+    handleWebViewScreen() {
+        this.props.navigator.push(Routes.WebViewScreen)
     }
 
     render() {
@@ -42,6 +47,14 @@ class SamplesListScreen extends Component {
                             accessibilityLabel="photoView">
                             <Text style={styles.header}>Photo View</Text>
                             <Text style={styles.subHeader}>Ping & Zoom</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={this.handleWebViewScreen}>
+                        <View style={styles.itemView}
+                            testID="webView"
+                            accessibilityLabel="webView">
+                            <Text style={styles.header}>Web View</Text>
+                            <Text style={styles.subHeader}>View hacker news</Text>
                         </View>
                     </TouchableOpacity>
                 </View>

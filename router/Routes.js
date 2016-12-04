@@ -10,6 +10,9 @@ let routes = {
     },
     PhotoScreen: {
         title: 'Photos - Ping & Zoom'
+    },
+    WebViewScreen: {
+        title: 'Webview'
     }
 }
 
