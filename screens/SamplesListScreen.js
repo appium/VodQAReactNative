@@ -16,6 +16,7 @@ class SamplesListScreen extends Component {
         this.handleCarouselSample = this.handleCarouselSample.bind(this)
         this.handlePhotoScreen = this.handlePhotoScreen.bind(this)
         this.handleWebViewScreen = this.handleWebViewScreen.bind(this)
+        this.handleSliderScreen = this.handleSliderScreen.bind(this)
     }
 
     handleCarouselSample() {
@@ -28,6 +29,10 @@ class SamplesListScreen extends Component {
 
     handleWebViewScreen() {
         this.props.navigator.push(Routes.WebViewScreen)
+    }
+
+    handleSliderScreen() {
+        this.props.navigator.push(Routes.SliderScreen)
     }
 
     getView(header, subHeader, testId, handlePress) {
@@ -50,6 +55,7 @@ class SamplesListScreen extends Component {
                     {this.getView('Carousel', 'Demos swipe left & right', 'carousel', this.handleCarouselSample)}
                     {this.getView('Photo View', 'Ping & Zoom', 'photoView', this.handlePhotoScreen)}
                     {this.getView('Web View', 'View hacker news', 'webView', this.handleWebViewScreen)}
+                    {this.getView('Slider', 'Slide your number', 'slider', this.handleSliderScreen)}
                 </View>
             </ScrollView>
         )

@@ -52,11 +52,12 @@ class Router extends Component {
 
     renderLeftButton(route, navigator) {
         return (
-            <View style={{ paddingTop: 12, paddingLeft: 8 }}>
+            <View>
                 <TouchableOpacity
                     onPress={() => {
                         navigator.pop()
-                    } }>
+                    } }
+                    style={{ paddingVertical: 12, paddingLeft: 8 }}>
                     <Text style={{ color: 'white' }}>Back</Text>
                 </TouchableOpacity>
             </View>
@@ -91,7 +92,7 @@ class Router extends Component {
         ]
         // todo status bar styling in correct place. 
         return (
-            <View style={styles.mainContainer}> 
+            <View style={styles.mainContainer}>
                 <StatusBar
                     barStyle="light-content"
                     />
