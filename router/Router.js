@@ -9,7 +9,6 @@ import DrapAndDrop from '../screens/DrapAndDrop'
 
 import {
     Navigator,
-    StatusBar,
     StyleSheet,
     Text,
     View,
@@ -95,12 +94,9 @@ class Router extends Component {
         ]
         // todo status bar styling in correct place. 
         return (
-            <View style={styles.mainContainer}>
-                <StatusBar
-                    barStyle="light-content"
-                    />
+
+            <View style={styles.mainContainer}> 
                 <Navigator
-                    style={{ backgroundColor: 'white' }}
                     initialRoute={routes[0]}
                     initialRouteStack={routes}
                     renderScene={this.renderScene}
