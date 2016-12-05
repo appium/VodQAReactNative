@@ -1,8 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import {
     StyleSheet,
-    Text,
+    Platform,
     View,
+    Image,
     TextInput,
     Button,
 } from 'react-native'
@@ -22,33 +23,34 @@ class LoginScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.title}>
-                    VodQA
-                </Text>
-                <View style={styles.loginFieldsContainer}>
-                    <View style={styles.inputField}>
-                        <TextInput
-                            placeholder ={'Username'}
-                            style={styles.loginFields}
-                            testID="username"
-                            accessible
-                            accessibilityLabel={'username'}
-                            />
-                    </View>
-                    <View style={styles.inputField}>
-                        <TextInput
-                            secureTextEntry 
-                            placeholder ={'Password'}
-                            style={styles.loginFields}
-                            testID="password"
-                            accessible
-                            accessibilityLabel={'password'}
-                            />   
-                    </View>       
+                <View style={styles.logoContainer}>
+                    <Image
+                        style={styles.logo}
+                        resizeMode ="cover"
+                        source={require('../assets/vodqa.png') }
+                        />
                 </View>
-                <Button onPress={this.handleLogin}
-                    title="Log in" />
-               
+                <View style={styles.loginFieldsContainer}>
+                    <TextInput
+                        placeholder ={'Username'}
+                        style={styles.loginFields}
+                        testID="username"
+                        accessible
+                        accessibilityLabel={'username'}
+                        />
+                    <TextInput
+                        secureTextEntry
+                        placeholder ={'Password'}
+                        style={styles.loginFields}
+                        testID="password"
+                        accessible
+                        accessibilityLabel={'password'}
+                        />
+                    <View style={styles.loginButton}>
+                        <Button onPress={this.handleLogin}
+                            title="Log in" />
+                    </View>   
+                </View>
             </View>
         )
     }
@@ -60,29 +62,36 @@ LoginScreen.propTypes = Object.assign({}, Component.propTypes, {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#B4B835',
         flex: 1,
-        marginTop: 64
     },
-    title: {
-        color: '#fff',
-        fontSize: 64,
-        textAlign: 'center',
-        fontWeight: '600',
-        margin: 10,
+    logoContainer: {
+        marginTop: 64,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    logo: {
+        width: 400,
+        height: 150
+
     },
     loginFieldsContainer: {
+        marginTop: 64
     },
-  
     loginFields: {
-        backgroundColor: '#ced250',
-        borderWidth: 1,
-        borderColor: '#fff',
-        borderRadius: 5,
-        height: 48,
-        margin: 16,
-        color: '#fff',
-        paddingHorizontal: 16
+        ...Platform.select({
+        ios: {
+            borderWidth: 1,
+            borderColor: '#B4B835',
+            borderRadius: 5
+        },
+    }),
+    height: 48,
+    margin: 16,
+    color: '#444444',
+    paddingHorizontal: 16
+    },
+    loginButton: {
+        marginHorizontal: 24
     }
 })
 
