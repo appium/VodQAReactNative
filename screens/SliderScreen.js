@@ -20,6 +20,9 @@ class SliderScreen extends Component {
         return (
             <View style={styles.container}>
                 <Slider
+                    testID="slider"
+                    accessible
+                    accessibilityLabel="slider"
                     minimumValue={0}
                     maximumValue={100}
                     step={1}
