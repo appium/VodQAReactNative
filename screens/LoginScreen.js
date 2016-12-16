@@ -1,12 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import {
-    StyleSheet,
-    Platform,
     View,
     Image,
     TextInput,
     Button,
 } from 'react-native'
+import {create} from '../helpers/PlatformSpecificStyles'
 import Routes from '../router/Routes'
 
 class LoginScreen extends Component {
@@ -14,10 +13,26 @@ class LoginScreen extends Component {
     constructor(props) {
         super(props)
         this.handleLogin = this.handleLogin.bind(this)
+        this.handleUserNameChange = this.handleUserNameChange.bind(this)
+        this.handlePasswordChange = this.handlePasswordChange.bind(this)
+        
+        this.state = {
+            username: '',
+            password: ''
+        }
     }
 
     handleLogin() {
         this.props.navigator.push({ title: Routes.SamplesListScreen.title })
+    }
+    handleUserNameChange(text) {
+        this.setState({username: text})
+    }
+    handlePasswordChange(text) {
+        this.setState({ password: text })
+    }
+    loginFiledValidator() {
+
     }
 
     render() {
@@ -32,19 +47,24 @@ class LoginScreen extends Component {
                 </View>
                 <View style={styles.loginFieldsContainer}>
                     <TextInput
+                        onChangeText = {this.handleUserNameChange}
                         placeholder ={'Username'}
                         style={styles.loginFields}
                         testID="username"
                         accessible
                         accessibilityLabel={'username'}
+                        value= {this.state.username}
                         />
                     <TextInput
                         secureTextEntry
+                        onChangeText = {this.handlePasswordChange}
                         placeholder ={'Password'}
                         style={styles.loginFields}
                         testID="password"
                         accessible
                         accessibilityLabel={'password'}
+                        value= {this.state.password}
+                        
                         />
                     <View style={styles.loginButton}>
                         <Button onPress={this.handleLogin}
@@ -60,12 +80,14 @@ LoginScreen.propTypes = Object.assign({}, Component.propTypes, {
     navigator: PropTypes.object
 })
 
-const styles = StyleSheet.create({
+const styles = create({
     container: {
         flex: 1,
+        backgroundColor: '#fff',
+        justifyContent: 'space-between'
     },
     logoContainer: {
-        marginTop: 64,
+        marginTop: 96,
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -75,16 +97,14 @@ const styles = StyleSheet.create({
 
     },
     loginFieldsContainer: {
-        marginTop: 64
+        marginBottom: 64
     },
     loginFields: {
-        ...Platform.select({
-        ios: {
-            borderWidth: 1,
-            borderColor: '#B4B835',
-            borderRadius: 5
-        },
-    }),
+    ios: {
+        borderWidth: 1,
+        borderColor: '#B4B835',
+        borderRadius: 5
+    },
     height: 48,
     margin: 16,
     color: '#444444',

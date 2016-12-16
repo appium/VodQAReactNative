@@ -46,8 +46,8 @@ class Router extends Component {
 
     renderTitle(route) {
         return (
-            <View style={{ paddingTop: 12 }}>
-                <Text style={{ color: 'white' }}>{route.title}</Text>
+            <View style={styles.title}>
+                <Text style={styles.titleText}>{route.title}</Text>
             </View>
         )
     }
@@ -109,6 +109,13 @@ class Router extends Component {
 const styles = StyleSheet.create({
     mainContainer: {
         flex: 1
-    }
+    },
+   title: {
+       paddingTop: 12,
+   },
+   titleText: {
+       color: '#fff',
+       fontSize: 18
+   }
 })
 export default Router
