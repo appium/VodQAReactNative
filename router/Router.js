@@ -5,6 +5,7 @@ import CarouselScreen from '../screens/CarouselScreen'
 import PhotoScreen from '../screens/PhotoScreen'
 import WebViewScreen from '../screens/WebViewScreen'
 import SliderScreen from '../screens/SliderScreen'
+import DrapAndDrop from '../screens/DrapAndDrop'
 
 import {
     Navigator,
@@ -36,6 +37,8 @@ class Router extends Component {
                 return (<WebViewScreen navigator={navigator} />)
             case Routes.SliderScreen.title:
                 return (<SliderScreen navigator={navigator} />)
+            case Routes.DragAndDrop.title:
+                return (<DrapAndDrop navigator={navigator} />)
             default:
                 return
         }

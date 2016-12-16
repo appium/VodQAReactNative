@@ -16,6 +16,9 @@ let routes = {
     },
     SliderScreen: {
         title: 'Slider'
+    },
+    DragAndDrop:{
+        title: 'Drag & Drop'
     }
 }
 
