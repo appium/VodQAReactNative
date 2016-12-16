@@ -17,6 +17,9 @@ let routes = {
     SliderScreen: {
         title: 'Slider'
     },
+    VerticalSwipe: {
+        title: 'Vertical swiping'
+    },
     DragAndDrop:{
         title: 'Drag & Drop'
     }

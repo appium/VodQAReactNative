@@ -6,6 +6,8 @@ import PhotoScreen from '../screens/PhotoScreen'
 import WebViewScreen from '../screens/WebViewScreen'
 import SliderScreen from '../screens/SliderScreen'
 import DrapAndDrop from '../screens/DrapAndDrop'
+import VerticalSwipe from '../screens/VerticalSwipe'
+
 
 import {
     Navigator,
@@ -37,6 +39,8 @@ class Router extends Component {
                 return (<WebViewScreen navigator={navigator} />)
             case Routes.SliderScreen.title:
                 return (<SliderScreen navigator={navigator} />)
+            case Routes.VerticalSwipe.title:
+                return (<VerticalSwipe navigator={navigator} />)
             case Routes.DragAndDrop.title:
                 return (<DrapAndDrop navigator={navigator} />)
             default:
@@ -91,6 +95,7 @@ class Router extends Component {
             { title: Routes.PhotoScreen.title },
             { title: Routes.WebViewScreen.title },
             { title: Routes.SliderScreen.title },
+            { title: Routes.VerticalSwipe.title },
         ]
         // todo status bar styling in correct place. 
         return (

@@ -41,6 +41,7 @@ class SamplesListScreen extends Component {
                     {this.getView('Photo View', 'Ping & Zoom', 'photoView', Routes.PhotoScreen)}
                     {this.getView('Web View', 'View hacker news', 'webView', Routes.WebViewScreen)}
                     {this.getView('Slider', 'Slide your number', 'slider', Routes.SliderScreen)}
+                    {this.getView('Vertical swiping', 'Demos vertical swiping ', 'verticalSwipe', Routes.VerticalSwipe) }
                     {this.getView('Drag & Drop', 'Demo drag and drop', 'dragAndDrop', Routes.DragAndDrop)}
                 </View>
             </ScrollView>
