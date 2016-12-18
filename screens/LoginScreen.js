@@ -4,6 +4,7 @@ import {
     Image,
     TextInput,
     Button,
+    Alert
 } from 'react-native'
 import {create} from '../helpers/PlatformSpecificStyles'
 import Routes from '../router/Routes'
@@ -23,17 +24,32 @@ class LoginScreen extends Component {
     }
 
     handleLogin() {
-        this.props.navigator.push({ title: Routes.SamplesListScreen.title })
+        if (!this.state.username || !this.state.password) {
+            Alert.alert('Oops',
+                'Please enter Username or password',
+                [
+                    { text: 'OK', onPress: () => { } },
+                ])
+        }else {
+            if (this.state.username === 'admin' && this.state.password === 'admin') {
+                this.props.navigator.push({ title: Routes.SamplesListScreen.title })
+            } else {
+                Alert.alert('Oops',
+                    'Invilid Credientials',
+                    [
+                        { text: 'OK', onPress: () => { } },
+                    ])
+            }
+        }
     }
+
     handleUserNameChange(text) {
         this.setState({username: text})
     }
     handlePasswordChange(text) {
         this.setState({ password: text })
     }
-    loginFiledValidator() {
 
-    }
 
     render() {
         return (
@@ -54,6 +70,8 @@ class LoginScreen extends Component {
                         accessible
                         accessibilityLabel={'username'}
                         value= {this.state.username}
+                        autoCapitalize="none"
+                        autoCorrect={false}
                         />
                     <TextInput
                         secureTextEntry
@@ -64,6 +82,8 @@ class LoginScreen extends Component {
                         accessible
                         accessibilityLabel={'password'}
                         value= {this.state.password}
+                        autoCapitalize="none"
+                        autoCorrect={false}
                         
                         />
                     <View style={styles.loginButton}>
