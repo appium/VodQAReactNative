@@ -88,6 +88,9 @@ class LoginScreen extends Component {
                         />
                     <View style={styles.loginButton}>
                         <Button onPress={this.handleLogin}
+                            testID="login"
+                            accessible
+                            accessibilityLabel={'login'}
                             title="Log in" />
                     </View>   
                 </View>
