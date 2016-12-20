@@ -5,7 +5,8 @@ import {
     StyleSheet,
     Animated,
     Dimensions,
-    PanResponder
+    PanResponder,
+    Platform
 
 } from 'react-native'
 
@@ -16,11 +17,11 @@ class DrapAndDrop extends Component {
         this.setDropZoneValues = this.setDropZoneValues.bind(this)
         this.isDropZone = this.isDropZone.bind(this)
         this.state = {
-            showDraggable: true,     
+            showDraggable: true,
             dropZoneValues: null,
             pan: new Animated.ValueXY()
         }
-        this.panResponder = PanResponder.create({    
+        this.panResponder = PanResponder.create({
             onStartShouldSetPanResponder: () => true,
             onPanResponderMove: Animated.event([null, {
                 dx: this.state.pan.x,
@@ -41,15 +42,14 @@ class DrapAndDrop extends Component {
             }
         })
     }
-    isDropZone(gesture) {     
+    isDropZone(gesture) {
         var dz = this.state.dropZoneValues
         return (gesture.moveY - 64) > dz.y && (gesture.moveY - 64) < dz.y + dz.height
     }
     renderDraggable() {
-        if (this.state.showDraggable) {     
+        if (this.state.showDraggable) {
             return (
-                <View testID="draggableContainer"
-                    style={styles.draggableContainer} >
+                <View style={styles.dragWrapper}>
                     <Animated.View
                         {...this.panResponder.panHandlers}
                         style={[this.state.pan.getLayout(), styles.circle]}>
@@ -59,26 +59,29 @@ class DrapAndDrop extends Component {
             )
         }
     }
-    setDropZoneValues(event) {     
+    setDropZoneValues(event) {
         this.setState({
             dropZoneValues: event.nativeEvent.layout
         })
     }
     render() {
         return (
-            <View style={{ flex: 1, marginTop: 64 }}>
-                <View onLayout={(event) => this.setDropZoneValues(event)}
-                    testID="dropZone"
-                    style={styles.dropZone}>
-                    <Text style={styles.draggableText} >Drop here.</Text>
+            <View style={styles.container}>
+                <View testID="dragDropContainer"
+                    style={styles.dragDropContainer} >
+                    <View onLayout={(event) => this.setDropZoneValues(event)}
+                        testID="dropZone"
+                        style={styles.dropZone}>
+                        <Text style={styles.dropText} >Drop here.</Text>
+                    </View>
+                    {this.renderDraggable()}
+                    <View>
+                        {!this.state.showDraggable &&
+                            <View>
+                                <Text style={styles.dragSuccessLabel}>Circle dropped sucessfully!</Text>
+                            </View>
+                        }</View>
                 </View>
-                {this.renderDraggable()}
-                <View>
-                    {!this.state.showDraggable &&
-                        <View>
-                            <Text style={styles.dragSuccessLabel}>Circle dragged sucessfully!</Text>
-                        </View>
-                    }</View>
             </View>
         )
     }
@@ -86,6 +89,10 @@ class DrapAndDrop extends Component {
 let CIRCLE_RADIUS = 36
 let Window = Dimensions.get('window')
 var styles = StyleSheet.create({
+    container:{
+        marginTop: (Platform.OS === 'ios')?64:56,
+        flex:1
+    },
     text: {
         marginTop: 25,
         marginLeft: 5,
@@ -93,19 +100,26 @@ var styles = StyleSheet.create({
         textAlign: 'center',
         color: '#fff'
     },
-    draggableText: {
-        flex: 1, textAlign: 'center', alignItems: 'center', justifyContent: 'center', color: '#fff'
+    dropText:{
+        marginTop:32,
+        marginLeft: 5,
+        marginRight: 5,
+        textAlign: 'center',
+        color: '#fff'
     },
     dragSuccessLabel: {
         marginTop: 125, textAlign: 'center', color: 'blue'
     },
     dropZone: {
-        width: 380,
+        width: Window.width,
         height: 100,
         backgroundColor: '#2c3e50',
-       
+
     },
-    draggableContainer: {
+    dragDropContainer: {
+        flex: 1
+    },
+    dragWrapper: {
         position: 'absolute',
         top: Window.height / 2 - CIRCLE_RADIUS - 165,
         left: Window.width / 2 - CIRCLE_RADIUS,
