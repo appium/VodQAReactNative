@@ -121,7 +121,7 @@ var styles = StyleSheet.create({
     },
     dragWrapper: {
         position: 'absolute',
-        top: Window.height / 2 - CIRCLE_RADIUS - 165,
+        top: Window.height / 2 - CIRCLE_RADIUS ,
         left: Window.width / 2 - CIRCLE_RADIUS,
     },
     circle: {
