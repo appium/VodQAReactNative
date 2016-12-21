@@ -43,6 +43,7 @@ class SamplesListScreen extends Component {
                     {this.getView('Slider', 'Slide your number', 'slider', Routes.SliderScreen)}
                     {this.getView('Vertical swiping', 'Demos vertical swiping ', 'verticalSwipe', Routes.VerticalSwipe) }
                     {this.getView('Drag & Drop', 'Demo drag and drop', 'dragAndDrop', Routes.DragAndDrop)}
+                    {this.getView('Double Tap', 'Demo double tap button', 'doubleTap', Routes.DoubleTap)}
                 </View>
             </ScrollView>
         )

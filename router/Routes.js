@@ -22,6 +22,9 @@ let routes = {
     },
     DragAndDrop:{
         title: 'Drag & Drop'
+    },
+    DoubleTap: {
+        title: 'Double Tap Demo'
     }
 }
 

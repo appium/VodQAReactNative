@@ -7,6 +7,7 @@ import WebViewScreen from '../screens/WebViewScreen'
 import SliderScreen from '../screens/SliderScreen'
 import DrapAndDrop from '../screens/DrapAndDrop'
 import VerticalSwipe from '../screens/VerticalSwipe'
+import DoubleTap from '../screens/DoubleTap'
 
 
 import {
@@ -43,6 +44,8 @@ class Router extends Component {
                 return (<VerticalSwipe navigator={navigator} />)
             case Routes.DragAndDrop.title:
                 return (<DrapAndDrop navigator={navigator} />)
+            case Routes.DoubleTap.title:
+                return (<DoubleTap navigator={navigator} />)
             default:
                 return
         }
