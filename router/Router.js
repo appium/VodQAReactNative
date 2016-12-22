@@ -8,6 +8,8 @@ import SliderScreen from '../screens/SliderScreen'
 import DrapAndDrop from '../screens/DrapAndDrop'
 import VerticalSwipe from '../screens/VerticalSwipe'
 import DoubleTap from '../screens/DoubleTap'
+import LongPress from '../screens/LongPress'
+
 
 
 import {
@@ -46,6 +48,8 @@ class Router extends Component {
                 return (<DrapAndDrop navigator={navigator} />)
             case Routes.DoubleTap.title:
                 return (<DoubleTap navigator={navigator} />)
+            case Routes.LongPress.title:
+                return (<LongPress navigator={navigator} />)
             default:
                 return
         }

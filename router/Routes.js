@@ -25,6 +25,9 @@ let routes = {
     },
     DoubleTap: {
         title: 'Double Tap Demo'
+    },
+    LongPress: {
+        title: 'Long Press Demo'
     }
 }
 
