@@ -28,6 +28,9 @@ class ListViewVerticalSwipe extends Component {
         return (
             <View style={styles.container}>
                 <ListView
+                    testID="listview"
+                    accessible
+                    accessibilityLabel="listview"
                     dataSource={this.state.dataSource}
                     renderRow={this.renderRowView}
                     />

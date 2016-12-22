@@ -35,7 +35,7 @@ class LoginScreen extends Component {
                 this.props.navigator.push({ title: Routes.SamplesListScreen.title })
             } else {
                 Alert.alert('Oops',
-                    'Invilid Credientials',
+                    'Invalid  Credentials',
                     [
                         { text: 'OK', onPress: () => { } },
                     ])
@@ -86,11 +86,11 @@ class LoginScreen extends Component {
                         autoCorrect={false}
                         
                         />
-                    <View style={styles.loginButton}>
+                    <View style={styles.loginButton}
+                          testID="login"
+                          accessible
+                          accessibilityLabel={'login'}>
                         <Button onPress={this.handleLogin}
-                            testID="login"
-                            accessible
-                            accessibilityLabel={'login'}
                             title="Log in" />
                     </View>   
                 </View>

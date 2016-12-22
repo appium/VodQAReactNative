@@ -49,7 +49,9 @@ class DrapAndDrop extends Component {
     renderDraggable() {
         if (this.state.showDraggable) {
             return (
-                <View style={styles.dragWrapper}>
+                <View style={styles.dragWrapper}
+                      testID="dragMe"
+                      accessibilityLabel={"dragMe"}>
                     <Animated.View
                         {...this.panResponder.panHandlers}
                         style={[this.state.pan.getLayout(), styles.circle]}>
@@ -70,7 +72,8 @@ class DrapAndDrop extends Component {
                 <View testID="dragDropContainer"
                     style={styles.dragDropContainer} >
                     <View onLayout={(event) => this.setDropZoneValues(event)}
-                        testID="dropZone"
+                        testID="dropzone"
+                          accessibilityLabel={"dropzone"}
                         style={styles.dropZone}>
                         <Text style={styles.dropText} >Drop here.</Text>
                     </View>
