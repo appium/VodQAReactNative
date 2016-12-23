@@ -39,16 +39,17 @@ class SamplesListScreen extends Component {
 
     render() {
         return (
-            <ScrollView>
+            <ScrollView testID="scrollView"
+                        accessibilityLabel="scrollView">
                 <View style={styles.container}>
-                    {this.getView('Carousel', 'Demos swipe left & right', 'carousel', Routes.CarouselScreen)}
-                    {this.getView('Photo View', 'Ping & Zoom', 'photoView', Routes.PhotoScreen)}
-                    {this.getView('Web View', 'View hacker news', 'webView', Routes.WebViewScreen)}
                     {this.getView('Slider', 'Slide your number', 'slider1', Routes.SliderScreen)}
                     {this.getView('Vertical swiping', 'Demos vertical swiping ', 'verticalSwipe', Routes.VerticalSwipe) }
                     {this.getView('Drag & Drop', 'Demo drag and drop', 'dragAndDrop', Routes.DragAndDrop)}
                     {this.getView('Double Tap', 'Demo double tap button', 'doubleTap', Routes.DoubleTap)}
                     {this.getView('Long Press', 'Demo Long press button', 'longPress', Routes.LongPress)}
+                    {this.getView('Photo View', 'Ping & Zoom', 'photoView', Routes.PhotoScreen)}
+                    {this.getView('Web View', 'View hacker news', 'webView', Routes.WebViewScreen)}
+                    {this.getView('Carousel', 'Demos swipe left & right', 'carousel', Routes.CarouselScreen)}
                 </View>
             </ScrollView>
         )

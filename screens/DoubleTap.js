@@ -44,9 +44,11 @@ class DoubleTap extends Component {
         return (
             <View style={styles.container}>
                 <TouchableHighlight onPress={this.handleClick}
-                    style={styles.button}>
+                    style={styles.button}
+                                    testID={"doubleTapMe"}
+                                    accessibilityLabel={"doubleTapMe"}>
                     <View>
-                        <Text style={styles.buttonText} >Double Tap Me</Text>
+                        <Text style={styles.buttonText}>Double Tap Me</Text>
                     </View>
                 </TouchableHighlight>
             </View>

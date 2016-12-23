@@ -25,7 +25,9 @@ class LongPress extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.HeaderText}>Long press the Botton</Text>
-                <TouchableOpacity 
+                <TouchableOpacity
+                    testID="longpress"
+                    accessibilityLabel="longpress"
                     style={styles.button}
                     onLongPress ={this.handleLongPress} >
                     <Text style={styles.buttonText}>Long Press Me</Text>
