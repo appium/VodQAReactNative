@@ -49,9 +49,7 @@ class DrapAndDrop extends Component {
     renderDraggable() {
         if (this.state.showDraggable) {
             return (
-                <View style={styles.dragWrapper}
-                      testID="dragMe"
-                      accessibilityLabel={"dragMe"}>
+                <View style={styles.dragWrapper} >
                     <Animated.View
                         {...this.panResponder.panHandlers}
                         style={[this.state.pan.getLayout(), styles.circle]}>
@@ -69,11 +67,9 @@ class DrapAndDrop extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View testID="dragDropContainer"
+                <View 
                     style={styles.dragDropContainer} >
                     <View onLayout={(event) => this.setDropZoneValues(event)}
-                        testID="dropzone"
-                          accessibilityLabel={"dropzone"}
                         style={styles.dropZone}>
                         <Text style={styles.dropText} >Drop here.</Text>
                     </View>
@@ -92,9 +88,9 @@ class DrapAndDrop extends Component {
 let CIRCLE_RADIUS = 36
 let Window = Dimensions.get('window')
 var styles = StyleSheet.create({
-    container:{
-        marginTop: (Platform.OS === 'ios')?64:56,
-        flex:1
+    container: {
+        marginTop: (Platform.OS === 'ios') ? 64 : 56,
+        flex: 1
     },
     text: {
         marginTop: 25,
@@ -103,8 +99,8 @@ var styles = StyleSheet.create({
         textAlign: 'center',
         color: '#fff'
     },
-    dropText:{
-        marginTop:32,
+    dropText: {
+        marginTop: 32,
         marginLeft: 5,
         marginRight: 5,
         textAlign: 'center',
@@ -117,14 +113,16 @@ var styles = StyleSheet.create({
         width: Window.width,
         height: 100,
         backgroundColor: '#2c3e50',
+        //flex: (Platform.OS === 'ios')? 0: 1
 
     },
     dragDropContainer: {
-        flex: 1
+        flex: (Platform.OS === 'ios') ?1:0,
+        
     },
     dragWrapper: {
         position: 'absolute',
-        top: Window.height / 2 - CIRCLE_RADIUS ,
+        top: Window.height / 2 - CIRCLE_RADIUS,
         left: Window.width / 2 - CIRCLE_RADIUS,
     },
     circle: {
