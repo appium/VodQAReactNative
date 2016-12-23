@@ -69,7 +69,7 @@ class LoginScreen extends Component {
                         testID="username"
                         accessible
                         accessibilityLabel={'username'}
-                        value= {this.state.username}
+                        value= {"admin"}
                         autoCapitalize="none"
                         autoCorrect={false}
                         />
@@ -81,7 +81,7 @@ class LoginScreen extends Component {
                         testID="password"
                         accessible
                         accessibilityLabel={'password'}
-                        value= {this.state.password}
+                        value= {"admin"}
                         autoCapitalize="none"
                         autoCorrect={false}
                         
