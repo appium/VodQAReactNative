@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet,Slider
 } from 'react-native'
-import Slider from 'react-native-slider'
 
 class SliderScreen extends Component {
 
@@ -18,35 +17,33 @@ class SliderScreen extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <View>
+                <Text style={styles.text} >
+                    {this.state.value && + this.state.value.toFixed(3)}
+                </Text>
                 <Slider
-                    testID="slider"
-                    accessible
-                    accessibilityLabel="slider"
+                    testID={"slider"}
+                    accessibilityLabel={"slider"}
+                    style={styles.slider}
                     minimumValue={0}
                     maximumValue={100}
-                    step={1}
-                    minimumTrackTintColor="#1fb28a"
-                    maximumTrackTintColor="#d3d3d3"
-                    thumbTintColor="#1a9274"
-                    onValueChange={(value) => this.setState({ value })}
-                    />
-                <Text style={styles.text}>Value: {this.state.value}</Text>
+                    onValueChange={(value) => this.setState({value: value})} />
             </View>
-        )
+        );
     }
 }
 
 var styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        marginHorizontal: 30,
-        alignItems: 'stretch',
-        justifyContent: 'center',
+    slider: {
+        width: 300,
+        margin: 50,
     },
     text: {
-        alignSelf: 'center'
-    }
-})
+        fontSize: 14,
+        textAlign: 'center',
+        fontWeight: '500',
+        margin: 10,
+    },
+});
 
 export default SliderScreen
