@@ -119,7 +119,9 @@ var styles = StyleSheet.create({
     dragDropContainer: {
         flex: (Platform.OS === 'ios') ?1:0,
         
+
     },
+   
     dragWrapper: {
         position: 'absolute',
         top: Window.height / 2 - CIRCLE_RADIUS,
