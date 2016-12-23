@@ -18,8 +18,8 @@ class LoginScreen extends Component {
         this.handlePasswordChange = this.handlePasswordChange.bind(this)
         
         this.state = {
-            username: '',
-            password: ''
+            username: 'admin',
+            password: 'admin'
         }
     }
 
