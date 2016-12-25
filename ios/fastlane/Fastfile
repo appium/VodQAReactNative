@@ -23,7 +23,14 @@ platform :ios do
   desc "Build a new Beta Build"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-    gym(scheme: "VodQAReactNative",use_legacy_build_api: true, export_method: "development", output_directory: "./build")
+    gym(
+      scheme: "VodQAReactNative",
+      use_legacy_build_api: true, 
+      export_method: "development", 
+      configuration:"release",
+      build_path:"./build",
+      output_directory:"./build"
+    )
   end
 
   after_all do |lane|
