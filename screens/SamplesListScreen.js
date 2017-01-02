@@ -23,14 +23,13 @@ class SamplesListScreen extends Component {
     getView(header, subHeader, testId, screenName) {
         return (
             <TouchableOpacity onPress={() => { this.goToScreen(screenName) } }
-                              testID={testId}
-                              accessibilityLabel={testId}
-                              >
+                testID={testId}
+                accessibilityLabel={testId}>
                 <View style={styles.itemView}>
                     <Text style={styles.header}
-                          testID={testId}
-                          accessible={true}
-                          accessibilityLabel={testId}>{header}</Text>
+                        testID={testId}
+                        accessible={true}
+                        accessibilityLabel={testId}>{header}</Text>
                     <Text style={styles.subHeader}>{subHeader}</Text>
                 </View>
             </TouchableOpacity>
@@ -40,15 +39,16 @@ class SamplesListScreen extends Component {
     render() {
         return (
             <ScrollView testID="scrollView"
-                        accessibilityLabel="scrollView">
+                accessibilityLabel="scrollView">
                 <View style={styles.container}>
                     {this.getView('Slider', 'Slide your number', 'slider1', Routes.SliderScreen)}
-                    {this.getView('Vertical swiping', 'Demos vertical swiping ', 'verticalSwipe', Routes.VerticalSwipe) }
+                    {this.getView('Vertical swiping', 'Demos vertical swiping ', 'verticalSwipe', Routes.VerticalSwipe)}
                     {this.getView('Drag & Drop', 'Demo drag and drop', 'dragAndDrop', Routes.DragAndDrop)}
                     {this.getView('Double Tap', 'Demo double tap button', 'doubleTap', Routes.DoubleTap)}
                     {this.getView('Long Press', 'Demo Long press button', 'longPress', Routes.LongPress)}
                     {this.getView('Photo View', 'Ping & Zoom', 'photoView', Routes.PhotoScreen)}
                     {this.getView('Web View', 'View hacker news', 'webView', Routes.WebViewScreen)}
+                    {this.getView('Native View', 'Demo for the Native View component', 'NativeView', Routes.NativeView)}
                     {this.getView('Carousel', 'Demos swipe left & right', 'carousel', Routes.CarouselScreen)}
                 </View>
             </ScrollView>

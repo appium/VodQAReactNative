@@ -28,6 +28,9 @@ let routes = {
     },
     LongPress: {
         title: 'Long Press Demo'
+    },
+    NativeView: {
+        title: 'Native View Demo'
     }
 }
 

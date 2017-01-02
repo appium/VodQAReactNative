@@ -69,7 +69,7 @@ class LoginScreen extends Component {
                         testID="username"
                         accessible
                         accessibilityLabel={'username'}
-                        value= {"admin"}
+                        value= {this.state.username}
                         autoCapitalize="none"
                         autoCorrect={false}
                         />
@@ -81,7 +81,7 @@ class LoginScreen extends Component {
                         testID="password"
                         accessible
                         accessibilityLabel={'password'}
-                        value= {"admin"}
+                        value={this.state.password}
                         autoCapitalize="none"
                         autoCorrect={false}
                         
@@ -107,7 +107,6 @@ const styles = create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        justifyContent: 'space-between'
     },
     logoContainer: {
         marginTop: 96,
@@ -120,7 +119,6 @@ const styles = create({
 
     },
     loginFieldsContainer: {
-        marginBottom: 64
     },
     loginFields: {
     ios: {
