@@ -41,6 +41,7 @@ class SamplesListScreen extends Component {
             <ScrollView testID="scrollView"
                 accessibilityLabel="scrollView">
                 <View style={styles.container}>
+                    {this.getView('Native View', 'Chained View', 'chainedView', Routes.NativeView)}
                     {this.getView('Slider', 'Slide your number', 'slider1', Routes.SliderScreen)}
                     {this.getView('Vertical swiping', 'Demos vertical swiping ', 'verticalSwipe', Routes.VerticalSwipe)}
                     {this.getView('Drag & Drop', 'Demo drag and drop', 'dragAndDrop', Routes.DragAndDrop)}
@@ -48,7 +49,6 @@ class SamplesListScreen extends Component {
                     {this.getView('Long Press', 'Demo Long press button', 'longPress', Routes.LongPress)}
                     {this.getView('Photo View', 'Ping & Zoom', 'photoView', Routes.PhotoScreen)}
                     {this.getView('Web View', 'View hacker news', 'webView', Routes.WebViewScreen)}
-                    {this.getView('Native View', 'Demo for the Native View component', 'NativeView', Routes.NativeView)}
                     {this.getView('Carousel', 'Demos swipe left & right', 'carousel', Routes.CarouselScreen)}
                 </View>
             </ScrollView>
