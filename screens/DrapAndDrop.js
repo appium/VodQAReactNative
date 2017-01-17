@@ -49,15 +49,11 @@ class DrapAndDrop extends Component {
     renderDraggable() {
         if (this.state.showDraggable) {
             return (
-                <View style={styles.dragWrapper}
-                testID={"dragMe"}
-                accessibilityLabel={"dragMe"}>
-                    <Animated.View
-                        {...this.panResponder.panHandlers}
-                        style={[this.state.pan.getLayout(), styles.circle]}>
-                        <Text style={styles.text}>Drag me!</Text>
-                    </Animated.View>
-                </View>
+                <Animated.View
+                    {...this.panResponder.panHandlers}
+                    style={[this.state.pan.getLayout(), styles.circle]}>
+                    <Text style={styles.text}>Drag me!</Text>
+                </Animated.View>
             )
         }
     }
@@ -69,12 +65,12 @@ class DrapAndDrop extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View 
+                <View
                     style={styles.dragDropContainer} >
                     <View onLayout={(event) => this.setDropZoneValues(event)}
                         style={styles.dropZone}
-                    testID={"dropzone"}
-                    accessibilityLabel={"dropzone"}>
+                        testID="dropzone"
+                        accessibilityLabel="dropzone">
                         <Text style={styles.dropText} >Drop here.</Text>
                     </View>
                     {this.renderDraggable()}
@@ -117,25 +113,18 @@ var styles = StyleSheet.create({
         width: Window.width,
         height: 100,
         backgroundColor: '#2c3e50',
-        //flex: (Platform.OS === 'ios')? 0: 1
-
     },
     dragDropContainer: {
-        flex: (Platform.OS === 'ios') ?1:0,
-        
+        flex: 1
+    },
 
-    },
-   
-    dragWrapper: {
-        position: 'absolute',
-        top: Window.height / 2 - CIRCLE_RADIUS,
-        left: Window.width / 2 - CIRCLE_RADIUS,
-    },
     circle: {
         backgroundColor: '#1abc9c',
         width: CIRCLE_RADIUS * 2,
         height: CIRCLE_RADIUS * 2,
-        borderRadius: CIRCLE_RADIUS
+        borderRadius: CIRCLE_RADIUS,
+        marginTop:Window.height/2-CIRCLE_RADIUS-100,
+        alignSelf:'center'
     }
 })
 
