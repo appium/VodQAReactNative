@@ -31,6 +31,9 @@ let routes = {
     },
     NativeView: {
         title: 'Native View Demo'
+    },
+    WheelPicker:{
+        title: 'Wheel Picker Demo'
     }
 }
 

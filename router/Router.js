@@ -10,6 +10,7 @@ import VerticalSwipe from '../screens/VerticalSwipe'
 import DoubleTap from '../screens/DoubleTap'
 import LongPress from '../screens/LongPress'
 import NativeView from '../screens/NativeView'
+import WheelPicker from '../screens/WheelPicker'
 
 
 
@@ -54,6 +55,8 @@ class Router extends Component {
                 return (<LongPress navigator={navigator} />)
             case Routes.NativeView.title:
                 return (<NativeView navigator={navigator} />)
+            case Routes.WheelPicker.title:
+                return (<WheelPicker navigator={navigator} />)
             default:
                 return
         }

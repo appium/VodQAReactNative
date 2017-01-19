@@ -50,6 +50,7 @@ class SamplesListScreen extends Component {
                     {this.getView('Photo View', 'Ping & Zoom', 'photoView', Routes.PhotoScreen)}
                     {this.getView('Web View', 'View hacker news', 'webView', Routes.WebViewScreen)}
                     {this.getView('Carousel', 'Demos swipe left & right', 'carousel', Routes.CarouselScreen)}
+                    {this.getView('Wheel Picker', 'Demos wheel picker color', 'wheelPicker', Routes.WheelPicker)}
                 </View>
             </ScrollView>
         )
