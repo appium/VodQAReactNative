@@ -52,7 +52,9 @@ class DrapAndDrop extends Component {
                 <Animated.View
                     {...this.panResponder.panHandlers}
                     style={[this.state.pan.getLayout(), styles.circle]}>
-                    <Text style={styles.text}>Drag me!</Text>
+                    <Text style={styles.text}
+                          testID="dragMe"
+                          accessibilityLabel="dragMe">Drag me!</Text>
                 </Animated.View>
             )
         }
@@ -77,7 +79,9 @@ class DrapAndDrop extends Component {
                     <View>
                         {!this.state.showDraggable &&
                             <View>
-                                <Text style={styles.dragSuccessLabel}>Circle dropped sucessfully!</Text>
+                                <Text style={styles.dragSuccessLabel}
+                                      testID="success"
+                                      accessibilityLabel="success">Circle dropped</Text>
                             </View>
                         }</View>
                 </View>
