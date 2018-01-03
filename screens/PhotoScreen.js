@@ -13,7 +13,7 @@ class PhotoScreen extends Component {
                 accessibilityLabel="photo">
                 <Text>Photo Screen</Text>
                 <PhotoView
-                    source={{ uri: 'https://facebook.github.io/react/img/logo_og.png' }}
+                    source={{ uri: 'https://www.thoughtworks.com/imgs/tw-logo.png' }}
                     minimumZoomScale={0.5}
                     maximumZoomScale={3}
                     androidScaleType="center"
