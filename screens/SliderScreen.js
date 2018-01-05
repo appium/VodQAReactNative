@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {
     View,
     Text,
-    StyleSheet,Slider
+    StyleSheet, Slider
 } from 'react-native'
 
 class SliderScreen extends Component {
@@ -18,16 +18,30 @@ class SliderScreen extends Component {
     render() {
         return (
             <View>
-                <Text style={styles.text} >
-                    {this.state.value && + this.state.value.toFixed(3)}
-                </Text>
-                <Slider
-                    testID={"slider"}
-                    accessibilityLabel={"slider"}
-                    style={styles.slider}
-                    minimumValue={0}
-                    maximumValue={100}
-                    onValueChange={(value) => this.setState({value: value})} />
+                <View>
+                    <Text style={styles.text} >
+                        {this.state.value && + this.state.value.toFixed(3)}
+                    </Text>
+                    <Slider
+                        testID={"slider"}
+                        accessibilityLabel={"slider"}
+                        style={styles.slider}
+                        minimumValue={0}
+                        maximumValue={100}
+                        onValueChange={(value) => this.setState({ value: value })} />
+                </View>
+                <View>
+                    <Text style={styles.text} >
+                        {this.state.value && + this.state.value.toFixed(3)}
+                    </Text>
+                    <Slider
+                        testID={"slider1"}
+                        accessibilityLabel={"slider1"}
+                        style={styles.slider}
+                        minimumValue={0}
+                        maximumValue={100}
+                        onValueChange={(value) => this.setState({ value: value })} />
+                </View>
             </View>
         );
     }

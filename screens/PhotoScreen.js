@@ -13,10 +13,7 @@ class PhotoScreen extends Component {
                 accessibilityLabel="photo">
                 <Text>Photo Screen</Text>
                 <PhotoView
-                    source={{ uri: 'https://www.thoughtworks.com/imgs/tw-logo.png' }}
-                    minimumZoomScale={0.5}
-                    maximumZoomScale={3}
-                    androidScaleType="center"
+                    source={{ uri: 'https://prelrik.files.wordpress.com/2016/06/appium.jpg?w=640' }}
                     style={{ width: 300, height: 300 }} />
             </View>
         )

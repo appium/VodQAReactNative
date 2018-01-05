@@ -22,7 +22,7 @@ class SamplesListScreen extends Component {
 
     getView(header, subHeader, testId, screenName) {
         return (
-            <TouchableOpacity onPress={() => { this.goToScreen(screenName) } }
+            <TouchableOpacity accessible={false} onPress={() => { this.goToScreen(screenName) } }
                 testID={testId}
                 accessibilityLabel={testId}>
                 <View style={styles.itemView}>
@@ -30,7 +30,10 @@ class SamplesListScreen extends Component {
                         testID={testId}
                         accessible={true}
                         accessibilityLabel={testId}>{header}</Text>
-                    <Text style={styles.subHeader}>{subHeader}</Text>
+                    <Text style={styles.subHeader}
+                        testID={subHeader}
+                        accessible={true}
+                        accessibilityLabel={subHeader}>{subHeader}</Text>
                 </View>
             </TouchableOpacity>
         )
