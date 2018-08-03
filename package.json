@@ -7,8 +7,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "^16.0.0-alpha.6",
-    "react-native": "^0.43.0",
+    "react": "^16.0.0",
+    "react-native": "^0.51.0-rc.3",
+    "react-native-deprecated-custom-components": "^0.1.2",
     "react-native-looped-carousel": "^0.1.4",
     "react-native-photo-view": "^1.2.0",
     "react-native-slider": "^0.9.1"
@@ -24,6 +25,7 @@
     "eslint-plugin-react-native": "^2.0.0",
     "jest": "17.0.3",
     "jest-react-native": "17.0.3",
-    "react-test-renderer": "15.3.2"
+    "react-test-renderer": "15.3.2",
+    "prop-types": "15.6.2"
   }
 }

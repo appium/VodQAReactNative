@@ -16,12 +16,13 @@ import WheelPicker from '../screens/WheelPicker'
 
 
 import {
-    Navigator,
     StyleSheet,
     Text,
     View,
     TouchableOpacity
 } from 'react-native'
+
+import {Navigator} from 'react-native-deprecated-custom-components'
 import Routes from './Routes'
 
 class Router extends Component {
