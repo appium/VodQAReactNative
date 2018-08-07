@@ -8,16 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* VodQAReactNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* VodQAReactNativeTests.m */; };
+		078D06740B193E5314C602C3 /* libPods-VodQAReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F05B24979D8F9E0D3DDBB38 /* libPods-VodQAReactNativeTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		3F2CD3BD869C98D97ECFA984 /* libPods-VodQAReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D963EE8356909B334E3EE1 /* libPods-VodQAReactNative.a */; };
 		8D6FC15521142C4000236F5F /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		8D6FC1862114341C00236F5F /* libyoga.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6FC1242114297A00236F5F /* libyoga.a */; };
 		8D6FC1D22114386100236F5F /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		8D6FC1D32114388E00236F5F /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8D6FC1DA21143A3700236F5F /* libRNPhotoView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6FC1D9211439C600236F5F /* libRNPhotoView.a */; };
+		8D99DB6B2119A21B00F619F0 /* libcxxreact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6FC1282114297A00236F5F /* libcxxreact.a */; };
+		8D99DB6C2119A22600F619F0 /* libdouble-conversion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6FC1342114297A00236F5F /* libdouble-conversion.a */; };
+		8D99DB6D2119A22C00F619F0 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6FC1032114297A00236F5F /* libRCTLinking.a */; };
+		8D99DB902119A4AA00F619F0 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
+		8D99DB912119A4AA00F619F0 /* libthird-party.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6FC1322114297A00236F5F /* libthird-party.a */; };
+		8D99DBBD2119A6BF00F619F0 /* libDoubleConversion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D99DBBC2119A6BF00F619F0 /* libDoubleConversion.a */; };
+		8D99DBBF2119A6BF00F619F0 /* libFolly.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D99DBBE2119A6BF00F619F0 /* libFolly.a */; };
+		8D99DBC12119A6BF00F619F0 /* libGLog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D99DBC02119A6BF00F619F0 /* libGLog.a */; };
+		8D99DBC82119A6BF00F619F0 /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
+		8D99DBC92119A6BF00F619F0 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -285,6 +297,7 @@
 		00E356EE1AD99517003FC87E /* VodQAReactNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VodQAReactNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* VodQAReactNativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VodQAReactNativeTests.m; sourceTree = "<group>"; };
+		0F9864F5994C08B9018E98AD /* Pods-VodQAReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodQAReactNativeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodQAReactNativeTests/Pods-VodQAReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* VodQAReactNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VodQAReactNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,10 +308,21 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = VodQAReactNative/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = VodQAReactNative/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		14D963EE8356909B334E3EE1 /* libPods-VodQAReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VodQAReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F05B24979D8F9E0D3DDBB38 /* libPods-VodQAReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VodQAReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5D996CB30324378F08CA3D /* Pods-VodQAReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodQAReactNativeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VodQAReactNativeTests/Pods-VodQAReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8D6FC1D4211439C500236F5F /* RNPhotoView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNPhotoView.xcodeproj; path = "../node_modules/react-native-photo-view/ios/RNPhotoView.xcodeproj"; sourceTree = "<group>"; };
+		8D99DB7A2119A4AA00F619F0 /* libDoubleConversion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libDoubleConversion.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D99DB7C2119A4AA00F619F0 /* libFolly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFolly.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D99DB7E2119A4AA00F619F0 /* libglog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D99DBBC2119A6BF00F619F0 /* libDoubleConversion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libDoubleConversion.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D99DBBE2119A6BF00F619F0 /* libFolly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFolly.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D99DBC02119A6BF00F619F0 /* libGLog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGLog.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		D9C9E4A12B764BB7789179AD /* Pods-VodQAReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodQAReactNative.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodQAReactNative/Pods-VodQAReactNative.debug.xcconfig"; sourceTree = "<group>"; };
+		EBC679A33013FD9F50805276 /* Pods-VodQAReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodQAReactNative.release.xcconfig"; path = "Pods/Target Support Files/Pods-VodQAReactNative/Pods-VodQAReactNative.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				078D06740B193E5314C602C3 /* libPods-VodQAReactNativeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,11 +339,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D99DBBD2119A6BF00F619F0 /* libDoubleConversion.a in Frameworks */,
+				8D99DBBF2119A6BF00F619F0 /* libFolly.a in Frameworks */,
+				8D99DBC12119A6BF00F619F0 /* libGLog.a in Frameworks */,
+				8D99DBC82119A6BF00F619F0 /* libRCTSettings.a in Frameworks */,
+				8D99DBC92119A6BF00F619F0 /* libRCTWebSocket.a in Frameworks */,
+				8D99DB902119A4AA00F619F0 /* libRCTNetwork.a in Frameworks */,
+				8D99DB912119A4AA00F619F0 /* libthird-party.a in Frameworks */,
+				8D99DB6D2119A22C00F619F0 /* libRCTLinking.a in Frameworks */,
+				8D99DB6C2119A22600F619F0 /* libdouble-conversion.a in Frameworks */,
+				8D99DB6B2119A21B00F619F0 /* libcxxreact.a in Frameworks */,
 				8D6FC1DA21143A3700236F5F /* libRNPhotoView.a in Frameworks */,
 				8D6FC1D32114388E00236F5F /* libRCTText.a in Frameworks */,
 				8D6FC1D22114386100236F5F /* libRCTImage.a in Frameworks */,
 				8D6FC1862114341C00236F5F /* libyoga.a in Frameworks */,
 				8D6FC15521142C4000236F5F /* libReact.a in Frameworks */,
+				3F2CD3BD869C98D97ECFA984 /* libPods-VodQAReactNative.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +475,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		362F0049435042E6B967851A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9C9E4A12B764BB7789179AD /* Pods-VodQAReactNative.debug.xcconfig */,
+				EBC679A33013FD9F50805276 /* Pods-VodQAReactNative.release.xcconfig */,
+				0F9864F5994C08B9018E98AD /* Pods-VodQAReactNativeTests.debug.xcconfig */,
+				2E5D996CB30324378F08CA3D /* Pods-VodQAReactNativeTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +532,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				8D6FC0FB2114297900236F5F /* Recovered References */,
 				8D6FC15121142BAA00236F5F /* Frameworks */,
+				362F0049435042E6B967851A /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -520,6 +568,14 @@
 		8D6FC15121142BAA00236F5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D99DBBC2119A6BF00F619F0 /* libDoubleConversion.a */,
+				8D99DBBE2119A6BF00F619F0 /* libFolly.a */,
+				8D99DBC02119A6BF00F619F0 /* libGLog.a */,
+				8D99DB7A2119A4AA00F619F0 /* libDoubleConversion.a */,
+				8D99DB7C2119A4AA00F619F0 /* libFolly.a */,
+				8D99DB7E2119A4AA00F619F0 /* libglog.a */,
+				14D963EE8356909B334E3EE1 /* libPods-VodQAReactNative.a */,
+				1F05B24979D8F9E0D3DDBB38 /* libPods-VodQAReactNativeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -539,6 +595,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "VodQAReactNativeTests" */;
 			buildPhases = (
+				50AD0CC682769C97A31D8F2F /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -557,6 +614,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "VodQAReactNative" */;
 			buildPhases = (
+				633ADEC476EE5A05012EFC33 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
@@ -941,6 +999,42 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		50AD0CC682769C97A31D8F2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VodQAReactNativeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		633ADEC476EE5A05012EFC33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VodQAReactNative-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -986,6 +1080,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F9864F5994C08B9018E98AD /* Pods-VodQAReactNativeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FT34T42Y8L;
@@ -1003,6 +1098,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E5D996CB30324378F08CA3D /* Pods-VodQAReactNativeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1017,6 +1113,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9C9E4A12B764BB7789179AD /* Pods-VodQAReactNative.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1034,6 +1131,11 @@
 					"-ObjC",
 					"-lc++",
 				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hariharanweb;
 				PRODUCT_NAME = VodQAReactNative;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1042,6 +1144,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBC679A33013FD9F50805276 /* Pods-VodQAReactNative.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1054,6 +1157,11 @@
 				INFOPLIST_FILE = VodQAReactNative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
