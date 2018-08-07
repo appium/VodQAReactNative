@@ -11,7 +11,7 @@
     "react-native": "^0.51.0-rc.3",
     "react-native-deprecated-custom-components": "^0.1.2",
     "react-native-looped-carousel": "^0.1.4",
-    "react-native-photo-view": "^1.2.0",
+    "react-native-photo-view": "^1.5.2",
     "react-native-slider": "^0.9.1"
   },
   "jest": {
