@@ -28,6 +28,8 @@ project.xcworkspace
 .idea
 .gradle
 local.properties
+android/app/build
+android/app/release
 
 # node.js
 #
@@ -37,7 +39,6 @@ npm-debug.log
 # BUCK
 buck-out/
 \.buckd/
-<<<<<<< ours
 android/app/libs
 android/keystores/debug.keystore
 
@@ -45,8 +46,8 @@ android/keystores/debug.keystore
 .vscode
 tsconfig.json
 typings/
-=======
 *.keystore
+!debug.keystore
 
 # fastlane
 #
@@ -58,4 +59,3 @@ typings/
 */fastlane/report.xml
 */fastlane/Preview.html
 */fastlane/screenshots
->>>>>>> theirs

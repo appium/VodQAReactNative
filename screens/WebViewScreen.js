@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import {
-    WebView
-} from 'react-native'
+import { WebView } from 'react-native-webview';
 
 class WebViewScreen extends Component {
     render() {
