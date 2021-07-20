@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "react": "16.13.1",
-    "react-native": "0.63.2",
+    "react-native": "0.64.1",
     "react-native-deprecated-custom-components": "^0.1.2",
     "react-native-looped-carousel": "^0.1.4",
     "react-native-photo-view": "^1.5.2",
