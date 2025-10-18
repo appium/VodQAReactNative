@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import PropTypes from 'prop-types';
+import {object as PropTypesObject} from 'prop-types';
 import {
     View,
     Image,
@@ -101,7 +101,7 @@ class LoginScreen extends Component {
 }
 
 LoginScreen.propTypes = Object.assign({}, Component.propTypes, {
-    navigator: PropTypes.object
+    navigator: PropTypesObject
 });
 
 const styles = create({

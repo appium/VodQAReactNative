@@ -30,7 +30,7 @@ export default [
     },
   },
   {
-    files: ['__tests__/**/*.{js,jsx,ts,tsx}'],
+    files: ['tests/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
         it: 'readonly',

@@ -7,6 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "build": "tsc --noEmit",
     "clean": "rm -rf build",
     "rebuild": "npm run clean && npm run build",
@@ -28,15 +30,17 @@
     }
   },
   "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
-    "testMatch": ["**/__tests__/**/*.(test|spec).(ts|tsx|js)"],
+    "preset": "react-native",
+    "testMatch": [
+      "**/tests/**/*.test.(ts|tsx|js)",
+      "**/tests/**/*.spec.(ts|tsx|js)"
+    ],
     "collectCoverageFrom": [
       "**/*.{ts,tsx,js,jsx}",
       "!**/node_modules/**",
       "!**/build/**",
-      "!**/coverage/**"
+      "!**/coverage/**",
+      "!**/tests/**"
     ]
   },
   "devDependencies": {

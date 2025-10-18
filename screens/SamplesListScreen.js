@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import {object as PropTypesObject} from 'prop-types';
 import {
     Text,
     StyleSheet,
@@ -62,7 +62,7 @@ class SamplesListScreen extends Component {
 }
 
 SamplesListScreen.propTypes = Object.assign({}, Component.propTypes, {
-    navigator: PropTypes.object
+    navigator: PropTypesObject
 });
 
 const styles = StyleSheet.create({
