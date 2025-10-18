@@ -36,7 +36,6 @@ android/app/release
 #
 node_modules/
 npm-debug.log
-__tests__/__snapshots__
 
 # BUCK
 buck-out/

@@ -37,11 +37,21 @@ jest.mock('react-native-deprecated-custom-components', () => {
   const React = require('react');
   const {View} = require('react-native');
 
+  class NavigatorComponent extends React.Component {
+    render() {
+      return React.createElement(View, this.props);
+    }
+  }
+
+  class NavigationBar extends React.Component {
+    render() {
+      return React.createElement(View, this.props);
+    }
+  }
+
+  NavigatorComponent.NavigationBar = NavigationBar;
+
   return {
-    Navigator: class Navigator extends React.Component {
-      render() {
-        return React.createElement(View, this.props);
-      }
-    },
+    Navigator: NavigatorComponent,
   };
 });
