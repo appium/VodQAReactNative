@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
     View,
     Text,
@@ -8,19 +8,19 @@ import {
     PanResponder,
     Platform
 
-} from 'react-native'
+} from 'react-native';
 
 class DrapAndDrop extends Component {
     constructor(props) {
-        super(props)
-        this.renderDraggable = this.renderDraggable.bind(this)
-        this.setDropZoneValues = this.setDropZoneValues.bind(this)
-        this.isDropZone = this.isDropZone.bind(this)
+        super(props);
+        this.renderDraggable = this.renderDraggable.bind(this);
+        this.setDropZoneValues = this.setDropZoneValues.bind(this);
+        this.isDropZone = this.isDropZone.bind(this);
         this.state = {
             showDraggable: true,
             dropZoneValues: null,
             pan: new Animated.ValueXY()
-        }
+        };
         this.panResponder = PanResponder.create({
             onStartShouldSetPanResponder: () => true,
             onPanResponderMove: Animated.event([null, {
@@ -32,19 +32,19 @@ class DrapAndDrop extends Component {
                     this.setState({
                         showDraggable: false,
 
-                    })
+                    });
                 } else {
                     Animated.spring(
                         this.state.pan,
                         { toValue: { x: 0, y: 0 } }
-                    ).start()
+                    ).start();
                 }
             }
-        })
+        });
     }
     isDropZone(gesture) {
-        var dz = this.state.dropZoneValues
-        return (gesture.moveY - 64) > dz.y && (gesture.moveY - 64) < dz.y + dz.height
+        let dz = this.state.dropZoneValues;
+        return (gesture.moveY - 64) > dz.y && (gesture.moveY - 64) < dz.y + dz.height;
     }
     renderDraggable() {
         if (this.state.showDraggable) {
@@ -56,13 +56,13 @@ class DrapAndDrop extends Component {
                           testID="dragMe"
                           accessibilityLabel="dragMe">Drag me!</Text>
                 </Animated.View>
-            )
+            );
         }
     }
     setDropZoneValues(event) {
         this.setState({
             dropZoneValues: event.nativeEvent.layout
-        })
+        });
     }
     render() {
         return (
@@ -86,12 +86,12 @@ class DrapAndDrop extends Component {
                         }</View>
                 </View>
             </View>
-        )
+        );
     }
 }
-let CIRCLE_RADIUS = 36
-let Window = Dimensions.get('window')
-var styles = StyleSheet.create({
+let CIRCLE_RADIUS = 36;
+let Window = Dimensions.get('window');
+const styles = StyleSheet.create({
     container: {
         marginTop: (Platform.OS === 'ios') ? 64 : 56,
         flex: 1
@@ -127,10 +127,10 @@ var styles = StyleSheet.create({
         width: CIRCLE_RADIUS * 2,
         height: CIRCLE_RADIUS * 2,
         borderRadius: CIRCLE_RADIUS,
-        marginTop:Window.height/2-CIRCLE_RADIUS-100,
-        alignSelf:'center'
+        marginTop: Window.height / 2 - CIRCLE_RADIUS - 100,
+        alignSelf: 'center'
     }
-})
+});
 
 
-export default DrapAndDrop
+export default DrapAndDrop;

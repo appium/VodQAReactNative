@@ -20,7 +20,7 @@ let routes = {
     VerticalSwipe: {
         title: 'Vertical swiping'
     },
-    DragAndDrop:{
+    DragAndDrop: {
         title: 'Drag & Drop'
     },
     DoubleTap: {
@@ -32,9 +32,9 @@ let routes = {
     NativeView: {
         title: 'Native View Demo'
     },
-    WheelPicker:{
+    WheelPicker: {
         title: 'Wheel Picker Demo'
     }
-}
+};
 
-export default routes
+export default routes;

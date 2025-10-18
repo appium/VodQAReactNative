@@ -1,25 +1,25 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
     View,
     Text,
     TouchableOpacity,
-    Alert 
-} from 'react-native'
-import { create } from '../helpers/PlatformSpecificStyles'
+    Alert
+} from 'react-native';
+import { create } from '../helpers/PlatformSpecificStyles';
 
 
 class LongPress extends Component {
 
     constructor(props) {
-        super(props)
-        this.handleLongPress = this.handleLongPress.bind(this)
+        super(props);
+        this.handleLongPress = this.handleLongPress.bind(this);
     }
     handleLongPress() {
         Alert.alert('Long Pressed',
             'you pressed me hard :P',
             [
                 { text: 'OK', onPress: () => { } },
-            ])
+            ]);
     }
     render() {
         return (
@@ -33,19 +33,19 @@ class LongPress extends Component {
                     <Text style={styles.buttonText}>Long Press Me</Text>
                 </TouchableOpacity>
             </View>
-        )
+        );
     }
 }
 const styles = create({
     container: {
         justifyContent: 'space-around',
         alignItems: 'center',
-        flex: 1 
+        flex: 1
     },
     HeaderText: {
         fontSize: 18,
         fontWeight: 'bold'
-        
+
     },
    button: {
        padding: 16,
@@ -60,5 +60,5 @@ const styles = create({
        fontWeight: 'bold'
 
    }
-})
-export default LongPress
+});
+export default LongPress;

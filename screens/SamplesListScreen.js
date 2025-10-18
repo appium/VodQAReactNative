@@ -1,29 +1,29 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
     Text,
     StyleSheet,
     ScrollView,
     View,
     TouchableOpacity
-} from 'react-native'
-import Routes from '../router/Routes'
+} from 'react-native';
+import Routes from '../router/Routes';
 
 class SamplesListScreen extends Component {
 
     constructor(props) {
-        super(props)
-        this.getView = this.getView.bind(this)
-        this.goToScreen = this.goToScreen.bind(this)
+        super(props);
+        this.getView = this.getView.bind(this);
+        this.goToScreen = this.goToScreen.bind(this);
     }
 
     goToScreen(screenName) {
-        this.props.navigator.push(screenName)
+        this.props.navigator.push(screenName);
     }
 
     getView(header, subHeader, testId, screenName) {
         return (
-            <TouchableOpacity accessible={false} onPress={() => { this.goToScreen(screenName) } }
+            <TouchableOpacity accessible={false} onPress={() => { this.goToScreen(screenName); } }
                 testID={testId}
                 accessibilityLabel={testId}>
                 <View style={styles.itemView}>
@@ -37,7 +37,7 @@ class SamplesListScreen extends Component {
                         accessibilityLabel={subHeader}>{subHeader}</Text>
                 </View>
             </TouchableOpacity>
-        )
+        );
     }
 
     render() {
@@ -57,13 +57,13 @@ class SamplesListScreen extends Component {
                     {this.getView('Wheel Picker', 'Demos wheel picker color', 'wheelPicker', Routes.WheelPicker)}
                 </View>
             </ScrollView>
-        )
+        );
     }
 }
 
 SamplesListScreen.propTypes = Object.assign({}, Component.propTypes, {
     navigator: PropTypes.object
-})
+});
 
 const styles = StyleSheet.create({
     container: {
@@ -83,6 +83,6 @@ const styles = StyleSheet.create({
     subHeader: {
         color: '#696969'
     }
-})
+});
 
-export default SamplesListScreen
+export default SamplesListScreen;

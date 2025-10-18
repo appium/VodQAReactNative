@@ -1,42 +1,42 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
     View,
     TouchableHighlight,
     Text,
     Alert
-} from 'react-native'
-import { create } from '../helpers/PlatformSpecificStyles'
+} from 'react-native';
+import { create } from '../helpers/PlatformSpecificStyles';
 
-const DOUBLE_PRESS_DELAY = 300
+const DOUBLE_PRESS_DELAY = 300;
 class DoubleTap extends Component {
 
     constructor(props) {
-        super(props)
-        this.handleDoubleTap = this.handleDoubleTap.bind(this)
-        this.handleClick = this.handleClick.bind(this)
+        super(props);
+        this.handleDoubleTap = this.handleDoubleTap.bind(this);
+        this.handleClick = this.handleClick.bind(this);
         this.state = {
             timeLastPressed: undefined
-        }
-        
+        };
+
     }
 
 
-    
+
     handleDoubleTap() {
         Alert.alert('Double Tap',
             'Double tap successful!',
             [
                 { text: 'OK', onPress: () => { } },
-            ])
+            ]);
     }
 
     handleClick() {
-        let now = new Date().getTime()
+        let now = new Date().getTime();
         if (this.state.timeLastPressed && (now - this.state.timeLastPressed) < DOUBLE_PRESS_DELAY) {
-            this.setState({ timeLastPressed: undefined })
-            this.handleDoubleTap()
+            this.setState({ timeLastPressed: undefined });
+            this.handleDoubleTap();
         }
-        this.setState({ timeLastPressed: now })
+        this.setState({ timeLastPressed: now });
     }
 
 
@@ -45,14 +45,14 @@ class DoubleTap extends Component {
             <View style={styles.container}>
                 <TouchableHighlight onPress={this.handleClick}
                     style={styles.button}
-                                    testID={"doubleTapMe"}
-                                    accessibilityLabel={"doubleTapMe"}>
+                                    testID={'doubleTapMe'}
+                                    accessibilityLabel={'doubleTapMe'}>
                     <View>
                         <Text style={styles.buttonText}>Double Tap Me</Text>
                     </View>
                 </TouchableHighlight>
             </View>
-        )
+        );
     }
 }
 const styles = create({
@@ -61,7 +61,7 @@ const styles = create({
         alignItems: 'center',
         flex: 1
     },
-   
+
     button: {
         padding: 16,
         backgroundColor: '#0D77B7',
@@ -75,5 +75,5 @@ const styles = create({
         fontWeight: 'bold'
 
     }
-})
-export default DoubleTap
+});
+export default DoubleTap;

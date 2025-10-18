@@ -1,27 +1,27 @@
-import React, { Component} from 'react'
-import PropTypes from 'prop-types'
+import React, { Component} from 'react';
+import PropTypes from 'prop-types';
 import {
     View,
     Image,
     TextInput,
     Button,
     Alert
-} from 'react-native'
-import {create} from '../helpers/PlatformSpecificStyles'
-import Routes from '../router/Routes'
+} from 'react-native';
+import {create} from '../helpers/PlatformSpecificStyles';
+import Routes from '../router/Routes';
 
 class LoginScreen extends Component {
 
     constructor(props) {
-        super(props)
-        this.handleLogin = this.handleLogin.bind(this)
-        this.handleUserNameChange = this.handleUserNameChange.bind(this)
-        this.handlePasswordChange = this.handlePasswordChange.bind(this)
-        
+        super(props);
+        this.handleLogin = this.handleLogin.bind(this);
+        this.handleUserNameChange = this.handleUserNameChange.bind(this);
+        this.handlePasswordChange = this.handlePasswordChange.bind(this);
+
         this.state = {
             username: 'admin',
             password: 'admin'
-        }
+        };
     }
 
     handleLogin() {
@@ -30,25 +30,25 @@ class LoginScreen extends Component {
                 'Please enter Username or password',
                 [
                     { text: 'OK', onPress: () => { } },
-                ])
-        }else {
+                ]);
+        } else {
             if (this.state.username === 'admin' && this.state.password === 'admin') {
-                this.props.navigator.push({ title: Routes.SamplesListScreen.title })
+                this.props.navigator.push({ title: Routes.SamplesListScreen.title });
             } else {
                 Alert.alert('Oops',
                     'Invalid  Credentials',
                     [
                         { text: 'OK', onPress: () => { } },
-                    ])
+                    ]);
             }
         }
     }
 
     handleUserNameChange(text) {
-        this.setState({username: text})
+        this.setState({username: text});
     }
     handlePasswordChange(text) {
-        this.setState({ password: text })
+        this.setState({ password: text });
     }
 
 
@@ -85,7 +85,7 @@ class LoginScreen extends Component {
                         value={this.state.password}
                         autoCapitalize="none"
                         autoCorrect={false}
-                        
+
                         />
                     <View style={styles.loginButton}
                           testID="login"
@@ -93,16 +93,16 @@ class LoginScreen extends Component {
                           accessibilityLabel={'login'}>
                         <Button onPress={this.handleLogin}
                             title="Log in" />
-                    </View>   
+                    </View>
                 </View>
             </View>
-        )
+        );
     }
 }
 
 LoginScreen.propTypes = Object.assign({}, Component.propTypes, {
     navigator: PropTypes.object
-})
+});
 
 const styles = create({
     container: {
@@ -135,6 +135,6 @@ const styles = create({
     loginButton: {
         marginHorizontal: 24
     }
-})
+});
 
-export default LoginScreen
+export default LoginScreen;

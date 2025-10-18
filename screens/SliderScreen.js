@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
     View,
     Text,
     StyleSheet, Slider
-} from 'react-native'
+} from 'react-native';
 
 class SliderScreen extends Component {
 
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             value: 0
-        }
+        };
     }
 
 
@@ -20,34 +20,34 @@ class SliderScreen extends Component {
             <View>
                 <View>
                     <Text style={styles.text} >
-                        {this.state.value && + this.state.value.toFixed(3)}
+                        {this.state.value && +this.state.value.toFixed(3)}
                     </Text>
                     <Slider
-                        testID={"slider"}
-                        accessibilityLabel={"slider"}
+                        testID={'slider'}
+                        accessibilityLabel={'slider'}
                         style={styles.slider}
                         minimumValue={0}
                         maximumValue={100}
-                        onValueChange={(value) => this.setState({ value: value })} />
+                        onValueChange={(value) => this.setState({ value })} />
                 </View>
                 <View>
                     <Text style={styles.text} >
-                        {this.state.value && + this.state.value.toFixed(3)}
+                        {this.state.value && +this.state.value.toFixed(3)}
                     </Text>
                     <Slider
-                        testID={"slider1"}
-                        accessibilityLabel={"slider1"}
+                        testID={'slider1'}
+                        accessibilityLabel={'slider1'}
                         style={styles.slider}
                         minimumValue={0}
                         maximumValue={100}
-                        onValueChange={(value) => this.setState({ value: value })} />
+                        onValueChange={(value) => this.setState({ value })} />
                 </View>
             </View>
         );
     }
 }
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
     slider: {
         width: 300,
         margin: 50,
@@ -60,4 +60,4 @@ var styles = StyleSheet.create({
     },
 });
 
-export default SliderScreen
+export default SliderScreen;

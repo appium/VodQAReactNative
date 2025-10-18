@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
     View,
     Text
-} from 'react-native'
+} from 'react-native';
 import PhotoView from 'react-native-photo-view';
 
 class PhotoScreen extends Component {
@@ -16,8 +16,8 @@ class PhotoScreen extends Component {
                     source={{ uri: 'https://prelrik.files.wordpress.com/2016/06/appium.jpg?w=640' }}
                     style={{ width: 300, height: 300 }} />
             </View>
-        )
+        );
     }
 }
 
-export default PhotoScreen
+export default PhotoScreen;

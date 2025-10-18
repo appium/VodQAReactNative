@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
     Picker,
     StyleSheet,
@@ -6,34 +6,33 @@ import {
     Dimensions,
     Text,
     Platform
-} from 'react-native'
+} from 'react-native';
 class WheelPicker extends Component {
 
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             colors: ['red', 'green', 'blue', 'black'],
             selectedColor: 'red'
-        }
-        this.handleOnValueChnage = this.handleOnValueChnage.bind(this)
+        };
+        this.handleOnValueChnage = this.handleOnValueChnage.bind(this);
     }
 
     onValueChange(key, value) {
-        const newState = {}
-        newState[key] = value
-        this.setState(newState)
+        const newState = {};
+        newState[key] = value;
+        this.setState(newState);
     }
     handleOnValueChnage(color) {
-        console.log(color)
         this.setState({
             selectedColor: color
-        })
+        });
 
     }
 
     render() {
-        var PickerItem = Picker.Item
-        let Window = Dimensions.get('window')
+        let PickerItem = Picker.Item;
+        let Window = Dimensions.get('window');
         return (
             <View style={styles.container}>
                 <View style={{ backgroundColor: this.state.selectedColor, width: Window.width, height: 50, justifyContent: 'center' }} >
@@ -43,19 +42,17 @@ class WheelPicker extends Component {
                     mode="dropdown"
                     selectedValue={this.state.selectedColor}
                     onValueChange={(color) => this.handleOnValueChnage(color)}>
-                    {this.state.colors.map((s, i) => {
-                        return (<PickerItem
+                    {this.state.colors.map((s, i) => (<PickerItem
                             key={i}
                             value={s}
-                            label={s} />)
-                    })}</Picker>
+                            label={s} />))}</Picker>
 
             </View >
-        )
+        );
     }
 
 }
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -67,5 +64,5 @@ var styles = StyleSheet.create({
         width: 320
 
     },
-})
-export default WheelPicker
+});
+export default WheelPicker;
