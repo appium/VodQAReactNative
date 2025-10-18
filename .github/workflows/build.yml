@@ -56,13 +56,18 @@ jobs:
           path: android/app/build/outputs/apk/release/app-release.apk
           retention-days: 30
 
-  build-ios:
-    name: Build iOS IPA
-    runs-on: macos-latest
+  build-ios-simulator:
+    name: Build iOS Simulator
+    runs-on: macos-15
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '26'
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -92,14 +97,14 @@ jobs:
           cd ios
           pod install --repo-update
 
-      - name: Build iOS app
-        run: npm run build:ios:release
+      - name: Build iOS Simulator app
+        run: npm run build:ios:simulator:release
 
-      - name: Upload iOS Archive
+      - name: Upload iOS Simulator app
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: actions/upload-artifact@v4
         with:
-          name: ios-archive
-          path: ios/build/VodQAReactNative.xcarchive
+          name: ios-simulator-app
+          path: ios/build/DerivedData/VodQAReactNative-simulator-release.zip
           retention-days: 30
 
