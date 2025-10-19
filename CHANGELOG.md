@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1](https://github.com/appium/VodQAReactNative/compare/v1.0.0...v1.0.1) (2025-10-19)
+
+
+### Bug Fixes
+
+* format config ([2dc869b](https://github.com/appium/VodQAReactNative/commit/2dc869b058432eebe726fcaf375d58848c806842))
+
+
+### Miscellaneous Chores
+
+* Add back button margin ([#48](https://github.com/appium/VodQAReactNative/issues/48)) ([085188e](https://github.com/appium/VodQAReactNative/commit/085188e6a5a5db43589ec4732dc9df581d713311))
+* Exclude .md files from prettify rules ([#46](https://github.com/appium/VodQAReactNative/issues/46)) ([ec112cf](https://github.com/appium/VodQAReactNative/commit/ec112cf62a27db5eeed83bb1a1de1f8cfdeb6233))
+
 ## 1.0.0 (2025-10-19)
 
 
