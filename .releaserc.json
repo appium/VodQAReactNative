@@ -36,7 +36,7 @@
             {"type": "style", "section": "Styles", "hidden": true},
             {
               "type": "chore",
-              "section": "Miscellaneous Chores",
+              "section": "Miscellaneous Chores"
             },
             {"type": "test", "section": "Tests", "hidden": true},
             {"type": "build", "section": "Build System", "hidden": true},
