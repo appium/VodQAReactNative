@@ -1,15 +1,22 @@
-import React, { Component } from 'react'
-import { WebView } from 'react-native-webview';
+import React, {Component} from 'react';
+import {StyleSheet} from 'react-native';
+import {WebView} from 'react-native-webview';
 
 class WebViewScreen extends Component {
-    render() {
-        return (
-            <WebView
-                source={{ uri: 'https://news.ycombinator.com/' }}
-                style={{ marginTop: 62 }}
-                />
-        )
-    }
+  render() {
+    return (
+      <WebView
+        source={{uri: 'https://news.ycombinator.com/'}}
+        style={styles.webView}
+      />
+    );
+  }
 }
 
-export default WebViewScreen
+const styles = StyleSheet.create({
+  webView: {
+    marginTop: 62,
+  },
+});
+
+export default WebViewScreen;

@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+ios/Pods/
+android/build/
+android/app/build/
+
+# Generated files
+ios/build/
+*.lock
+package-lock.json
+
+# Build outputs
+*.apk
+*.ipa
+*.xcarchive
+
