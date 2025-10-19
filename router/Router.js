@@ -133,6 +133,7 @@ const styles = StyleSheet.create({
     minWidth: 60,
     minHeight: 44,
     justifyContent: 'center',
+    marginTop: 10,
   },
   backButtonText: {
     color: 'white',
