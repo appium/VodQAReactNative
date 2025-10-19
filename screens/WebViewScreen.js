@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {StyleSheet} from 'react-native';
 import {WebView} from 'react-native-webview';
 
 class WebViewScreen extends Component {
@@ -6,10 +7,16 @@ class WebViewScreen extends Component {
     return (
       <WebView
         source={{uri: 'https://news.ycombinator.com/'}}
-        style={{marginTop: 62}}
+        style={styles.webView}
       />
     );
   }
 }
+
+const styles = StyleSheet.create({
+  webView: {
+    marginTop: 62,
+  },
+});
 
 export default WebViewScreen;

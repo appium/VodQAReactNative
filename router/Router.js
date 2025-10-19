@@ -69,8 +69,9 @@ class Router extends Component {
           onPress={() => {
             navigator.pop();
           }}
-          style={{paddingVertical: 12, paddingLeft: 8}}>
-          <Text style={{color: 'white'}}>Back</Text>
+          style={styles.backButton}
+          hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}>
+          <Text style={styles.backButtonText}>Back</Text>
         </TouchableOpacity>
       </View>
     );
@@ -86,7 +87,7 @@ class Router extends Component {
           Title: (route, navigator, index, navState) =>
             this.renderTitle(route, navigator, index, navState),
         }}
-        style={{backgroundColor: '#26aa5c'}}
+        style={styles.navBar}
       />
     );
   }
@@ -124,6 +125,20 @@ const styles = StyleSheet.create({
   titleText: {
     color: '#fff',
     fontSize: 18,
+  },
+  backButton: {
+    paddingVertical: 12,
+    paddingLeft: 12,
+    paddingRight: 16,
+    minWidth: 60,
+    minHeight: 44,
+    justifyContent: 'center',
+  },
+  backButtonText: {
+    color: 'white',
+  },
+  navBar: {
+    backgroundColor: '#26aa5c',
   },
 });
 export default Router;

@@ -28,13 +28,14 @@ class WheelPicker extends Component {
     return (
       <View style={styles.container}>
         <View
-          style={{
-            backgroundColor: this.state.selectedColor,
-            width: Window.width,
-            height: 50,
-            justifyContent: 'center',
-          }}>
-          <Text style={{textAlign: 'center', color: 'white'}}>
+          style={[
+            styles.colorDisplay,
+            {
+              backgroundColor: this.state.selectedColor,
+              width: Window.width,
+            },
+          ]}>
+          <Text style={styles.colorText}>
             {' '}
             Current Color: {this.state.selectedColor}{' '}
           </Text>
@@ -59,6 +60,14 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: Platform.OS === 'ios' ? 64 : 56,
     marginBottom: Platform.OS === 'ios' ? 200 : 350,
+  },
+  colorDisplay: {
+    height: 50,
+    justifyContent: 'center',
+  },
+  colorText: {
+    textAlign: 'center',
+    color: 'white',
   },
   picker: {
     width: 320,
