@@ -3,8 +3,13 @@ name: Build Apps (Reusable)
 on:
   workflow_call:
     inputs:
-      upload_artifacts:
+      upload_release_artifacts:
         description: 'Whether to upload build artifacts to a release'
+        required: false
+        type: boolean
+        default: false
+      upload_pr_artifacts:
+        description: 'Whether to upload build artifacts as GitHub Actions artifacts'
         required: false
         type: boolean
         default: false
@@ -62,8 +67,16 @@ jobs:
       - name: Build Android APK
         run: npm run build:android:release
 
+      - name: Upload Android APK as Artifact
+        if: inputs.upload_pr_artifacts == true
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
+          retention-days: 7
+
       - name: Upload Android APK to Release
-        if: inputs.upload_artifacts == true
+        if: inputs.upload_release_artifacts == true
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ inputs.release_tag }}
@@ -116,8 +129,16 @@ jobs:
       - name: Build iOS Simulator app
         run: npm run build:ios:simulator:release
 
+      - name: Upload iOS Simulator app as Artifact
+        if: inputs.upload_pr_artifacts == true
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-simulator-app
+          path: ios/build/DerivedData/VodQAReactNative-simulator-release.zip
+          retention-days: 7
+
       - name: Upload iOS Simulator app to Release
-        if: inputs.upload_artifacts == true
+        if: inputs.upload_release_artifacts == true
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ inputs.release_tag }}
