@@ -22,7 +22,7 @@
     "build:ios:clean": "cd ios && xcodebuild -workspace VodQAReactNative.xcworkspace -scheme VodQAReactNative clean"
   },
   "dependencies": {
-    "@react-native-community/slider": "^4.5.2",
+    "@react-native-community/slider": "^5.1.0",
     "@react-native-picker/picker": "^2.8.1",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
