@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/appium/VodQAReactNative/compare/v1.0.2...v1.1.0) (2025-10-27)
+
+
+### Features
+
+* Upgrade to React Native 0.81 ([#61](https://github.com/appium/VodQAReactNative/issues/61)) ([f8138ee](https://github.com/appium/VodQAReactNative/commit/f8138ee2b008d14f62220dbce35a922d9e32af93))
+
 ## [1.0.2](https://github.com/appium/VodQAReactNative/compare/v1.0.1...v1.0.2) (2025-10-27)
 
 
