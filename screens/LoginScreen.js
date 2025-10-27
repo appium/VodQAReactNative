@@ -24,7 +24,7 @@ class LoginScreen extends Component {
       ]);
     } else {
       if (this.state.username === 'admin' && this.state.password === 'admin') {
-        this.props.navigator.push({title: Routes.SamplesListScreen.title});
+        this.props.navigation.navigate(Routes.SamplesListScreen.title);
       } else {
         Alert.alert('Oops', 'Invalid  Credentials', [
           {text: 'OK', onPress: () => {}},
@@ -88,7 +88,7 @@ class LoginScreen extends Component {
 }
 
 LoginScreen.propTypes = Object.assign({}, Component.propTypes, {
-  navigator: PropTypesObject,
+  navigation: PropTypesObject,
 });
 
 const styles = create({

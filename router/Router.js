@@ -1,4 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import LoginScreen from '../screens/LoginScreen';
 import SamplesListScreen from '../screens/SamplesListScreen';
 import CarouselScreen from '../screens/CarouselScreen';
@@ -12,134 +14,87 @@ import LongPress from '../screens/LongPress';
 import NativeView from '../screens/NativeView';
 import WheelPicker from '../screens/WheelPicker';
 
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-
-import {Navigator} from 'react-native-deprecated-custom-components';
 import Routes from './Routes';
 
-class Router extends Component {
-  constructor(props) {
-    super(props);
-    this.renderScene = this.renderScene.bind(this);
-  }
+const Stack = createStackNavigator();
 
-  renderScene(route, navigator) {
-    switch (route.title) {
-      case Routes.LoginScreen.title:
-        return <LoginScreen navigator={navigator} />;
-      case Routes.SamplesListScreen.title:
-        return <SamplesListScreen navigator={navigator} />;
-      case Routes.CarouselScreen.title:
-        return <CarouselScreen navigator={navigator} />;
-      case Routes.PhotoScreen.title:
-        return <PhotoScreen navigator={navigator} />;
-      case Routes.WebViewScreen.title:
-        return <WebViewScreen navigator={navigator} />;
-      case Routes.SliderScreen.title:
-        return <SliderScreen navigator={navigator} />;
-      case Routes.VerticalSwipe.title:
-        return <VerticalSwipe navigator={navigator} />;
-      case Routes.DragAndDrop.title:
-        return <DrapAndDrop navigator={navigator} />;
-      case Routes.DoubleTap.title:
-        return <DoubleTap navigator={navigator} />;
-      case Routes.LongPress.title:
-        return <LongPress navigator={navigator} />;
-      case Routes.NativeView.title:
-        return <NativeView navigator={navigator} />;
-      case Routes.WheelPicker.title:
-        return <WheelPicker navigator={navigator} />;
-      default:
-        return;
-    }
-  }
-
-  renderTitle(route) {
-    return (
-      <View style={styles.title}>
-        <Text style={styles.titleText}>{route.title}</Text>
-      </View>
-    );
-  }
-
-  renderLeftButton(route, navigator) {
-    return (
-      <View>
-        <TouchableOpacity
-          onPress={() => {
-            navigator.pop();
-          }}
-          style={styles.backButton}
-          hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}>
-          <Text style={styles.backButtonText}>Back</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
-
-  renderNavBar() {
-    return (
-      <Navigator.NavigationBar
-        routeMapper={{
-          LeftButton: (route, navigator, index, navState) =>
-            this.renderLeftButton(route, navigator, index, navState),
-          RightButton: () => null,
-          Title: (route, navigator, index, navState) =>
-            this.renderTitle(route, navigator, index, navState),
-        }}
-        style={styles.navBar}
-      />
-    );
-  }
-
-  render() {
-    const routes = [
-      {title: Routes.LoginScreen.title},
-      {title: Routes.SamplesListScreen.title},
-      {title: Routes.CarouselScreen.title},
-      {title: Routes.PhotoScreen.title},
-      {title: Routes.WebViewScreen.title},
-      {title: Routes.SliderScreen.title},
-      {title: Routes.VerticalSwipe.title},
-    ];
-    // todo status bar styling in correct place.
-    return (
-      <View style={styles.mainContainer}>
-        <Navigator
-          initialRoute={routes[0]}
-          initialRouteStack={routes}
-          renderScene={this.renderScene}
-          navigationBar={this.renderNavBar()}
+function Router() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName={Routes.LoginScreen.title}
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#26aa5c',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            fontSize: 18,
+          },
+        }}>
+        <Stack.Screen
+          name={Routes.LoginScreen.title}
+          component={LoginScreen}
+          options={{ title: Routes.LoginScreen.title }}
         />
-      </View>
-    );
-  }
+        <Stack.Screen
+          name={Routes.SamplesListScreen.title}
+          component={SamplesListScreen}
+          options={{ title: Routes.SamplesListScreen.title }}
+        />
+        <Stack.Screen
+          name={Routes.CarouselScreen.title}
+          component={CarouselScreen}
+          options={{ title: Routes.CarouselScreen.title }}
+        />
+        <Stack.Screen
+          name={Routes.PhotoScreen.title}
+          component={PhotoScreen}
+          options={{ title: Routes.PhotoScreen.title }}
+        />
+        <Stack.Screen
+          name={Routes.WebViewScreen.title}
+          component={WebViewScreen}
+          options={{ title: Routes.WebViewScreen.title }}
+        />
+        <Stack.Screen
+          name={Routes.SliderScreen.title}
+          component={SliderScreen}
+          options={{ title: Routes.SliderScreen.title }}
+        />
+        <Stack.Screen
+          name={Routes.VerticalSwipe.title}
+          component={VerticalSwipe}
+          options={{ title: Routes.VerticalSwipe.title }}
+        />
+        <Stack.Screen
+          name={Routes.DragAndDrop.title}
+          component={DrapAndDrop}
+          options={{ title: Routes.DragAndDrop.title }}
+        />
+        <Stack.Screen
+          name={Routes.DoubleTap.title}
+          component={DoubleTap}
+          options={{ title: Routes.DoubleTap.title }}
+        />
+        <Stack.Screen
+          name={Routes.LongPress.title}
+          component={LongPress}
+          options={{ title: Routes.LongPress.title }}
+        />
+        <Stack.Screen
+          name={Routes.NativeView.title}
+          component={NativeView}
+          options={{ title: Routes.NativeView.title }}
+        />
+        <Stack.Screen
+          name={Routes.WheelPicker.title}
+          component={WheelPicker}
+          options={{ title: Routes.WheelPicker.title }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-  },
-  title: {
-    paddingTop: 12,
-  },
-  titleText: {
-    color: '#fff',
-    fontSize: 18,
-  },
-  backButton: {
-    paddingVertical: 12,
-    paddingLeft: 12,
-    paddingRight: 16,
-    minWidth: 60,
-    minHeight: 44,
-    justifyContent: 'center',
-    marginTop: 10,
-  },
-  backButtonText: {
-    color: 'white',
-  },
-  navBar: {
-    backgroundColor: '#26aa5c',
-  },
-});
 export default Router;

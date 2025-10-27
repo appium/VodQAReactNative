@@ -17,7 +17,7 @@ class SamplesListScreen extends Component {
   }
 
   goToScreen(screenName) {
-    this.props.navigator.push(screenName);
+    this.props.navigation.navigate(screenName);
   }
 
   getView(header, subHeader, testId, screenName) {
@@ -57,61 +57,61 @@ class SamplesListScreen extends Component {
             'Native View',
             'Chained View',
             'chainedView',
-            Routes.NativeView,
+            Routes.NativeView.title,
           )}
           {this.getView(
             'Slider',
             'Slide your number',
             'slider1',
-            Routes.SliderScreen,
+            Routes.SliderScreen.title,
           )}
           {this.getView(
             'Vertical swiping',
             'Demos vertical swiping ',
             'verticalSwipe',
-            Routes.VerticalSwipe,
+            Routes.VerticalSwipe.title,
           )}
           {this.getView(
             'Drag & Drop',
             'Demo drag and drop',
             'dragAndDrop',
-            Routes.DragAndDrop,
+            Routes.DragAndDrop.title,
           )}
           {this.getView(
             'Double Tap',
             'Demo double tap button',
             'doubleTap',
-            Routes.DoubleTap,
+            Routes.DoubleTap.title,
           )}
           {this.getView(
             'Long Press',
             'Demo Long press button',
             'longPress',
-            Routes.LongPress,
+            Routes.LongPress.title,
           )}
           {this.getView(
             'Photo View',
             'Ping & Zoom',
             'photoView',
-            Routes.PhotoScreen,
+            Routes.PhotoScreen.title,
           )}
           {this.getView(
             'Web View',
             'View hacker news',
             'webView',
-            Routes.WebViewScreen,
+            Routes.WebViewScreen.title,
           )}
           {this.getView(
             'Carousel',
             'Demos swipe left & right',
             'carousel',
-            Routes.CarouselScreen,
+            Routes.CarouselScreen.title,
           )}
           {this.getView(
             'Wheel Picker',
             'Demos wheel picker color',
             'wheelPicker',
-            Routes.WheelPicker,
+            Routes.WheelPicker.title,
           )}
         </View>
       </ScrollView>
@@ -120,7 +120,7 @@ class SamplesListScreen extends Component {
 }
 
 SamplesListScreen.propTypes = Object.assign({}, Component.propTypes, {
-  navigator: PropTypesObject,
+  navigation: PropTypesObject,
 });
 
 const styles = StyleSheet.create({
