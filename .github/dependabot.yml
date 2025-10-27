@@ -22,7 +22,7 @@ updates:
 
       # Ignore React Native ecosystem packages (should be updated together with React Native)
       - dependency-name: '@react-native/*'
-        update-types: ['version-update:semver-major', 'version-update:semver-minor', 'version-update:semver-patch']xw
+        update-types: ['version-update:semver-major', 'version-update:semver-minor', 'version-update:semver-patch']
 
   # Enable version updates for GitHub Actions
   - package-ecosystem: 'github-actions'
