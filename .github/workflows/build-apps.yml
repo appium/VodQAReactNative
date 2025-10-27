@@ -87,6 +87,9 @@ jobs:
     name: Build iOS Simulator
     runs-on: macos-15
 
+    env:
+      XCODE_VERSION: '26'
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -96,7 +99,7 @@ jobs:
       - name: Setup Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '26'
+          xcode-version: ${{ env.XCODE_VERSION }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -113,18 +116,21 @@ jobs:
           ruby-version: '3.4'
           bundler-cache: true
 
+      - name: Install Ruby dependencies
+        run: bundle install
+
       - name: Cache CocoaPods
         uses: actions/cache@v4
         with:
           path: ios/Pods
-          key: ${{ runner.os }}-pods-xcode26-${{ hashFiles('**/Podfile.lock') }}
+          key: ${{ runner.os }}-pods-xcode${{ env.XCODE_VERSION }}-${{ hashFiles('**/Podfile.lock', '**/Gemfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}-pods-xcode26-
+            ${{ runner.os }}-pods-xcode${{ env.XCODE_VERSION }}-
 
-      - name: Install CocoaPods dependencies
+      - name: Install iOS dependencies
         run: |
           cd ios
-          pod install
+          bundle exec pod install --repo-update
 
       - name: Build iOS Simulator app
         run: npm run build:ios:simulator:release
