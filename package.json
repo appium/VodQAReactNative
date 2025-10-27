@@ -26,7 +26,7 @@
     "@react-native-picker/picker": "^2.8.1",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
-    "react-native": "0.73.6",
+    "react-native": "0.82.1",
     "react-native-deprecated-custom-components": "^0.1.2",
     "react-native-image-viewing": "^0.2.2",
     "react-native-webview": "^13.10.0"
