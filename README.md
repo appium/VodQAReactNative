@@ -1,6 +1,6 @@
 # VodQAReactNative
 
-A React Native mobile application demonstrating various UI interactions and gestures, rebuilt on React Native 0.73.6.
+A React Native mobile application demonstrating various UI interactions and gestures.
 
 ## Features
 
