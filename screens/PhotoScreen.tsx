@@ -2,15 +2,19 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import ImageViewing from 'react-native-image-viewing';
 
-class PhotoScreen extends Component {
-  constructor(props) {
+interface State {
+  visible: boolean;
+}
+
+class PhotoScreen extends Component<{}, State> {
+  constructor(props: {}) {
     super(props);
     this.state = {
       visible: false,
     };
   }
 
-  render() {
+  render(): React.JSX.Element {
     const images = [
       {
         uri: 'https://prelrik.files.wordpress.com/2016/06/appium.jpg?w=640',

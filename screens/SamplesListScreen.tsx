@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { object as PropTypesObject } from 'prop-types';
 import {
   Text,
   StyleSheet,
@@ -7,20 +6,30 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
+import { NavigationProp } from '@react-navigation/native';
 import Routes from '../router/Routes';
 
-class SamplesListScreen extends Component {
-  constructor(props) {
+interface Props {
+  navigation?: NavigationProp<any>;
+}
+
+class SamplesListScreen extends Component<Props> {
+  constructor(props: Props = {}) {
     super(props);
     this.getView = this.getView.bind(this);
     this.goToScreen = this.goToScreen.bind(this);
   }
 
-  goToScreen(screenName) {
-    this.props.navigation.navigate(screenName);
+  goToScreen(screenName: string): void {
+    this.props.navigation?.navigate(screenName);
   }
 
-  getView(header, subHeader, testId, screenName) {
+  getView(
+    header: string,
+    subHeader: string,
+    testId: string,
+    screenName: string,
+  ): React.JSX.Element {
     return (
       <TouchableOpacity
         accessible={false}
@@ -52,7 +61,7 @@ class SamplesListScreen extends Component {
     );
   }
 
-  render() {
+  render(): React.JSX.Element {
     return (
       <ScrollView testID="scrollView" accessibilityLabel="scrollView">
         <View style={styles.container}>
@@ -121,10 +130,6 @@ class SamplesListScreen extends Component {
     );
   }
 }
-
-SamplesListScreen.propTypes = Object.assign({}, Component.propTypes, {
-  navigation: PropTypesObject,
-});
 
 const styles = StyleSheet.create({
   container: {

@@ -37,10 +37,10 @@ jest.mock('../screens/NativeView', () => mockScreen());
 jest.mock('../screens/WheelPicker', () => mockScreen());
 
 describe('Router', () => {
-  let Router;
-  let ReactTestRenderer;
-  let React;
-  let act;
+  let Router: React.ComponentType;
+  let ReactTestRenderer: any;
+  let React: any;
+  let act: any;
 
   beforeAll(async () => {
     // Import Router after mocks are set up
@@ -51,7 +51,7 @@ describe('Router', () => {
   });
 
   it('renders without crashing', async () => {
-    let tree;
+    let tree: any;
     await act(async () => {
       tree = ReactTestRenderer.create(React.createElement(Router));
     });

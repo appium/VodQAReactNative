@@ -2,15 +2,19 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Slider from '@react-native-community/slider';
 
-class SliderScreen extends Component {
-  constructor(props) {
+interface State {
+  value: number;
+}
+
+class SliderScreen extends Component<{}, State> {
+  constructor(props: {}) {
     super(props);
     this.state = {
       value: 0,
     };
   }
 
-  render() {
+  render(): React.JSX.Element {
     return (
       <View>
         <View>
@@ -23,7 +27,7 @@ class SliderScreen extends Component {
             style={styles.slider}
             minimumValue={0}
             maximumValue={100}
-            onValueChange={value => this.setState({ value })}
+            onValueChange={(value: number) => this.setState({ value })}
           />
         </View>
         <View>
@@ -36,7 +40,7 @@ class SliderScreen extends Component {
             style={styles.slider}
             minimumValue={0}
             maximumValue={100}
-            onValueChange={value => this.setState({ value })}
+            onValueChange={(value: number) => this.setState({ value })}
           />
         </View>
       </View>

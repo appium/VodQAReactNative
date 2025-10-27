@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
-import { object as PropTypesObject } from 'prop-types';
 import { View, Image, TextInput, Button, Alert } from 'react-native';
+import { NavigationProp } from '@react-navigation/native';
 import { create } from '../helpers/PlatformSpecificStyles';
 import Routes from '../router/Routes';
 
-class LoginScreen extends Component {
-  constructor(props) {
+interface Props {
+  navigation?: NavigationProp<any>;
+}
+
+interface State {
+  username: string;
+  password: string;
+}
+
+class LoginScreen extends Component<Props, State> {
+  constructor(props: Props = {}) {
     super(props);
     this.handleLogin = this.handleLogin.bind(this);
     this.handleUserNameChange = this.handleUserNameChange.bind(this);
@@ -17,14 +26,14 @@ class LoginScreen extends Component {
     };
   }
 
-  handleLogin() {
+  handleLogin(): void {
     if (!this.state.username || !this.state.password) {
       Alert.alert('Oops', 'Please enter Username or password', [
         { text: 'OK', onPress: () => {} },
       ]);
     } else {
       if (this.state.username === 'admin' && this.state.password === 'admin') {
-        this.props.navigation.navigate(Routes.SamplesListScreen.title);
+        this.props.navigation?.navigate(Routes.SamplesListScreen.title);
       } else {
         Alert.alert('Oops', 'Invalid  Credentials', [
           { text: 'OK', onPress: () => {} },
@@ -33,14 +42,15 @@ class LoginScreen extends Component {
     }
   }
 
-  handleUserNameChange(text) {
+  handleUserNameChange(text: string): void {
     this.setState({ username: text });
   }
-  handlePasswordChange(text) {
+
+  handlePasswordChange(text: string): void {
     this.setState({ password: text });
   }
 
-  render() {
+  render(): React.JSX.Element {
     return (
       <View style={styles.container}>
         <View style={styles.logoContainer}>
@@ -87,10 +97,6 @@ class LoginScreen extends Component {
     );
   }
 }
-
-LoginScreen.propTypes = Object.assign({}, Component.propTypes, {
-  navigation: PropTypesObject,
-});
 
 const styles = create({
   container: {

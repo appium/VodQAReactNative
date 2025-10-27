@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Dimensions, Text, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-class WheelPicker extends Component {
-  constructor(props) {
+
+interface State {
+  colors: string[];
+  selectedColor: string;
+}
+
+class WheelPicker extends Component<{}, State> {
+  constructor(props: {}) {
     super(props);
     this.state = {
       colors: ['red', 'green', 'blue', 'black'],
@@ -11,20 +17,21 @@ class WheelPicker extends Component {
     this.handleOnValueChnage = this.handleOnValueChnage.bind(this);
   }
 
-  onValueChange(key, value) {
-    const newState = {};
+  onValueChange(key: string, value: any): void {
+    const newState: any = {};
     newState[key] = value;
     this.setState(newState);
   }
-  handleOnValueChnage(color) {
+
+  handleOnValueChnage(color: string): void {
     this.setState({
       selectedColor: color,
     });
   }
 
-  render() {
-    let PickerItem = Picker.Item;
-    let Window = Dimensions.get('window');
+  render(): React.JSX.Element {
+    const PickerItem = Picker.Item;
+    const Window = Dimensions.get('window');
     return (
       <View style={styles.container}>
         <View
@@ -45,7 +52,7 @@ class WheelPicker extends Component {
           style={styles.picker}
           mode="dropdown"
           selectedValue={this.state.selectedColor}
-          onValueChange={color => this.handleOnValueChnage(color)}
+          onValueChange={(color: string) => this.handleOnValueChnage(color)}
         >
           {this.state.colors.map((s, i) => (
             <PickerItem key={i} value={s} label={s} />
@@ -55,6 +62,7 @@ class WheelPicker extends Component {
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
@@ -75,4 +83,5 @@ const styles = StyleSheet.create({
     width: 320,
   },
 });
+
 export default WheelPicker;

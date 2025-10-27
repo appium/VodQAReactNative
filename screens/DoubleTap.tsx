@@ -3,8 +3,13 @@ import { View, TouchableHighlight, Text, Alert } from 'react-native';
 import { create } from '../helpers/PlatformSpecificStyles';
 
 const DOUBLE_PRESS_DELAY = 300;
-class DoubleTap extends Component {
-  constructor(props) {
+
+interface State {
+  timeLastPressed: number | undefined;
+}
+
+class DoubleTap extends Component<{}, State> {
+  constructor(props: {}) {
     super(props);
     this.handleDoubleTap = this.handleDoubleTap.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -13,14 +18,14 @@ class DoubleTap extends Component {
     };
   }
 
-  handleDoubleTap() {
+  handleDoubleTap(): void {
     Alert.alert('Double Tap', 'Double tap successful!', [
       { text: 'OK', onPress: () => {} },
     ]);
   }
 
-  handleClick() {
-    let now = new Date().getTime();
+  handleClick(): void {
+    const now = new Date().getTime();
     if (
       this.state.timeLastPressed &&
       now - this.state.timeLastPressed < DOUBLE_PRESS_DELAY
@@ -31,7 +36,7 @@ class DoubleTap extends Component {
     this.setState({ timeLastPressed: now });
   }
 
-  render() {
+  render(): React.JSX.Element {
     return (
       <View style={styles.container}>
         <TouchableHighlight
@@ -48,13 +53,13 @@ class DoubleTap extends Component {
     );
   }
 }
+
 const styles = create({
   container: {
     justifyContent: 'space-around',
     alignItems: 'center',
     flex: 1,
   },
-
   button: {
     padding: 16,
     backgroundColor: '#0D77B7',
@@ -68,4 +73,5 @@ const styles = create({
     fontWeight: 'bold',
   },
 });
+
 export default DoubleTap;

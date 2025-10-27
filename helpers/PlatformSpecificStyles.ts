@@ -1,9 +1,27 @@
-import { StyleSheet, Platform } from 'react-native';
+import {
+  StyleSheet,
+  Platform,
+  ViewStyle,
+  TextStyle,
+  ImageStyle,
+} from 'react-native';
 
-export function create(styles) {
-  const platformStyles = {};
+type Style = ViewStyle | TextStyle | ImageStyle;
+
+interface PlatformStyle {
+  ios?: Style;
+  android?: Style;
+  [key: string]: any;
+}
+
+interface Styles {
+  [key: string]: PlatformStyle | Style;
+}
+
+export function create(styles: Styles): any {
+  const platformStyles: { [key: string]: Style } = {};
   Object.keys(styles).forEach(name => {
-    let { ios, android, ...style } = { ...styles[name] };
+    let { ios, android, ...style } = { ...styles[name] } as any;
     if (ios && Platform.OS === 'ios') {
       style = { ...style, ...ios };
     }

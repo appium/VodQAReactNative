@@ -1,4 +1,23 @@
-let routes = {
+interface RouteConfig {
+  title: string;
+}
+
+interface Routes {
+  LoginScreen: RouteConfig;
+  SamplesListScreen: RouteConfig;
+  CarouselScreen: RouteConfig;
+  PhotoScreen: RouteConfig;
+  WebViewScreen: RouteConfig;
+  SliderScreen: RouteConfig;
+  VerticalSwipe: RouteConfig;
+  DragAndDrop: RouteConfig;
+  DoubleTap: RouteConfig;
+  LongPress: RouteConfig;
+  NativeView: RouteConfig;
+  WheelPicker: RouteConfig;
+}
+
+const routes: Routes = {
   LoginScreen: {
     title: 'Login',
   },
