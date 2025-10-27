@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {object as PropTypesObject} from 'prop-types';
+import React, { Component } from 'react';
+import { object as PropTypesObject } from 'prop-types';
 import {
   Text,
   StyleSheet,
@@ -28,20 +28,23 @@ class SamplesListScreen extends Component {
           this.goToScreen(screenName);
         }}
         testID={testId}
-        accessibilityLabel={testId}>
+        accessibilityLabel={testId}
+      >
         <View style={styles.itemView}>
           <Text
             style={styles.header}
             testID={testId}
             accessible={true}
-            accessibilityLabel={testId}>
+            accessibilityLabel={testId}
+          >
             {header}
           </Text>
           <Text
             style={styles.subHeader}
             testID={subHeader}
             accessible={true}
-            accessibilityLabel={subHeader}>
+            accessibilityLabel={subHeader}
+          >
             {subHeader}
           </Text>
         </View>

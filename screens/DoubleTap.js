@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {View, TouchableHighlight, Text, Alert} from 'react-native';
-import {create} from '../helpers/PlatformSpecificStyles';
+import React, { Component } from 'react';
+import { View, TouchableHighlight, Text, Alert } from 'react-native';
+import { create } from '../helpers/PlatformSpecificStyles';
 
 const DOUBLE_PRESS_DELAY = 300;
 class DoubleTap extends Component {
@@ -15,7 +15,7 @@ class DoubleTap extends Component {
 
   handleDoubleTap() {
     Alert.alert('Double Tap', 'Double tap successful!', [
-      {text: 'OK', onPress: () => {}},
+      { text: 'OK', onPress: () => {} },
     ]);
   }
 
@@ -25,10 +25,10 @@ class DoubleTap extends Component {
       this.state.timeLastPressed &&
       now - this.state.timeLastPressed < DOUBLE_PRESS_DELAY
     ) {
-      this.setState({timeLastPressed: undefined});
+      this.setState({ timeLastPressed: undefined });
       this.handleDoubleTap();
     }
-    this.setState({timeLastPressed: now});
+    this.setState({ timeLastPressed: now });
   }
 
   render() {
@@ -38,7 +38,8 @@ class DoubleTap extends Component {
           onPress={this.handleClick}
           style={styles.button}
           testID={'doubleTapMe'}
-          accessibilityLabel={'doubleTapMe'}>
+          accessibilityLabel={'doubleTapMe'}
+        >
           <View>
             <Text style={styles.buttonText}>Double Tap Me</Text>
           </View>

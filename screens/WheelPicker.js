@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {StyleSheet, View, Dimensions, Text, Platform} from 'react-native';
-import {Picker} from '@react-native-picker/picker';
+import React, { Component } from 'react';
+import { StyleSheet, View, Dimensions, Text, Platform } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 class WheelPicker extends Component {
   constructor(props) {
     super(props);
@@ -34,7 +34,8 @@ class WheelPicker extends Component {
               backgroundColor: this.state.selectedColor,
               width: Window.width,
             },
-          ]}>
+          ]}
+        >
           <Text style={styles.colorText}>
             {' '}
             Current Color: {this.state.selectedColor}{' '}
@@ -44,7 +45,8 @@ class WheelPicker extends Component {
           style={styles.picker}
           mode="dropdown"
           selectedValue={this.state.selectedColor}
-          onValueChange={color => this.handleOnValueChnage(color)}>
+          onValueChange={color => this.handleOnValueChnage(color)}
+        >
           {this.state.colors.map((s, i) => (
             <PickerItem key={i} value={s} label={s} />
           ))}

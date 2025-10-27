@@ -4,24 +4,24 @@
 
 // Mock all screen components with simple implementations
 jest.mock('../screens/LoginScreen', () => {
-  const {View} = require('react-native');
+  const { View } = require('react-native');
   return function MockLoginScreen() {
-    return View({testID: 'login-screen'});
+    return View({ testID: 'login-screen' });
   };
 });
 
 jest.mock('../screens/SamplesListScreen', () => {
-  const {View} = require('react-native');
+  const { View } = require('react-native');
   return function MockSamplesListScreen() {
-    return View({testID: 'samples-list-screen'});
+    return View({ testID: 'samples-list-screen' });
   };
 });
 
 // Mock all other screens
 const mockScreen = () => {
-  const {View} = require('react-native');
+  const { View } = require('react-native');
   return function MockScreen() {
-    return View({testID: 'mock-screen'});
+    return View({ testID: 'mock-screen' });
   };
 };
 

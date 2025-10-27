@@ -1,6 +1,6 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from '../screens/LoginScreen';
 import SamplesListScreen from '../screens/SamplesListScreen';
 import CarouselScreen from '../screens/CarouselScreen';
@@ -32,7 +32,8 @@ function Router() {
             fontWeight: 'bold',
             fontSize: 18,
           },
-        }}>
+        }}
+      >
         <Stack.Screen
           name={Routes.LoginScreen.title}
           component={LoginScreen}

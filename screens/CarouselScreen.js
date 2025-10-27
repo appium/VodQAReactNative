@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {View, Text, ScrollView, StyleSheet, Dimensions} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, ScrollView, StyleSheet, Dimensions } from 'react-native';
 
-const {width} = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 class CarouselScreen extends Component {
   render() {
@@ -12,7 +12,8 @@ class CarouselScreen extends Component {
           horizontal
           pagingEnabled
           showsHorizontalScrollIndicator={false}
-          style={styles.scrollView}>
+          style={styles.scrollView}
+        >
           <View style={[styles.slide, styles.slide1]}>
             <Text style={styles.text}>1</Text>
           </View>

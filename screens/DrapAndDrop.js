@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Text,
@@ -35,7 +35,7 @@ class DrapAndDrop extends Component {
             showDraggable: false,
           });
         } else {
-          Animated.spring(this.state.pan, {toValue: {x: 0, y: 0}}).start();
+          Animated.spring(this.state.pan, { toValue: { x: 0, y: 0 } }).start();
         }
       },
     });
@@ -49,7 +49,8 @@ class DrapAndDrop extends Component {
       return (
         <Animated.View
           {...this.panResponder.panHandlers}
-          style={[this.state.pan.getLayout(), styles.circle]}>
+          style={[this.state.pan.getLayout(), styles.circle]}
+        >
           <Text style={styles.text} testID="dragMe" accessibilityLabel="dragMe">
             Drag me!
           </Text>
@@ -70,7 +71,8 @@ class DrapAndDrop extends Component {
             onLayout={event => this.setDropZoneValues(event)}
             style={styles.dropZone}
             testID="dropzone"
-            accessibilityLabel="dropzone">
+            accessibilityLabel="dropzone"
+          >
             <Text style={styles.dropText}>Drop here.</Text>
           </View>
           {this.renderDraggable()}
@@ -80,7 +82,8 @@ class DrapAndDrop extends Component {
                 <Text
                   style={styles.dragSuccessLabel}
                   testID="success"
-                  accessibilityLabel="success">
+                  accessibilityLabel="success"
+                >
                   Circle dropped
                 </Text>
               </View>

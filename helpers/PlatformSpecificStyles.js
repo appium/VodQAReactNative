@@ -1,14 +1,14 @@
-import {StyleSheet, Platform} from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 export function create(styles) {
   const platformStyles = {};
   Object.keys(styles).forEach(name => {
-    let {ios, android, ...style} = {...styles[name]};
+    let { ios, android, ...style } = { ...styles[name] };
     if (ios && Platform.OS === 'ios') {
-      style = {...style, ...ios};
+      style = { ...style, ...ios };
     }
     if (android && Platform.OS === 'android') {
-      style = {...style, ...android};
+      style = { ...style, ...android };
     }
 
     if (name === 'ios' && Platform.OS === 'ios') {
