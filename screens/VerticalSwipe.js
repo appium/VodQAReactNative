@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 
 const DATA = [
   {
@@ -65,7 +65,7 @@ class ListViewVerticalSwipe extends Component {
     super();
   }
 
-  renderRowView = ({item}) => (
+  renderRowView = ({ item }) => (
     <View style={styles.viewWrapper}>
       <Text style={styles.text}> {item.title}</Text>
     </View>

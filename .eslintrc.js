@@ -4,4 +4,18 @@ module.exports = {
   env: {
     jest: true,
   },
+  overrides: [
+    {
+      files: [
+        'jest-setup.js',
+        '**/__tests__/**/*',
+        '**/*.test.*',
+        '**/*.spec.*',
+      ],
+      env: {
+        jest: true,
+        node: true,
+      },
+    },
+  ],
 };

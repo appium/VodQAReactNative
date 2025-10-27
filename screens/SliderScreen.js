@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 import Slider from '@react-native-community/slider';
 
 class SliderScreen extends Component {
@@ -23,7 +23,7 @@ class SliderScreen extends Component {
             style={styles.slider}
             minimumValue={0}
             maximumValue={100}
-            onValueChange={value => this.setState({value})}
+            onValueChange={value => this.setState({ value })}
           />
         </View>
         <View>
@@ -36,7 +36,7 @@ class SliderScreen extends Component {
             style={styles.slider}
             minimumValue={0}
             maximumValue={100}
-            onValueChange={value => this.setState({value})}
+            onValueChange={value => this.setState({ value })}
           />
         </View>
       </View>

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Text, TouchableOpacity, Image, StyleSheet} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import ImageViewing from 'react-native-image-viewing';
 
 class PhotoScreen extends Component {
@@ -20,7 +20,7 @@ class PhotoScreen extends Component {
     return (
       <View style={styles.container} testID="photo" accessibilityLabel="photo">
         <Text>Photo Screen</Text>
-        <TouchableOpacity onPress={() => this.setState({visible: true})}>
+        <TouchableOpacity onPress={() => this.setState({ visible: true })}>
           <Image
             source={{
               uri: 'https://prelrik.files.wordpress.com/2016/06/appium.jpg?w=640',
@@ -32,7 +32,7 @@ class PhotoScreen extends Component {
           images={images}
           imageIndex={0}
           visible={this.state.visible}
-          onRequestClose={() => this.setState({visible: false})}
+          onRequestClose={() => this.setState({ visible: false })}
         />
       </View>
     );

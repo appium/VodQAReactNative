@@ -1,11 +1,9 @@
 # Dependencies
 node_modules/
-ios/Pods/
-android/build/
-android/app/build/
+ios/
+android/
 
 # Generated files
-ios/build/
 *.lock
 package-lock.json
 

@@ -13,17 +13,16 @@ updates:
       include: 'scope'
     labels:
       - 'dependencies'
-      - 'npm'
-    reviewers:
-      - 'your-github-username'
-    assignees:
-      - 'your-github-username'
     ignore:
       # Ignore major version updates for React Native
       - dependency-name: 'react-native'
-        update-types: ['version-update:semver-major']
+        update-types: ['version-update:semver-major', 'version-update:semver-minor', 'version-update:semver-patch']
       - dependency-name: 'react'
-        update-types: ['version-update:semver-major']
+        update-types: ['version-update:semver-major', 'version-update:semver-minor', 'version-update:semver-patch']
+
+      # Ignore React Native ecosystem packages (should be updated together with React Native)
+      - dependency-name: '@react-native/*'
+        update-types: ['version-update:semver-major', 'version-update:semver-minor', 'version-update:semver-patch']
 
   # Enable version updates for GitHub Actions
   - package-ecosystem: 'github-actions'
@@ -38,24 +37,3 @@ updates:
       include: 'scope'
     labels:
       - 'dependencies'
-      - 'github-actions'
-
-  # Enable version updates for Gradle (Android)
-  - package-ecosystem: 'gradle'
-    directory: '/android'
-    schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-    open-pull-requests-limit: 5
-    commit-message:
-      prefix: 'build'
-      include: 'scope'
-    labels:
-      - 'dependencies'
-      - 'android'
-    ignore:
-      # Ignore Android Gradle Plugin major updates (requires manual intervention)
-      - dependency-name: 'com.android.tools.build:gradle'
-        update-types: ['version-update:semver-major']
-

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {object as PropTypesObject} from 'prop-types';
-import {View, Image, TextInput, Button, Alert} from 'react-native';
-import {create} from '../helpers/PlatformSpecificStyles';
+import React, { Component } from 'react';
+import { object as PropTypesObject } from 'prop-types';
+import { View, Image, TextInput, Button, Alert } from 'react-native';
+import { create } from '../helpers/PlatformSpecificStyles';
 import Routes from '../router/Routes';
 
 class LoginScreen extends Component {
@@ -20,24 +20,24 @@ class LoginScreen extends Component {
   handleLogin() {
     if (!this.state.username || !this.state.password) {
       Alert.alert('Oops', 'Please enter Username or password', [
-        {text: 'OK', onPress: () => {}},
+        { text: 'OK', onPress: () => {} },
       ]);
     } else {
       if (this.state.username === 'admin' && this.state.password === 'admin') {
-        this.props.navigator.push({title: Routes.SamplesListScreen.title});
+        this.props.navigation.navigate(Routes.SamplesListScreen.title);
       } else {
         Alert.alert('Oops', 'Invalid  Credentials', [
-          {text: 'OK', onPress: () => {}},
+          { text: 'OK', onPress: () => {} },
         ]);
       }
     }
   }
 
   handleUserNameChange(text) {
-    this.setState({username: text});
+    this.setState({ username: text });
   }
   handlePasswordChange(text) {
-    this.setState({password: text});
+    this.setState({ password: text });
   }
 
   render() {
@@ -78,7 +78,8 @@ class LoginScreen extends Component {
             style={styles.loginButton}
             testID="login"
             accessible
-            accessibilityLabel={'login'}>
+            accessibilityLabel={'login'}
+          >
             <Button onPress={this.handleLogin} title="Log in" />
           </View>
         </View>
@@ -88,7 +89,7 @@ class LoginScreen extends Component {
 }
 
 LoginScreen.propTypes = Object.assign({}, Component.propTypes, {
-  navigator: PropTypesObject,
+  navigation: PropTypesObject,
 });
 
 const styles = create({
