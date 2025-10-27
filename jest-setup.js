@@ -34,7 +34,6 @@ jest.mock('react-native-image-viewing', () => {
 
 // Mock React Navigation
 jest.mock('@react-navigation/native', () => {
-  const { View } = require('react-native');
   return {
     NavigationContainer: ({ children }) => children,
     useNavigation: () => ({
@@ -50,7 +49,6 @@ jest.mock('@react-navigation/native', () => {
 });
 
 jest.mock('@react-navigation/stack', () => {
-  const { View } = require('react-native');
   return {
     createStackNavigator: () => ({
       Navigator: ({ children }) => children,
