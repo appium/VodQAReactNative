@@ -6,7 +6,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['jest-setup.js', '**/__tests__/**/*', '**/*.test.*', '**/*.spec.*'],
+      files: [
+        'jest-setup.js',
+        '**/__tests__/**/*',
+        '**/*.test.*',
+        '**/*.spec.*',
+      ],
       env: {
         jest: true,
         node: true,
