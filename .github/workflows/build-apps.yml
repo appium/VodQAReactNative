@@ -124,7 +124,7 @@ jobs:
       - name: Install CocoaPods dependencies
         run: |
           cd ios
-          pod install --repo-update
+          pod install
 
       - name: Build iOS Simulator app
         run: npm run build:ios:simulator:release
