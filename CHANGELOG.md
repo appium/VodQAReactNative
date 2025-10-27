@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2](https://github.com/appium/VodQAReactNative/compare/v1.0.1...v1.0.2) (2025-10-27)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @babel/core from 7.28.4 to 7.28.5 ([#53](https://github.com/appium/VodQAReactNative/issues/53)) ([7ce0862](https://github.com/appium/VodQAReactNative/commit/7ce086230baec6191a3e407838f6625c3ea841ad))
+
 ## [1.0.1](https://github.com/appium/VodQAReactNative/compare/v1.0.0...v1.0.1) (2025-10-19)
 
 
