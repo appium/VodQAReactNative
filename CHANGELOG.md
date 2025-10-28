@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/appium/VodQAReactNative/compare/v1.1.0...v1.2.0) (2025-10-28)
+
+
+### Features
+
+* Migrate to typescript ([#63](https://github.com/appium/VodQAReactNative/issues/63)) ([e4e8446](https://github.com/appium/VodQAReactNative/commit/e4e84468255c88bf15f9650fb81c4feeb0de7a7d))
+
 ## [1.1.0](https://github.com/appium/VodQAReactNative/compare/v1.0.2...v1.1.0) (2025-10-27)
 
 
