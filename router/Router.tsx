@@ -18,7 +18,7 @@ import Routes from './Routes';
 
 const Stack = createStackNavigator();
 
-function Router() {
+function Router(): React.JSX.Element {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -98,4 +98,5 @@ function Router() {
     </NavigationContainer>
   );
 }
+
 export default Router;

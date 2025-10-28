@@ -10,7 +10,7 @@ import LoginScreen from '../screens/LoginScreen';
 const mockNavigation = {
   navigate: jest.fn(),
   goBack: jest.fn(),
-};
+} as any;
 
 describe('LoginScreen', () => {
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('LoginScreen', () => {
   });
 
   it('renders without crashing', async () => {
-    let tree;
+    let tree: ReactTestRenderer.ReactTestRenderer | undefined;
     await act(async () => {
       tree = ReactTestRenderer.create(
         React.createElement(LoginScreen, { navigation: mockNavigation }),

@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 class WebViewScreen extends Component {
-  render() {
+  render(): React.JSX.Element {
     return (
       <WebView
         source={{ uri: 'https://news.ycombinator.com/' }}

@@ -7,10 +7,25 @@ import {
   Dimensions,
   PanResponder,
   Platform,
+  LayoutChangeEvent,
+  PanResponderGestureState,
 } from 'react-native';
 
-class DrapAndDrop extends Component {
-  constructor(props) {
+interface State {
+  showDraggable: boolean;
+  dropZoneValues: {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  } | null;
+  pan: Animated.ValueXY;
+}
+
+class DrapAndDrop extends Component<{}, State> {
+  private panResponder: any;
+
+  constructor(props: {}) {
     super(props);
     this.renderDraggable = this.renderDraggable.bind(this);
     this.setDropZoneValues = this.setDropZoneValues.bind(this);
@@ -35,16 +50,22 @@ class DrapAndDrop extends Component {
             showDraggable: false,
           });
         } else {
-          Animated.spring(this.state.pan, { toValue: { x: 0, y: 0 } }).start();
+          Animated.spring(this.state.pan, {
+            toValue: { x: 0, y: 0 },
+            useNativeDriver: false,
+          }).start();
         }
       },
     });
   }
-  isDropZone(gesture) {
-    let dz = this.state.dropZoneValues;
+
+  isDropZone(gesture: PanResponderGestureState): boolean {
+    const dz = this.state.dropZoneValues;
+    if (!dz) return false;
     return gesture.moveY - 64 > dz.y && gesture.moveY - 64 < dz.y + dz.height;
   }
-  renderDraggable() {
+
+  renderDraggable(): React.JSX.Element | null {
     if (this.state.showDraggable) {
       return (
         <Animated.View
@@ -57,18 +78,23 @@ class DrapAndDrop extends Component {
         </Animated.View>
       );
     }
+    return null;
   }
-  setDropZoneValues(event) {
+
+  setDropZoneValues(event: LayoutChangeEvent): void {
     this.setState({
       dropZoneValues: event.nativeEvent.layout,
     });
   }
-  render() {
+
+  render(): React.JSX.Element {
     return (
       <View style={styles.container}>
         <View style={styles.dragDropContainer}>
           <View
-            onLayout={event => this.setDropZoneValues(event)}
+            onLayout={(event: LayoutChangeEvent) =>
+              this.setDropZoneValues(event)
+            }
             style={styles.dropZone}
             testID="dropzone"
             accessibilityLabel="dropzone"
@@ -94,8 +120,10 @@ class DrapAndDrop extends Component {
     );
   }
 }
-let CIRCLE_RADIUS = 36;
-let Window = Dimensions.get('window');
+
+const CIRCLE_RADIUS = 36;
+const Window = Dimensions.get('window');
+
 const styles = StyleSheet.create({
   container: {
     marginTop: Platform.OS === 'ios' ? 64 : 56,
@@ -128,7 +156,6 @@ const styles = StyleSheet.create({
   dragDropContainer: {
     flex: 1,
   },
-
   circle: {
     backgroundColor: '#1abc9c',
     width: CIRCLE_RADIUS * 2,

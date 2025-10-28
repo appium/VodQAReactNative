@@ -1,12 +1,3 @@
-import 'react-native-gesture-handler';
-import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
-import Router from './router/Router';
+import App from './App.tsx';
 
-export default class VodQAReactNative extends Component {
-  render() {
-    return <Router />;
-  }
-}
-
-AppRegistry.registerComponent('VodQAReactNative', () => VodQAReactNative);
+export default App;

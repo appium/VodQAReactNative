@@ -3,16 +3,18 @@ import { View, Text, TouchableOpacity, Alert } from 'react-native';
 import { create } from '../helpers/PlatformSpecificStyles';
 
 class LongPress extends Component {
-  constructor(props) {
+  constructor(props: {}) {
     super(props);
     this.handleLongPress = this.handleLongPress.bind(this);
   }
-  handleLongPress() {
+
+  handleLongPress(): void {
     Alert.alert('Long Pressed', 'you pressed me hard :P', [
       { text: 'OK', onPress: () => {} },
     ]);
   }
-  render() {
+
+  render(): React.JSX.Element {
     return (
       <View style={styles.container}>
         <Text style={styles.HeaderText}>Long press the Botton</Text>
@@ -28,6 +30,7 @@ class LongPress extends Component {
     );
   }
 }
+
 const styles = create({
   container: {
     justifyContent: 'space-around',
@@ -51,4 +54,5 @@ const styles = create({
     fontWeight: 'bold',
   },
 });
+
 export default LongPress;

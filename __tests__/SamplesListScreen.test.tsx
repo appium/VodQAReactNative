@@ -10,7 +10,7 @@ import SamplesListScreen from '../screens/SamplesListScreen';
 const mockNavigation = {
   navigate: jest.fn(),
   goBack: jest.fn(),
-};
+} as any;
 
 describe('SamplesListScreen', () => {
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('SamplesListScreen', () => {
   });
 
   it('renders without crashing', async () => {
-    let tree;
+    let tree: ReactTestRenderer.ReactTestRenderer | undefined;
     await act(async () => {
       tree = ReactTestRenderer.create(
         React.createElement(SamplesListScreen, { navigation: mockNavigation }),

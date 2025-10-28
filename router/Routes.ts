@@ -1,4 +1,4 @@
-let routes = {
+const routes = {
   LoginScreen: {
     title: 'Login',
   },
@@ -35,6 +35,6 @@ let routes = {
   WheelPicker: {
     title: 'Wheel Picker Demo',
   },
-};
+} as const;
 
 export default routes;

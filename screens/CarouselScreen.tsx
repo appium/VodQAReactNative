@@ -4,7 +4,7 @@ import { View, Text, ScrollView, StyleSheet, Dimensions } from 'react-native';
 const { width } = Dimensions.get('window');
 
 class CarouselScreen extends Component {
-  render() {
+  render(): React.JSX.Element {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Horizontal ScrollView Carousel</Text>

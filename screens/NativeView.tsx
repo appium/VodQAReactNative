@@ -3,11 +3,11 @@ import { View, Text, ScrollView } from 'react-native';
 import { create } from '../helpers/PlatformSpecificStyles';
 
 class NativeView extends Component {
-  constructor(props) {
+  constructor(props: {}) {
     super(props);
   }
 
-  render() {
+  render(): React.JSX.Element {
     return (
       <ScrollView
         style={styles.scrollView}
@@ -75,6 +75,7 @@ class NativeView extends Component {
     );
   }
 }
+
 const styles = create({
   scrollView: {
     marginTop: 84,
@@ -89,9 +90,9 @@ const styles = create({
     alignItems: 'center',
     marginBottom: 16,
   },
-
   text: {
     fontSize: 20,
   },
 });
+
 export default NativeView;

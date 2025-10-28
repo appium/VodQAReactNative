@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet, FlatList, ListRenderItem } from 'react-native';
 
-const DATA = [
+interface DataItem {
+  id: string;
+  title: string;
+}
+
+const DATA: DataItem[] = [
   {
     id: 'item1',
     title: 'C',
@@ -61,22 +66,23 @@ const DATA = [
 ];
 
 class ListViewVerticalSwipe extends Component {
-  constructor() {
-    super();
+  constructor(props: {} = {}) {
+    super(props);
   }
 
-  renderRowView = ({ item }) => (
+  renderRowView: ListRenderItem<DataItem> = ({ item }) => (
     <View style={styles.viewWrapper}>
       <Text style={styles.text}> {item.title}</Text>
     </View>
   );
-  render() {
+
+  render(): React.JSX.Element {
     return (
       <View style={styles.container}>
         <FlatList
           data={DATA}
           renderItem={this.renderRowView}
-          keyExtractor={item => item.id}
+          keyExtractor={(item: DataItem) => item.id}
         />
       </View>
     );
