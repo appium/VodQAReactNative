@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.2](https://github.com/appium/VodQAReactNative/compare/v1.2.1...v1.2.2) (2025-10-28)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @react-native-community/cli-platform-android ([#65](https://github.com/appium/VodQAReactNative/issues/65)) ([dcbf437](https://github.com/appium/VodQAReactNative/commit/dcbf437940eac85a5b0ad02116f06d0d01048bff))
+
 ## [1.2.1](https://github.com/appium/VodQAReactNative/compare/v1.2.0...v1.2.1) (2025-10-28)
 
 
