@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.4](https://github.com/appium/VodQAReactNative/compare/v1.2.3...v1.2.4) (2025-11-15)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump react-native-safe-area-context from 5.6.1 to 5.6.2 ([#66](https://github.com/appium/VodQAReactNative/issues/66)) ([dae7252](https://github.com/appium/VodQAReactNative/commit/dae72528a6a0cb1d364387624cb61f8a8d79f859))
+
 ## [1.2.3](https://github.com/appium/VodQAReactNative/compare/v1.2.2...v1.2.3) (2025-10-28)
 
 
