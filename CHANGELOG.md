@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.5](https://github.com/appium/VodQAReactNative/compare/v1.2.4...v1.2.5) (2025-11-16)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump @react-native-community/slider from 5.1.0 to 5.1.1 ([#72](https://github.com/appium/VodQAReactNative/issues/72)) ([47a7977](https://github.com/appium/VodQAReactNative/commit/47a7977cfcf375ad5e9ad42a36992776ea616d3a))
+* **deps:** bump react-native-gesture-handler from 2.29.0 to 2.29.1 ([#71](https://github.com/appium/VodQAReactNative/issues/71)) ([595739e](https://github.com/appium/VodQAReactNative/commit/595739e65ec97d8410733204f5c2f7ce56116f86))
+
 ## [1.2.4](https://github.com/appium/VodQAReactNative/compare/v1.2.3...v1.2.4) (2025-11-15)
 
 
