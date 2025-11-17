@@ -17,7 +17,7 @@ class LongPress extends Component {
   render(): React.JSX.Element {
     return (
       <View style={styles.container}>
-        <Text style={styles.HeaderText}>Long press the Botton</Text>
+        <Text style={styles.HeaderText}>Long press the Button</Text>
         <TouchableOpacity
           testID="longpress"
           accessibilityLabel="longpress"
