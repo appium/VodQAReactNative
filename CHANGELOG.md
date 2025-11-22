@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.6](https://github.com/appium/VodQAReactNative/compare/v1.2.5...v1.2.6) (2025-11-22)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump js-yaml from 3.14.1 to 3.14.2 ([#79](https://github.com/appium/VodQAReactNative/issues/79)) ([3070310](https://github.com/appium/VodQAReactNative/commit/3070310af322bbf3613439a3a0228f54e3bce9e7))
+* fix typo ([#78](https://github.com/appium/VodQAReactNative/issues/78)) ([083f7a0](https://github.com/appium/VodQAReactNative/commit/083f7a0c44728ffd76eaea96d454e47eea9d5473))
+
 ## [1.2.5](https://github.com/appium/VodQAReactNative/compare/v1.2.4...v1.2.5) (2025-11-16)
 
 
