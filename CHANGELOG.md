@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.8](https://github.com/appium/VodQAReactNative/compare/v1.2.7...v1.2.8) (2025-11-22)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump @react-navigation/native from 7.1.19 to 7.1.20 ([#75](https://github.com/appium/VodQAReactNative/issues/75)) ([9af7f09](https://github.com/appium/VodQAReactNative/commit/9af7f097e0345f393e7ae778d457508f956522bd))
+
 ## [1.2.7](https://github.com/appium/VodQAReactNative/compare/v1.2.6...v1.2.7) (2025-11-22)
 
 
