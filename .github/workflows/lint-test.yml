@@ -19,10 +19,15 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 'lts/*'
+          check-latest: true
           cache: 'npm'
 
+      - uses: SocketDev/action@v1
+        with:
+          mode: firewall-free
+
       - name: Install dependencies
-        run: npm ci
+        run: sfw npm ci
 
       - name: Check code formatting
         run: npm run format:check
