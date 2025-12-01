@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.9](https://github.com/appium/VodQAReactNative/compare/v1.2.8...v1.2.9) (2025-12-01)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump prettier from 2.8.8 to 3.7.3 ([#82](https://github.com/appium/VodQAReactNative/issues/82)) ([4821c2f](https://github.com/appium/VodQAReactNative/commit/4821c2f733678a5ec4c3db97d6039993a5099644))
+
 ## [1.2.8](https://github.com/appium/VodQAReactNative/compare/v1.2.7...v1.2.8) (2025-11-22)
 
 
