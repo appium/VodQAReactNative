@@ -70,7 +70,7 @@ jobs:
 
       - name: Upload Android APK as Artifact
         if: inputs.upload_pr_artifacts == true
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: android-apk
           path: android/app/build/outputs/apk/release/app-release.apk
@@ -139,7 +139,7 @@ jobs:
 
       - name: Upload iOS Simulator app as Artifact
         if: inputs.upload_pr_artifacts == true
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: ios-simulator-app
           path: ios/build/DerivedData/VodQAReactNative-simulator-release.zip
