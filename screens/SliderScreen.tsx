@@ -40,7 +40,8 @@ class SliderScreen extends Component<{}, State> {
         this.startValue = this.state.value;
       },
       onPanResponderMove: (_e, gestureState) => {
-        const deltaValue = (gestureState.dx / SLIDER_WIDTH) * (MAX_VALUE - MIN_VALUE);
+        const deltaValue =
+          (gestureState.dx / SLIDER_WIDTH) * (MAX_VALUE - MIN_VALUE);
         const newValue = Math.min(
           Math.max(this.startValue + deltaValue, MIN_VALUE),
           MAX_VALUE,
@@ -56,7 +57,8 @@ class SliderScreen extends Component<{}, State> {
         this.startValue1 = this.state.value1;
       },
       onPanResponderMove: (_e, gestureState) => {
-        const deltaValue = (gestureState.dx / SLIDER_WIDTH) * (MAX_VALUE - MIN_VALUE);
+        const deltaValue =
+          (gestureState.dx / SLIDER_WIDTH) * (MAX_VALUE - MIN_VALUE);
         const newValue = Math.min(
           Math.max(this.startValue1 + deltaValue, MIN_VALUE),
           MAX_VALUE,
@@ -81,7 +83,8 @@ class SliderScreen extends Component<{}, State> {
           <View
             testID={'slider'}
             accessibilityLabel={'slider'}
-            style={styles.sliderContainer}>
+            style={styles.sliderContainer}
+          >
             <View style={styles.track}>
               <View
                 style={[
@@ -110,7 +113,8 @@ class SliderScreen extends Component<{}, State> {
           <View
             testID={'slider1'}
             accessibilityLabel={'slider1'}
-            style={styles.sliderContainer}>
+            style={styles.sliderContainer}
+          >
             <View style={styles.track}>
               <View
                 style={[
