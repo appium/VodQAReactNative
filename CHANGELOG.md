@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.11](https://github.com/appium/VodQAReactNative/compare/v1.2.10...v1.2.11) (2026-05-05)
+
+
+### Bug Fixes
+
+* add ios slider locator ([#109](https://github.com/appium/VodQAReactNative/issues/109)) ([205667c](https://github.com/appium/VodQAReactNative/commit/205667c55d4b47bbe1e27bf5fd795282da28326a))
+
 ## [1.2.10](https://github.com/appium/VodQAReactNative/compare/v1.2.9...v1.2.10) (2025-12-02)
 
 
