@@ -6,15 +6,6 @@ jest.mock('react-native-webview', () => {
   };
 });
 
-// Mock @react-native-community/slider
-jest.mock('@react-native-community/slider', () => {
-  const { View } = require('react-native');
-  return {
-    __esModule: true,
-    default: View,
-  };
-});
-
 // Mock @react-native-picker/picker
 jest.mock('@react-native-picker/picker', () => {
   const { View } = require('react-native');
