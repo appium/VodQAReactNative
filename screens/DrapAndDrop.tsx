@@ -6,7 +6,6 @@ import {
   Animated,
   Dimensions,
   PanResponder,
-  Platform,
   LayoutChangeEvent,
   PanResponderGestureState,
 } from 'react-native';
@@ -126,7 +125,6 @@ const Window = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: Platform.OS === 'ios' ? 64 : 56,
     flex: 1,
   },
   text: {
@@ -137,7 +135,6 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   dropText: {
-    marginTop: 32,
     marginLeft: 5,
     marginRight: 5,
     textAlign: 'center',
@@ -152,6 +149,7 @@ const styles = StyleSheet.create({
     width: Window.width,
     height: 100,
     backgroundColor: '#2c3e50',
+    justifyContent: 'center',
   },
   dragDropContainer: {
     flex: 1,

@@ -31,5 +31,18 @@ target 'VodQAReactNative' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    # Fix fmt compilation with Xcode 26 Clang (consteval bug)
+    fmt_base_h = File.join(__dir__, 'Pods', 'fmt', 'include', 'fmt', 'base.h')
+    if File.exist?(fmt_base_h)
+      content = File.read(fmt_base_h)
+      unless content.include?('force disable consteval')
+        content.gsub!(
+          /\/\/ Detect consteval.*?#endif/m,
+          "// Detect consteval, C++20 constexpr extensions and std::is_constant_evaluated.\n// Patched: force disable consteval for Xcode 26 compatibility\n#define FMT_USE_CONSTEVAL 0"
+        )
+        File.write(fmt_base_h, content)
+      end
+    end
   end
 end
