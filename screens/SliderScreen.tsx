@@ -1,11 +1,10 @@
-import React, { Component, createRef, RefObject } from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   PanResponder,
   PanResponderInstance,
-  LayoutChangeEvent,
 } from 'react-native';
 
 interface State {
