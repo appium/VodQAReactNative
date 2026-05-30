@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.14](https://github.com/appium/VodQAReactNative/compare/v1.2.13...v1.2.14) (2026-05-30)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump brace-expansion from 1.1.12 to 1.1.15 ([#113](https://github.com/appium/VodQAReactNative/issues/113)) ([f9a3d21](https://github.com/appium/VodQAReactNative/commit/f9a3d21fdff32d69d0524ddbb01601481599a74f))
+* **deps:** bump addressable from 2.8.7 to 2.9.0 ([#110](https://github.com/appium/VodQAReactNative/issues/110)) ([3c85fa3](https://github.com/appium/VodQAReactNative/commit/3c85fa383c4f699dbe8028043d06a9e43b885d4e))
+* **deps:** bump picomatch ([#111](https://github.com/appium/VodQAReactNative/issues/111)) ([f6e58f2](https://github.com/appium/VodQAReactNative/commit/f6e58f2f8298dac8739ae325c13639a7b52cc1a1))
+* **deps:** bump qs and body-parser ([#115](https://github.com/appium/VodQAReactNative/issues/115)) ([eb4d340](https://github.com/appium/VodQAReactNative/commit/eb4d340cb22e0321bc9043fd61d9391f015016c5))
+* **deps:** bump yaml from 2.8.1 to 2.9.0 ([#116](https://github.com/appium/VodQAReactNative/issues/116)) ([b443a59](https://github.com/appium/VodQAReactNative/commit/b443a59f5d0fbf595a9be247cbf51a199a96e5a6))
+
 ## [1.2.13](https://github.com/appium/VodQAReactNative/compare/v1.2.12...v1.2.13) (2026-05-30)
 
 
