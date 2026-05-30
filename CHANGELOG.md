@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.12](https://github.com/appium/VodQAReactNative/compare/v1.2.11...v1.2.12) (2026-05-30)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump lodash from 4.17.21 to 4.17.23 ([#103](https://github.com/appium/VodQAReactNative/issues/103)) ([d756c9e](https://github.com/appium/VodQAReactNative/commit/d756c9e9df0bdc01ac161971b56ebe96a40e2a4e))
+* **deps-dev:** bump minimatch from 3.1.2 to 3.1.5 ([#106](https://github.com/appium/VodQAReactNative/issues/106)) ([1ad9e39](https://github.com/appium/VodQAReactNative/commit/1ad9e39d3beb674b3c0b815f6ed88798e1c564ec))
+* **deps-dev:** bump prettier from 3.7.3 to 3.7.4 ([#86](https://github.com/appium/VodQAReactNative/issues/86)) ([89ef75b](https://github.com/appium/VodQAReactNative/commit/89ef75bf084dd81c40a70455b8cbff1850deadb6))
+* **deps:** bump fast-xml-parser from 4.5.3 to 4.5.4 ([#108](https://github.com/appium/VodQAReactNative/issues/108)) ([d4b3a1c](https://github.com/appium/VodQAReactNative/commit/d4b3a1c58a97862c33a50073ca27814782a8c433))
+* **deps:** bump qs and body-parser ([#104](https://github.com/appium/VodQAReactNative/issues/104)) ([63ca35c](https://github.com/appium/VodQAReactNative/commit/63ca35c56c824035c5e2ff987c0478069caca6b4))
+* **deps:** bump react-native-gesture-handler from 2.29.1 to 2.30.0 ([#97](https://github.com/appium/VodQAReactNative/issues/97)) ([32a65ba](https://github.com/appium/VodQAReactNative/commit/32a65bade59683077b93f6ff7cc65242696c6111))
+
 ## [1.2.11](https://github.com/appium/VodQAReactNative/compare/v1.2.10...v1.2.11) (2026-05-05)
 
 
