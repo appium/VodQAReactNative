@@ -53,7 +53,7 @@ jobs:
         run: npm ci
 
       - name: Cache Gradle packages
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             ~/.gradle/caches
@@ -122,7 +122,7 @@ jobs:
         run: bundle install
 
       - name: Cache CocoaPods
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ios/Pods
           key: ${{ runner.os }}-pods-xcode${{ env.XCODE_VERSION }}-${{ hashFiles('**/Podfile.lock', '**/Gemfile.lock') }}
