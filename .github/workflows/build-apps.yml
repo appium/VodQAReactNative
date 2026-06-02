@@ -78,7 +78,7 @@ jobs:
 
       - name: Upload Android APK to Release
         if: inputs.upload_release_artifacts == true
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ inputs.release_tag }}
           files: android/app/build/outputs/apk/release/app-release.apk
@@ -147,7 +147,7 @@ jobs:
 
       - name: Upload iOS Simulator app to Release
         if: inputs.upload_release_artifacts == true
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ inputs.release_tag }}
           files: ios/build/DerivedData/VodQAReactNative-simulator-release.zip
