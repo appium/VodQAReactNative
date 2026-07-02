@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.20](https://github.com/appium/VodQAReactNative/compare/v1.2.19...v1.2.20) (2026-07-02)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @react-native-community/cli-platform-android ([#124](https://github.com/appium/VodQAReactNative/issues/124)) ([d919063](https://github.com/appium/VodQAReactNative/commit/d919063af1b91260a0de5ccd95c79e87f46d6af3))
+* **deps-dev:** bump @react-native-community/cli-platform-ios ([#121](https://github.com/appium/VodQAReactNative/issues/121)) ([f9c23a0](https://github.com/appium/VodQAReactNative/commit/f9c23a02852a0e528c0ec5c9c7e25978ecd498e8))
+* **deps:** bump @react-navigation/stack from 7.6.4 to 7.10.7 ([#125](https://github.com/appium/VodQAReactNative/issues/125)) ([172fa12](https://github.com/appium/VodQAReactNative/commit/172fa12b744d8478a75c0210b8dd48bb5b91ed4b))
+
 ## [1.2.19](https://github.com/appium/VodQAReactNative/compare/v1.2.18...v1.2.19) (2026-07-02)
 
 
