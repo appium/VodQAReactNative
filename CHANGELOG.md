@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.16](https://github.com/appium/VodQAReactNative/compare/v1.2.15...v1.2.16) (2026-07-02)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump flatted from 3.3.3 to 3.4.2 ([#118](https://github.com/appium/VodQAReactNative/issues/118)) ([f93af07](https://github.com/appium/VodQAReactNative/commit/f93af07f480944f88601749aca7baca535130eef))
+* **deps:** bump launch-editor from 2.11.1 to 2.14.1 ([#129](https://github.com/appium/VodQAReactNative/issues/129)) ([00b3aa0](https://github.com/appium/VodQAReactNative/commit/00b3aa0a3e3dbbbb4b866b8519c54a62cd8b676d))
+* **deps:** bump ws ([#130](https://github.com/appium/VodQAReactNative/issues/130)) ([4d64b31](https://github.com/appium/VodQAReactNative/commit/4d64b31b6ac466723578975c47a794fe679af8d9))
+
 ## [1.2.15](https://github.com/appium/VodQAReactNative/compare/v1.2.14...v1.2.15) (2026-07-02)
 
 
