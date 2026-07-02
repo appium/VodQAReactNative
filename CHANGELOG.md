@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.17](https://github.com/appium/VodQAReactNative/compare/v1.2.16...v1.2.17) (2026-07-02)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @babel/core from 7.28.5 to 7.29.7 ([#120](https://github.com/appium/VodQAReactNative/issues/120)) ([648b5d7](https://github.com/appium/VodQAReactNative/commit/648b5d765733d787c1b6078b8a7f99a545c7b38d))
+* **deps:** bump activesupport from 7.2.2.2 to 7.2.3.1 ([#117](https://github.com/appium/VodQAReactNative/issues/117)) ([b5142af](https://github.com/appium/VodQAReactNative/commit/b5142afeef70721bfddae5d36add1f1f8c441485))
+
 ## [1.2.16](https://github.com/appium/VodQAReactNative/compare/v1.2.15...v1.2.16) (2026-07-02)
 
 

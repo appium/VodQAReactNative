@@ -1,6 +1,6 @@
 {
   "name": "VodQAReactNative",
-  "version": "1.2.16",
+  "version": "1.2.17",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
