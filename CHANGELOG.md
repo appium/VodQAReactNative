@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.19](https://github.com/appium/VodQAReactNative/compare/v1.2.18...v1.2.19) (2026-07-02)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @babel/plugin-transform-modules-systemjs ([#112](https://github.com/appium/VodQAReactNative/issues/112)) ([d74f0dc](https://github.com/appium/VodQAReactNative/commit/d74f0dccde9c8b3e377b8b7f32f0993db281b5c6))
+* **deps:** bump @react-native-community/slider from 5.1.1 to 5.2.0 ([#119](https://github.com/appium/VodQAReactNative/issues/119)) ([055d2fe](https://github.com/appium/VodQAReactNative/commit/055d2fee3c530f5087a3ab57c1436d08fc1ae7c4))
+
 ## [1.2.18](https://github.com/appium/VodQAReactNative/compare/v1.2.17...v1.2.18) (2026-07-02)
 
 
