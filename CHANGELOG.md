@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.15](https://github.com/appium/VodQAReactNative/compare/v1.2.14...v1.2.15) (2026-07-02)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump shell-quote from 1.8.3 to 1.8.4 ([#128](https://github.com/appium/VodQAReactNative/issues/128)) ([f220c3e](https://github.com/appium/VodQAReactNative/commit/f220c3ef0dd6856647cc8ad1463862e0e78cf7c3))
+
 ## [1.2.14](https://github.com/appium/VodQAReactNative/compare/v1.2.13...v1.2.14) (2026-05-30)
 
 
