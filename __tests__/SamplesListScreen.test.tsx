@@ -3,7 +3,8 @@
  */
 
 import React from 'react';
-import ReactTestRenderer, { act } from 'react-test-renderer';
+import ReactTestRenderer, {act} from 'react-test-renderer';
+
 import SamplesListScreen from '../screens/SamplesListScreen';
 
 // Mock navigation
@@ -20,9 +21,7 @@ describe('SamplesListScreen', () => {
   it('renders without crashing', async () => {
     let tree: ReactTestRenderer.ReactTestRenderer | undefined;
     await act(async () => {
-      tree = ReactTestRenderer.create(
-        React.createElement(SamplesListScreen, { navigation: mockNavigation }),
-      );
+      tree = ReactTestRenderer.create(React.createElement(SamplesListScreen, {navigation: mockNavigation}));
     });
     expect(tree).toBeTruthy();
   });

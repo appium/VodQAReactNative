@@ -3,7 +3,8 @@
  */
 
 import React from 'react';
-import ReactTestRenderer, { act } from 'react-test-renderer';
+import ReactTestRenderer, {act} from 'react-test-renderer';
+
 import VodQAReactNative from '../index';
 
 test('renders correctly', async () => {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   View,
   Text,
@@ -50,7 +50,7 @@ class DrapAndDrop extends Component<{}, State> {
           });
         } else {
           Animated.spring(this.state.pan, {
-            toValue: { x: 0, y: 0 },
+            toValue: {x: 0, y: 0},
             useNativeDriver: false,
           }).start();
         }
@@ -67,10 +67,7 @@ class DrapAndDrop extends Component<{}, State> {
   renderDraggable(): React.JSX.Element | null {
     if (this.state.showDraggable) {
       return (
-        <Animated.View
-          {...this.panResponder.panHandlers}
-          style={[this.state.pan.getLayout(), styles.circle]}
-        >
+        <Animated.View {...this.panResponder.panHandlers} style={[this.state.pan.getLayout(), styles.circle]}>
           <Text style={styles.text} testID="dragMe" accessibilityLabel="dragMe">
             Drag me!
           </Text>
@@ -91,9 +88,7 @@ class DrapAndDrop extends Component<{}, State> {
       <View style={styles.container}>
         <View style={styles.dragDropContainer}>
           <View
-            onLayout={(event: LayoutChangeEvent) =>
-              this.setDropZoneValues(event)
-            }
+            onLayout={(event: LayoutChangeEvent) => this.setDropZoneValues(event)}
             style={styles.dropZone}
             testID="dropzone"
             accessibilityLabel="dropzone"
@@ -104,11 +99,7 @@ class DrapAndDrop extends Component<{}, State> {
           <View>
             {!this.state.showDraggable && (
               <View>
-                <Text
-                  style={styles.dragSuccessLabel}
-                  testID="success"
-                  accessibilityLabel="success"
-                >
+                <Text style={styles.dragSuccessLabel} testID="success" accessibilityLabel="success">
                   Circle dropped
                 </Text>
               </View>

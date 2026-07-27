@@ -1,12 +1,7 @@
-import React, { Component } from 'react';
-import {
-  Text,
-  StyleSheet,
-  ScrollView,
-  View,
-  TouchableOpacity,
-} from 'react-native';
-import { NavigationProp } from '@react-navigation/native';
+import {NavigationProp} from '@react-navigation/native';
+import React, {Component} from 'react';
+import {Text, StyleSheet, ScrollView, View, TouchableOpacity} from 'react-native';
+
 import Routes from '../router/Routes';
 
 interface Props {
@@ -24,12 +19,7 @@ class SamplesListScreen extends Component<Props> {
     this.props.navigation?.navigate(screenName);
   }
 
-  getView(
-    header: string,
-    subHeader: string,
-    testId: string,
-    screenName: string,
-  ): React.JSX.Element {
+  getView(header: string, subHeader: string, testId: string, screenName: string): React.JSX.Element {
     return (
       <TouchableOpacity
         accessible={false}
@@ -40,20 +30,10 @@ class SamplesListScreen extends Component<Props> {
         accessibilityLabel={testId}
       >
         <View style={styles.itemView}>
-          <Text
-            style={styles.header}
-            testID={testId}
-            accessible={true}
-            accessibilityLabel={testId}
-          >
+          <Text style={styles.header} testID={testId} accessible={true} accessibilityLabel={testId}>
             {header}
           </Text>
-          <Text
-            style={styles.subHeader}
-            testID={subHeader}
-            accessible={true}
-            accessibilityLabel={subHeader}
-          >
+          <Text style={styles.subHeader} testID={subHeader} accessible={true} accessibilityLabel={subHeader}>
             {subHeader}
           </Text>
         </View>
@@ -65,66 +45,16 @@ class SamplesListScreen extends Component<Props> {
     return (
       <ScrollView testID="scrollView" accessibilityLabel="scrollView">
         <View style={styles.container}>
-          {this.getView(
-            'Native View',
-            'Chained View',
-            'chainedView',
-            Routes.NativeView.title,
-          )}
-          {this.getView(
-            'Slider',
-            'Slide your number',
-            'slider1',
-            Routes.SliderScreen.title,
-          )}
-          {this.getView(
-            'Vertical swiping',
-            'Demos vertical swiping ',
-            'verticalSwipe',
-            Routes.VerticalSwipe.title,
-          )}
-          {this.getView(
-            'Drag & Drop',
-            'Demo drag and drop',
-            'dragAndDrop',
-            Routes.DragAndDrop.title,
-          )}
-          {this.getView(
-            'Double Tap',
-            'Demo double tap button',
-            'doubleTap',
-            Routes.DoubleTap.title,
-          )}
-          {this.getView(
-            'Long Press',
-            'Demo Long press button',
-            'longPress',
-            Routes.LongPress.title,
-          )}
-          {this.getView(
-            'Photo View',
-            'Ping & Zoom',
-            'photoView',
-            Routes.PhotoScreen.title,
-          )}
-          {this.getView(
-            'Web View',
-            'View hacker news',
-            'webView',
-            Routes.WebViewScreen.title,
-          )}
-          {this.getView(
-            'Carousel',
-            'Demos swipe left & right',
-            'carousel',
-            Routes.CarouselScreen.title,
-          )}
-          {this.getView(
-            'Wheel Picker',
-            'Demos wheel picker color',
-            'wheelPicker',
-            Routes.WheelPicker.title,
-          )}
+          {this.getView('Native View', 'Chained View', 'chainedView', Routes.NativeView.title)}
+          {this.getView('Slider', 'Slide your number', 'slider1', Routes.SliderScreen.title)}
+          {this.getView('Vertical swiping', 'Demos vertical swiping ', 'verticalSwipe', Routes.VerticalSwipe.title)}
+          {this.getView('Drag & Drop', 'Demo drag and drop', 'dragAndDrop', Routes.DragAndDrop.title)}
+          {this.getView('Double Tap', 'Demo double tap button', 'doubleTap', Routes.DoubleTap.title)}
+          {this.getView('Long Press', 'Demo Long press button', 'longPress', Routes.LongPress.title)}
+          {this.getView('Photo View', 'Ping & Zoom', 'photoView', Routes.PhotoScreen.title)}
+          {this.getView('Web View', 'View hacker news', 'webView', Routes.WebViewScreen.title)}
+          {this.getView('Carousel', 'Demos swipe left & right', 'carousel', Routes.CarouselScreen.title)}
+          {this.getView('Wheel Picker', 'Demos wheel picker color', 'wheelPicker', Routes.WheelPicker.title)}
         </View>
       </ScrollView>
     );

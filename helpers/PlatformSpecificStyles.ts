@@ -1,10 +1,4 @@
-import {
-  StyleSheet,
-  Platform,
-  ViewStyle,
-  TextStyle,
-  ImageStyle,
-} from 'react-native';
+import {StyleSheet, Platform, ViewStyle, TextStyle, ImageStyle} from 'react-native';
 
 type Style = ViewStyle | TextStyle | ImageStyle;
 
@@ -19,18 +13,18 @@ interface Styles {
 }
 
 export function create(styles: Styles): any {
-  const platformStyles: { [key: string]: Style } = {};
-  Object.keys(styles).forEach(name => {
-    let { ios, android, ...style } = { ...styles[name] } as any;
+  const platformStyles: {[key: string]: Style} = {};
+  Object.keys(styles).forEach((name) => {
+    let {ios, android, ...style} = {...styles[name]} as any;
     if (ios && Platform.OS === 'ios') {
-      style = { ...style, ...ios };
+      style = {...style, ...ios};
     }
     if (android && Platform.OS === 'android') {
-      style = { ...style, ...android };
+      style = {...style, ...android};
     }
 
     if (name === 'ios' && Platform.OS === 'ios') {
-      Object.keys(style).forEach(styleName => {
+      Object.keys(style).forEach((styleName) => {
         if (platformStyles[styleName]) {
           platformStyles[styleName] = {
             ...platformStyles[styleName],
@@ -41,7 +35,7 @@ export function create(styles: Styles): any {
     }
 
     if (name === 'android' && Platform.OS === 'android') {
-      Object.keys(style).forEach(styleName => {
+      Object.keys(style).forEach((styleName) => {
         if (platformStyles[styleName]) {
           platformStyles[styleName] = {
             ...platformStyles[styleName],
