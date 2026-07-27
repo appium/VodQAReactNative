@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.21](https://github.com/appium/VodQAReactNative/compare/v1.2.20...v1.2.21) (2026-07-27)
+
+### Miscellaneous Chores
+
+* Integrate oxc and release configs ([#150](https://github.com/appium/VodQAReactNative/issues/150)) ([0a322a8](https://github.com/appium/VodQAReactNative/commit/0a322a8ee6bbe5b81df8d1db4f4d5d027cf51ef3))
+
 ## [1.2.20](https://github.com/appium/VodQAReactNative/compare/v1.2.19...v1.2.20) (2026-07-02)
 
 
