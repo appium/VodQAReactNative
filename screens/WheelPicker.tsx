@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Dimensions, Text, Platform } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+import {Picker} from '@react-native-picker/picker';
+import React, {Component} from 'react';
+import {StyleSheet, View, Dimensions, Text, Platform} from 'react-native';
 
 interface State {
   colors: string[];
@@ -43,10 +43,7 @@ class WheelPicker extends Component<{}, State> {
             },
           ]}
         >
-          <Text style={styles.colorText}>
-            {' '}
-            Current Color: {this.state.selectedColor}{' '}
-          </Text>
+          <Text style={styles.colorText}> Current Color: {this.state.selectedColor} </Text>
         </View>
         <Picker
           style={styles.picker}

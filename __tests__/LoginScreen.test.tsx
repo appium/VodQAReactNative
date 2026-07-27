@@ -3,7 +3,8 @@
  */
 
 import React from 'react';
-import ReactTestRenderer, { act } from 'react-test-renderer';
+import ReactTestRenderer, {act} from 'react-test-renderer';
+
 import LoginScreen from '../screens/LoginScreen';
 
 // Mock navigation
@@ -20,9 +21,7 @@ describe('LoginScreen', () => {
   it('renders without crashing', async () => {
     let tree: ReactTestRenderer.ReactTestRenderer | undefined;
     await act(async () => {
-      tree = ReactTestRenderer.create(
-        React.createElement(LoginScreen, { navigation: mockNavigation }),
-      );
+      tree = ReactTestRenderer.create(React.createElement(LoginScreen, {navigation: mockNavigation}));
     });
     expect(tree).toBeTruthy();
   });

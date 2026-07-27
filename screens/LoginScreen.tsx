@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import { View, Image, TextInput, Button, Alert } from 'react-native';
-import { NavigationProp } from '@react-navigation/native';
-import { create } from '../helpers/PlatformSpecificStyles';
+import {NavigationProp} from '@react-navigation/native';
+import React, {Component} from 'react';
+import {View, Image, TextInput, Button, Alert} from 'react-native';
+
+import {create} from '../helpers/PlatformSpecificStyles';
 import Routes from '../router/Routes';
 
 interface Props {
@@ -28,37 +29,29 @@ class LoginScreen extends Component<Props, State> {
 
   handleLogin(): void {
     if (!this.state.username || !this.state.password) {
-      Alert.alert('Oops', 'Please enter Username or password', [
-        { text: 'OK', onPress: () => {} },
-      ]);
+      Alert.alert('Oops', 'Please enter Username or password', [{text: 'OK', onPress: () => {}}]);
     } else {
       if (this.state.username === 'admin' && this.state.password === 'admin') {
         this.props.navigation?.navigate(Routes.SamplesListScreen.title);
       } else {
-        Alert.alert('Oops', 'Invalid  Credentials', [
-          { text: 'OK', onPress: () => {} },
-        ]);
+        Alert.alert('Oops', 'Invalid  Credentials', [{text: 'OK', onPress: () => {}}]);
       }
     }
   }
 
   handleUserNameChange(text: string): void {
-    this.setState({ username: text });
+    this.setState({username: text});
   }
 
   handlePasswordChange(text: string): void {
-    this.setState({ password: text });
+    this.setState({password: text});
   }
 
   render(): React.JSX.Element {
     return (
       <View style={styles.container}>
         <View style={styles.logoContainer}>
-          <Image
-            style={styles.logo}
-            resizeMode="cover"
-            source={require('../assets/vodqa.png')}
-          />
+          <Image style={styles.logo} resizeMode="cover" source={require('../assets/vodqa.png')} />
         </View>
         <View style={styles.loginFieldsContainer}>
           <TextInput
@@ -84,12 +77,7 @@ class LoginScreen extends Component<Props, State> {
             autoCapitalize="none"
             autoCorrect={false}
           />
-          <View
-            style={styles.loginButton}
-            testID="login"
-            accessible
-            accessibilityLabel={'login'}
-          >
+          <View style={styles.loginButton} testID="login" accessible accessibilityLabel={'login'}>
             <Button onPress={this.handleLogin} title="Log in" />
           </View>
         </View>

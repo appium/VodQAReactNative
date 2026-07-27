@@ -1,11 +1,5 @@
-import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  PanResponder,
-  PanResponderInstance,
-} from 'react-native';
+import React, {Component} from 'react';
+import {View, Text, StyleSheet, PanResponder, PanResponderInstance} from 'react-native';
 
 interface State {
   value: number;
@@ -39,13 +33,9 @@ class SliderScreen extends Component<{}, State> {
         this.startValue = this.state.value;
       },
       onPanResponderMove: (_e, gestureState) => {
-        const deltaValue =
-          (gestureState.dx / SLIDER_WIDTH) * (MAX_VALUE - MIN_VALUE);
-        const newValue = Math.min(
-          Math.max(this.startValue + deltaValue, MIN_VALUE),
-          MAX_VALUE,
-        );
-        this.setState({ value: newValue });
+        const deltaValue = (gestureState.dx / SLIDER_WIDTH) * (MAX_VALUE - MIN_VALUE);
+        const newValue = Math.min(Math.max(this.startValue + deltaValue, MIN_VALUE), MAX_VALUE);
+        this.setState({value: newValue});
       },
     });
 
@@ -56,13 +46,9 @@ class SliderScreen extends Component<{}, State> {
         this.startValue1 = this.state.value1;
       },
       onPanResponderMove: (_e, gestureState) => {
-        const deltaValue =
-          (gestureState.dx / SLIDER_WIDTH) * (MAX_VALUE - MIN_VALUE);
-        const newValue = Math.min(
-          Math.max(this.startValue1 + deltaValue, MIN_VALUE),
-          MAX_VALUE,
-        );
-        this.setState({ value1: newValue });
+        const deltaValue = (gestureState.dx / SLIDER_WIDTH) * (MAX_VALUE - MIN_VALUE);
+        const newValue = Math.min(Math.max(this.startValue1 + deltaValue, MIN_VALUE), MAX_VALUE);
+        this.setState({value1: newValue});
       },
     });
   }
@@ -76,14 +62,8 @@ class SliderScreen extends Component<{}, State> {
     return (
       <View>
         <View>
-          <Text style={styles.text}>
-            {this.state.value && +this.state.value.toFixed(3)}
-          </Text>
-          <View
-            testID={'slider'}
-            accessibilityLabel={'slider'}
-            style={styles.sliderContainer}
-          >
+          <Text style={styles.text}>{this.state.value && +this.state.value.toFixed(3)}</Text>
+          <View testID={'slider'} accessibilityLabel={'slider'} style={styles.sliderContainer}>
             <View style={styles.track}>
               <View
                 style={[
@@ -97,23 +77,14 @@ class SliderScreen extends Component<{}, State> {
             <View
               testID={'slider-thumb'}
               accessibilityLabel={'slider-thumb'}
-              style={[
-                styles.thumb,
-                { left: this.getThumbLeft(this.state.value) - THUMB_SIZE / 2 },
-              ]}
+              style={[styles.thumb, {left: this.getThumbLeft(this.state.value) - THUMB_SIZE / 2}]}
               {...this.thumbPanResponder.panHandlers}
             />
           </View>
         </View>
         <View>
-          <Text style={styles.text}>
-            {this.state.value1 && +this.state.value1.toFixed(3)}
-          </Text>
-          <View
-            testID={'slider1'}
-            accessibilityLabel={'slider1'}
-            style={styles.sliderContainer}
-          >
+          <Text style={styles.text}>{this.state.value1 && +this.state.value1.toFixed(3)}</Text>
+          <View testID={'slider1'} accessibilityLabel={'slider1'} style={styles.sliderContainer}>
             <View style={styles.track}>
               <View
                 style={[
@@ -127,10 +98,7 @@ class SliderScreen extends Component<{}, State> {
             <View
               testID={'slider1-thumb'}
               accessibilityLabel={'slider1-thumb'}
-              style={[
-                styles.thumb,
-                { left: this.getThumbLeft(this.state.value1) - THUMB_SIZE / 2 },
-              ]}
+              style={[styles.thumb, {left: this.getThumbLeft(this.state.value1) - THUMB_SIZE / 2}]}
               {...this.thumbPanResponder1.panHandlers}
             />
           </View>
@@ -165,7 +133,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4caf50',
     elevation: 3,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.25,
     shadowRadius: 3,
   },

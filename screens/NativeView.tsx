@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { View, Text, ScrollView } from 'react-native';
-import { create } from '../helpers/PlatformSpecificStyles';
+import React, {Component} from 'react';
+import {View, Text, ScrollView} from 'react-native';
+
+import {create} from '../helpers/PlatformSpecificStyles';
 
 class NativeView extends Component {
   constructor(props: {}) {
@@ -9,64 +10,24 @@ class NativeView extends Component {
 
   render(): React.JSX.Element {
     return (
-      <ScrollView
-        style={styles.scrollView}
-        testID="scrollView"
-        accessibilityLabel="scrollView"
-      >
-        <View
-          style={styles.container}
-          testID="container1"
-          accessibilityLabel="container1"
-        >
-          <View
-            style={styles.wrapper}
-            testID="viewgroup1"
-            accessibilityLabel="viewgroup1"
-          >
-            <Text
-              style={styles.text}
-              testID="textView"
-              accessibilityLabel="textView"
-            >
+      <ScrollView style={styles.scrollView} testID="scrollView" accessibilityLabel="scrollView">
+        <View style={styles.container} testID="container1" accessibilityLabel="container1">
+          <View style={styles.wrapper} testID="viewgroup1" accessibilityLabel="viewgroup1">
+            <Text style={styles.text} testID="textView" accessibilityLabel="textView">
               Hello World, I&apos;m View one{' '}
             </Text>
           </View>
         </View>
-        <View
-          style={styles.container}
-          testID="container2"
-          accessibilityLabel="container2"
-        >
-          <View
-            style={styles.wrapper}
-            testID="viewgroup2"
-            accessibilityLabel="viewgroup2"
-          >
-            <Text
-              style={styles.text}
-              testID="textView"
-              accessibilityLabel="textView"
-            >
+        <View style={styles.container} testID="container2" accessibilityLabel="container2">
+          <View style={styles.wrapper} testID="viewgroup2" accessibilityLabel="viewgroup2">
+            <Text style={styles.text} testID="textView" accessibilityLabel="textView">
               Hello World, I&apos;m View two{' '}
             </Text>
           </View>
         </View>
-        <View
-          style={styles.container}
-          testID="container3"
-          accessibilityLabel="container3"
-        >
-          <View
-            style={styles.wrapper}
-            testID="viewgroup3"
-            accessibilityLabel="viewgroup3"
-          >
-            <Text
-              style={styles.text}
-              testID="textView"
-              accessibilityLabel="textView"
-            >
+        <View style={styles.container} testID="container3" accessibilityLabel="container3">
+          <View style={styles.wrapper} testID="viewgroup3" accessibilityLabel="viewgroup3">
+            <Text style={styles.text} testID="textView" accessibilityLabel="textView">
               Hello World, I&apos;m View three{' '}
             </Text>
           </View>

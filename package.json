@@ -6,8 +6,8 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
-    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json}\"",
+    "format": "oxfmt -c oxfmt.config.mjs .",
+    "format:check": "oxfmt -c oxfmt.config.mjs --check .",
     "start": "react-native start",
     "start:reset": "react-native start --reset-cache",
     "clean": "rm -rf node_modules && rm -rf ios/Pods && rm -rf ios/build && rm -rf android/build && rm -rf android/app/build && npm install && cd ios && pod install",
@@ -40,6 +40,8 @@
     "react-native-webview": "^13.10.0"
   },
   "devDependencies": {
+    "@appium/oxc-config": "^1.1.0",
+    "@appium/semantic-release-config": "^1.1.0",
     "@babel/core": "^7.29.7",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
@@ -56,7 +58,6 @@
     "eslint": "^8.19.0",
     "jest": "^29.6.3",
     "jest-environment-jsdom": "^30.2.0",
-    "prettier": "3.7.4",
     "react-test-renderer": "19.1.0",
     "typescript": "^5.8.3"
   },
