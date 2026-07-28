@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.22](https://github.com/appium/VodQAReactNative/compare/v1.2.21...v1.2.22) (2026-07-28)
+
+### Miscellaneous Chores
+
+* upgrade react-native to 0.86.2 ([#151](https://github.com/appium/VodQAReactNative/issues/151)) ([66f6efc](https://github.com/appium/VodQAReactNative/commit/66f6efc1c3dca6c0290a96cec2d4c2f34e93e012))
+
 ## [1.2.21](https://github.com/appium/VodQAReactNative/compare/v1.2.20...v1.2.21) (2026-07-27)
 
 ### Miscellaneous Chores
