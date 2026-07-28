@@ -35,7 +35,7 @@
     "react-native": "0.86.2",
     "react-native-gesture-handler": "^3.1.0",
     "react-native-image-viewing": "^0.2.2",
-    "react-native-safe-area-context": "^5.6.2",
+    "react-native-safe-area-context": "^5.8.0",
     "react-native-screens": "^4.19.0",
     "react-native-webview": "^13.10.0"
   },
