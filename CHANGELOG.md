@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.24](https://github.com/appium/VodQAReactNative/compare/v1.2.23...v1.2.24) (2026-07-28)
+
+### Miscellaneous Chores
+
+* Update .editorconfig for JavaScript and JSON files ([00d996d](https://github.com/appium/VodQAReactNative/commit/00d996d659f52ead18d434812aed392a9f1c65bd))
+
 ## [1.2.23](https://github.com/appium/VodQAReactNative/compare/v1.2.22...v1.2.23) (2026-07-28)
 
 ### Miscellaneous Chores
