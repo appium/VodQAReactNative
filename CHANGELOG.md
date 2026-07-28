@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.23](https://github.com/appium/VodQAReactNative/compare/v1.2.22...v1.2.23) (2026-07-28)
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump fast-xml-parser from 4.5.4 to 4.5.7 ([#152](https://github.com/appium/VodQAReactNative/issues/152)) ([2c7cedf](https://github.com/appium/VodQAReactNative/commit/2c7cedf4dd1f0828307b5e52e96efedaec336b84))
+* **deps:** bump json from 2.15.2.1 to 2.19.9 ([#149](https://github.com/appium/VodQAReactNative/issues/149)) ([ef0e632](https://github.com/appium/VodQAReactNative/commit/ef0e632858b4e33e715865133bea0ace4be718a2))
+* **deps:** bump shell-quote from 1.8.4 to 1.10.0 ([#148](https://github.com/appium/VodQAReactNative/issues/148)) ([25d34ff](https://github.com/appium/VodQAReactNative/commit/25d34ffb40600d4652e5a57d7f57fccaf9dd46e0))
+
 ## [1.2.22](https://github.com/appium/VodQAReactNative/compare/v1.2.21...v1.2.22) (2026-07-28)
 
 ### Miscellaneous Chores
