@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.26](https://github.com/appium/VodQAReactNative/compare/v1.2.25...v1.2.26) (2026-10-13)
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @react-native-community/cli from 20.0.2 to 20.2.0 ([#136](https://github.com/appium/VodQAReactNative/issues/136)) ([7b1cadb](https://github.com/appium/VodQAReactNative/commit/7b1cadb14310416cc8cbe6e9d07321672eb66a5b))
+* **deps-dev:** bump brace-expansion from 1.1.15 to 1.1.21 ([#165](https://github.com/appium/VodQAReactNative/issues/165)) ([ff221c9](https://github.com/appium/VodQAReactNative/commit/ff221c9c3a6fd9acdbd9311288e870221f6ba14d))
+* **deps-dev:** bump handlebars from 4.7.9 to 4.7.10 ([#166](https://github.com/appium/VodQAReactNative/issues/166)) ([915df0d](https://github.com/appium/VodQAReactNative/commit/915df0db1de9d7e5cf64b03c02c738c491494c67))
+* **deps:** bump compression from 1.8.1 to 1.8.2 ([#168](https://github.com/appium/VodQAReactNative/issues/168)) ([39920f8](https://github.com/appium/VodQAReactNative/commit/39920f8603dbc7735f03e4aa975dc05356c68e5d))
+* **deps:** bump shell-quote from 1.10.0 to 1.12.0 ([#164](https://github.com/appium/VodQAReactNative/issues/164)) ([0fab788](https://github.com/appium/VodQAReactNative/commit/0fab7886edc6737aca39bc9d920e32465d769bf8))
+* **deps:** bump tinypool and @appium/oxc-config ([#167](https://github.com/appium/VodQAReactNative/issues/167)) ([b2f1ea3](https://github.com/appium/VodQAReactNative/commit/b2f1ea3ccf04b66fd29e00ffe15ff28d3b2efdc5))
+
 ## [1.2.25](https://github.com/appium/VodQAReactNative/compare/v1.2.24...v1.2.25) (2026-10-13)
 
 ### Miscellaneous Chores
