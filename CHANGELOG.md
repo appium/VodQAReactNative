@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.25](https://github.com/appium/VodQAReactNative/compare/v1.2.24...v1.2.25) (2026-10-13)
+
+### Miscellaneous Chores
+
+* **deps:** bump baseline-browser-mapping from 2.8.20 to 2.11.21 ([#159](https://github.com/appium/VodQAReactNative/issues/159)) ([0ab52f0](https://github.com/appium/VodQAReactNative/commit/0ab52f0facf3802abd1ec78c1cf9ca3495309e3a))
+* **deps:** bump browserslist from 4.27.0 to 4.28.9 ([#158](https://github.com/appium/VodQAReactNative/issues/158)) ([0832259](https://github.com/appium/VodQAReactNative/commit/0832259023537d0f8f9120083d7be1d3650e26b5))
+* **deps:** bump joi from 17.13.3 to 17.13.8 ([#163](https://github.com/appium/VodQAReactNative/issues/163)) ([305c0a3](https://github.com/appium/VodQAReactNative/commit/305c0a3e4bfc5d8db0d69b40b889e30c2a42a865))
+* **deps:** bump js-yaml from 3.14.2 to 3.15.2 ([#161](https://github.com/appium/VodQAReactNative/issues/161)) ([316a8f2](https://github.com/appium/VodQAReactNative/commit/316a8f2f79510f2002522bba1702c3c7531e8375))
+* **deps:** bump react-native-safe-area-context from 5.6.2 to 5.8.0 ([#139](https://github.com/appium/VodQAReactNative/issues/139)) ([6ed751d](https://github.com/appium/VodQAReactNative/commit/6ed751dbccbef50e972b35a27adc34a32ae69e73))
+* **deps:** bump undici ([#162](https://github.com/appium/VodQAReactNative/issues/162)) ([56d0c74](https://github.com/appium/VodQAReactNative/commit/56d0c74d53100ed4cf64006bf8eac84b83beea5e))
+
 ## [1.2.24](https://github.com/appium/VodQAReactNative/compare/v1.2.23...v1.2.24) (2026-07-28)
 
 ### Miscellaneous Chores
