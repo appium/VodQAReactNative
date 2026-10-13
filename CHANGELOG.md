@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.27](https://github.com/appium/VodQAReactNative/compare/v1.2.26...v1.2.27) (2026-10-13)
+
+### Miscellaneous Chores
+
+* **deps:** bump react-native-screens from 4.19.0 to 4.29.0 ([#156](https://github.com/appium/VodQAReactNative/issues/156)) ([7d6a2ad](https://github.com/appium/VodQAReactNative/commit/7d6a2ad7dab26436a1fb46526a7919b4b7917329))
+
 ## [1.2.26](https://github.com/appium/VodQAReactNative/compare/v1.2.25...v1.2.26) (2026-10-13)
 
 ### Miscellaneous Chores
