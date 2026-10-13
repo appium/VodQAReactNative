@@ -40,7 +40,7 @@
     "react-native-webview": "^13.10.0"
   },
   "devDependencies": {
-    "@appium/oxc-config": "^1.1.0",
+    "@appium/oxc-config": "^1.1.2",
     "@appium/semantic-release-config": "^1.1.0",
     "@babel/core": "^7.29.7",
     "@babel/preset-env": "^7.25.3",
