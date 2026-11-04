@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.28](https://github.com/appium/VodQAReactNative/compare/v1.2.27...v1.2.28) (2026-11-04)
+
+### Miscellaneous Chores
+
+* **deps:** bump decode-uri-component and @react-navigation/core ([#180](https://github.com/appium/VodQAReactNative/issues/180)) ([bc4b370](https://github.com/appium/VodQAReactNative/commit/bc4b370e75117b56c1548382c5b55e1b38bf8a23))
+
 ## [1.2.27](https://github.com/appium/VodQAReactNative/compare/v1.2.26...v1.2.27) (2026-10-13)
 
 ### Miscellaneous Chores
