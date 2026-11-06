@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.29](https://github.com/appium/VodQAReactNative/compare/v1.2.28...v1.2.29) (2026-11-06)
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump jest-environment-jsdom from 30.2.0 to 30.5.2 ([#172](https://github.com/appium/VodQAReactNative/issues/172)) ([652ad6b](https://github.com/appium/VodQAReactNative/commit/652ad6b85c5634895242e46b76ad895ecb17cf48))
+* **deps:** bump launch-editor from 2.14.1 to 2.14.2 ([#177](https://github.com/appium/VodQAReactNative/issues/177)) ([cb2f979](https://github.com/appium/VodQAReactNative/commit/cb2f979f21e1fea64f61f1202545fec2abb8837d))
+* **deps:** bump nanoid from 3.3.16 to 3.3.20 ([#169](https://github.com/appium/VodQAReactNative/issues/169)) ([e9553e1](https://github.com/appium/VodQAReactNative/commit/e9553e12d6e37edd90ded02207a3ec9b9b59bc92))
+* **deps:** bump qs from 6.16.0 to 6.17.1 ([#181](https://github.com/appium/VodQAReactNative/issues/181)) ([b76215f](https://github.com/appium/VodQAReactNative/commit/b76215fa385b8fbcc9af1c801b46b2e0f0ccb563))
+* **deps:** bump undici ([#179](https://github.com/appium/VodQAReactNative/issues/179)) ([7872d64](https://github.com/appium/VodQAReactNative/commit/7872d64c6539cfb8194eac63195fa389d7ac9d24))
+
 ## [1.2.28](https://github.com/appium/VodQAReactNative/compare/v1.2.27...v1.2.28) (2026-11-04)
 
 ### Miscellaneous Chores
