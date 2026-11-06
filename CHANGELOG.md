@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.30](https://github.com/appium/VodQAReactNative/compare/v1.2.29...v1.2.30) (2026-11-06)
+
+### Bug Fixes
+
+* reset DoubleTap timestamp after alert and pass useNativeDriver in DrapAndDrop ([#178](https://github.com/appium/VodQAReactNative/issues/178)) ([c1d020c](https://github.com/appium/VodQAReactNative/commit/c1d020cd0bed9cfc1fe4f0d15161138ee431d187))
+
 ## [1.2.29](https://github.com/appium/VodQAReactNative/compare/v1.2.28...v1.2.29) (2026-11-06)
 
 ### Miscellaneous Chores
