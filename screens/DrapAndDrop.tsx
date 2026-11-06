@@ -36,13 +36,16 @@ class DrapAndDrop extends Component<{}, State> {
     };
     this.panResponder = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
-      onPanResponderMove: Animated.event([
-        null,
-        {
-          dx: this.state.pan.x,
-          dy: this.state.pan.y,
-        },
-      ]),
+      onPanResponderMove: Animated.event(
+        [
+          null,
+          {
+            dx: this.state.pan.x,
+            dy: this.state.pan.y,
+          },
+        ],
+        {useNativeDriver: false},
+      ),
       onPanResponderRelease: (e, gesture) => {
         if (this.isDropZone(gesture)) {
           this.setState({

@@ -28,8 +28,9 @@ class DoubleTap extends Component<{}, State> {
     if (this.state.timeLastPressed && now - this.state.timeLastPressed < DOUBLE_PRESS_DELAY) {
       this.setState({timeLastPressed: undefined});
       this.handleDoubleTap();
+    } else {
+      this.setState({timeLastPressed: now});
     }
-    this.setState({timeLastPressed: now});
   }
 
   render(): React.JSX.Element {
