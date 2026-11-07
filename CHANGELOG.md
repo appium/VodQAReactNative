@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.33](https://github.com/appium/VodQAReactNative/compare/v1.2.32...v1.2.33) (2026-11-07)
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @babel/runtime from 7.28.4 to 7.29.10 ([#191](https://github.com/appium/VodQAReactNative/issues/191)) ([0e24825](https://github.com/appium/VodQAReactNative/commit/0e24825319dfe6b3ca8f6ea9f0c36d4487ee39c8))
+* **deps-dev:** bump @types/react from 19.2.17 to 19.3.0 ([#190](https://github.com/appium/VodQAReactNative/issues/190)) ([ad97c81](https://github.com/appium/VodQAReactNative/commit/ad97c811cd384ea06047b5369e337447ee286831))
+* **deps:** bump @react-navigation/stack from 7.10.7 to 7.12.1 ([#171](https://github.com/appium/VodQAReactNative/issues/171)) ([89799c0](https://github.com/appium/VodQAReactNative/commit/89799c010c20709d7c2817ffc424fa98b6038a3e))
+* **deps:** bump react-native-gesture-handler from 3.1.0 to 3.4.0 ([#186](https://github.com/appium/VodQAReactNative/issues/186)) ([5dd671d](https://github.com/appium/VodQAReactNative/commit/5dd671d7142db6f3986a861a1a389ea8dd3c4335))
+* **deps:** bump react-native-screens from 4.29.0 to 4.30.1 ([#192](https://github.com/appium/VodQAReactNative/issues/192)) ([c28ba6e](https://github.com/appium/VodQAReactNative/commit/c28ba6ecc592950f08b987013653eb153a06e71e))
+
 ## [1.2.32](https://github.com/appium/VodQAReactNative/compare/v1.2.31...v1.2.32) (2026-11-07)
 
 ### Miscellaneous Chores
