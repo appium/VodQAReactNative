@@ -24,6 +24,25 @@ updates:
       - dependency-name: '@react-native/*'
         update-types: ['version-update:semver-major', 'version-update:semver-minor', 'version-update:semver-patch']
 
+      # Must match the React version bundled with React Native
+      - dependency-name: 'react-test-renderer'
+      - dependency-name: '@types/react-test-renderer'
+
+      # Babel 8 is incompatible with @react-native/babel-preset (Babel 7)
+      - dependency-name: '@babel/*'
+        update-types: ['version-update:semver-major']
+
+      # RN toolchain limits: @react-native/eslint-config supports eslint ^8 || ^9,
+      # @react-native/jest-preset depends on Jest 29 packages
+      - dependency-name: 'eslint'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'typescript'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'jest'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@types/jest'
+        update-types: ['version-update:semver-major']
+
   # Enable version updates for GitHub Actions
   - package-ecosystem: 'github-actions'
     directory: '/'
