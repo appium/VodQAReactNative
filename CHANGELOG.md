@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.34](https://github.com/appium/VodQAReactNative/compare/v1.2.33...v1.2.34) (2026-11-07)
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @appium/oxc-config from 1.1.2 to 1.1.3 ([#189](https://github.com/appium/VodQAReactNative/issues/189)) ([7b25362](https://github.com/appium/VodQAReactNative/commit/7b253622c8f9176954c47e4bacdce730ccaac43c))
+* **deps-dev:** bump @babel/preset-env from 7.28.5 to 7.29.7 ([#184](https://github.com/appium/VodQAReactNative/issues/184)) ([cef8a89](https://github.com/appium/VodQAReactNative/commit/cef8a89afede7cb31e50b57af30c513f5cc83203))
+* **deps:** bump @react-native-community/slider from 5.2.0 to 5.2.2 ([#193](https://github.com/appium/VodQAReactNative/issues/193)) ([ca73db6](https://github.com/appium/VodQAReactNative/commit/ca73db6c33f62a71f2acc55206a8267b85e2729a))
+* **deps:** bump react-native-safe-area-context from 5.8.0 to 5.11.1 ([#187](https://github.com/appium/VodQAReactNative/issues/187)) ([defe4cb](https://github.com/appium/VodQAReactNative/commit/defe4cbd3b05b548127c0406d2502351f6d4f64e))
+* **deps:** bump react-native-webview from 13.16.0 to 14.0.1 ([#185](https://github.com/appium/VodQAReactNative/issues/185)) ([d64c772](https://github.com/appium/VodQAReactNative/commit/d64c77200e29a5c9f80a77c70785169a7b2ef866))
+
 ## [1.2.33](https://github.com/appium/VodQAReactNative/compare/v1.2.32...v1.2.33) (2026-11-07)
 
 ### Miscellaneous Chores
