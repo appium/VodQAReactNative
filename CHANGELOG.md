@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.32](https://github.com/appium/VodQAReactNative/compare/v1.2.31...v1.2.32) (2026-11-07)
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @appium/semantic-release-config ([#188](https://github.com/appium/VodQAReactNative/issues/188)) ([195fd09](https://github.com/appium/VodQAReactNative/commit/195fd09ae26f2636ebee3046753d3a303fc4ba9a))
+
 ## [1.2.31](https://github.com/appium/VodQAReactNative/compare/v1.2.30...v1.2.31) (2026-11-07)
 
 ### Miscellaneous Chores
