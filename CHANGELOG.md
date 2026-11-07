@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.31](https://github.com/appium/VodQAReactNative/compare/v1.2.30...v1.2.31) (2026-11-07)
+
+### Miscellaneous Chores
+
+* **deps:** upgrade React to 19.3.1 and React Native to 0.88.1 ([#182](https://github.com/appium/VodQAReactNative/issues/182)) ([20e753e](https://github.com/appium/VodQAReactNative/commit/20e753e3ddab563fa3241d58364d90885fbf0ac6))
+
 ## [1.2.30](https://github.com/appium/VodQAReactNative/compare/v1.2.29...v1.2.30) (2026-11-06)
 
 ### Bug Fixes
