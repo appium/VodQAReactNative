@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.35](https://github.com/appium/VodQAReactNative/compare/v1.2.34...v1.2.35) (2026-11-09)
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @babel/core from 7.29.7 to 7.29.13 ([#194](https://github.com/appium/VodQAReactNative/issues/194)) ([fb42a67](https://github.com/appium/VodQAReactNative/commit/fb42a6791186dbf2ef62f28d190bb8141b050a7a))
+* **deps-dev:** bump @babel/runtime from 7.29.10 to 7.29.13 ([#195](https://github.com/appium/VodQAReactNative/issues/195)) ([d6270fb](https://github.com/appium/VodQAReactNative/commit/d6270fb0ed695f8cf92f5be2e3de49505285b33a))
+* **deps:** bump react-native-gesture-handler from 3.4.0 to 3.5.0 ([#196](https://github.com/appium/VodQAReactNative/issues/196)) ([7441a3c](https://github.com/appium/VodQAReactNative/commit/7441a3cf1d4559cdb7e6b041703343cc08525dbb))
+
 ## [1.2.34](https://github.com/appium/VodQAReactNative/compare/v1.2.33...v1.2.34) (2026-11-07)
 
 ### Miscellaneous Chores
