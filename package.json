@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@react-native-community/slider": "^5.2.2",
-    "@react-native-picker/picker": "^2.8.1",
+    "@react-native-picker/picker": "^2.11.5",
     "@react-native/new-app-screen": "0.88.1",
     "@react-navigation/native": "^7.1.22",
     "@react-navigation/stack": "^7.12.1",
